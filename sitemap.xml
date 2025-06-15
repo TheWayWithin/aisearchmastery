@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage - Highest Priority -->
+    <url>
+        <loc>https://aisearchmastery.com/</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Core Pages - High Priority -->
+    <url>
+        <loc>https://aisearchmastery.com/newsletter</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/free-page-audit</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/about</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/contact</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog Section - High Priority for Content -->
+    <url>
+        <loc>https://aisearchmastery.com/blog</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Categories -->
+    <url>
+        <loc>https://aisearchmastery.com/blog/fundamentals</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/case-studies</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/how-to-guides</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/industry-updates</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Featured Case Study - High Priority -->
+    <url>
+        <loc>https://aisearchmastery.com/blog/case-studies/freecalchub-transformation</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Key AI Search Fundamentals Articles -->
+    <url>
+        <loc>https://aisearchmastery.com/blog/fundamentals/what-is-ai-search-optimization</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/fundamentals/ai-search-vs-traditional-seo</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/fundamentals/chatgpt-claude-perplexity-optimization</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- How-To Guides - Medium Priority -->
+    <url>
+        <loc>https://aisearchmastery.com/blog/how-to-guides/optimize-content-ai-search</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/how-to-guides/track-ai-search-performance</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/how-to-guides/ai-search-content-audit</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Services Pages - High Priority -->
+    <url>
+        <loc>https://aisearchmastery.com/services</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/services/ai-search-audit</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/services/strategy-consultation</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/services/implementation-support</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Legal Pages - Lower Priority -->
+    <url>
+        <loc>https://aisearchmastery.com/privacy</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/terms</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/cookies</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <!-- Resources and Tools - Medium Priority -->
+    <url>
+        <loc>https://aisearchmastery.com/resources</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/resources/ai-search-checklist</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/resources/content-templates</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Future Key Articles (planned content) -->
+    <url>
+        <loc>https://aisearchmastery.com/blog/industry-updates/ai-search-algorithm-changes-2024</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/case-studies/small-business-ai-search-wins</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://aisearchmastery.com/blog/how-to-guides/ai-search-for-solopreneurs</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Newsletter Archive - Lower Priority -->
+    <url>
+        <loc>https://aisearchmastery.com/newsletter/archive</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- API Endpoints (if needed for tools) -->
+    <url>
+        <loc>https://aisearchmastery.com/api/page-audit</loc>
+        <lastmod>2024-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+</urlset>
