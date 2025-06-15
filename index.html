@@ -251,13 +251,115 @@
                     
                     <div class="hero-visual">
                         <div class="hero-image-container">
-                            <img src="/images/hero/freecalchub-traffic-recovery.webp" 
-                                 alt="FreecalcHub traffic recovery dashboard showing 40% growth after AI search optimization"
-                                 width="600" 
-                                 height="400"
-                                 loading="eager"
-                                 fetchpriority="high"
-                                 class="hero-image">
+                            <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" class="hero-image" role="img" aria-labelledby="chart-title" aria-describedby="chart-desc">
+                                <title id="chart-title">FreecalcHub Traffic Recovery Chart</title>
+                                <desc id="chart-desc">Line chart showing FreecalcHub website traffic from March to September 2024. Traffic started at 100% baseline, dropped to 70% in April due to AI search changes, then recovered to 140% by September after implementing AI search optimization strategies.</desc>
+                                
+                                <!-- Background -->
+                                <rect width="600" height="400" fill="#f9fafb"/>
+                                
+                                <!-- Chart Background -->
+                                <rect x="80" y="60" width="480" height="280" fill="white" stroke="#e5e7eb" stroke-width="1" rx="8"/>
+                                
+                                <!-- Title -->
+                                <text x="300" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#1f2937">
+                                    FreecalcHub Traffic Recovery: Real Results
+                                </text>
+                                
+                                <!-- Y-Axis Labels -->
+                                <text x="70" y="95" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#6b7280">150%</text>
+                                <text x="70" y="135" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#6b7280">125%</text>
+                                <text x="70" y="175" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#6b7280">100%</text>
+                                <text x="70" y="215" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#6b7280">75%</text>
+                                <text x="70" y="255" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#6b7280">50%</text>
+                                
+                                <!-- Grid Lines -->
+                                <line x1="80" y1="90" x2="560" y2="90" stroke="#f3f4f6" stroke-width="1"/>
+                                <line x1="80" y1="130" x2="560" y2="130" stroke="#f3f4f6" stroke-width="1"/>
+                                <line x1="80" y1="170" x2="560" y2="170" stroke="#f3f4f6" stroke-width="1"/>
+                                <line x1="80" y1="210" x2="560" y2="210" stroke="#f3f4f6" stroke-width="1"/>
+                                <line x1="80" y1="250" x2="560" y2="250" stroke="#f3f4f6" stroke-width="1"/>
+                                
+                                <!-- Baseline Reference Line -->
+                                <line x1="80" y1="170" x2="560" y2="170" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="5,5" opacity="0.7"/>
+                                <text x="85" y="165" font-family="Inter, sans-serif" font-size="11" fill="#1e3a8a" font-weight="500">Baseline (100%)</text>
+                                
+                                <!-- Gradient Definition -->
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:0.3"/>
+                                        <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:0.1"/>
+                                    </linearGradient>
+                                </defs>
+                                
+                                <!-- Fill Area Under Curve -->
+                                <path d="M 120 170 L 200 218 L 280 210 L 360 194 L 440 154 L 520 130 L 560 106 L 560 340 L 120 340 Z" 
+                                      fill="url(#gradient)" opacity="0.2"/>
+                                
+                                <!-- Data Points and Line -->
+                                <!-- March 2024: 100% -->
+                                <circle cx="120" cy="170" r="5" fill="#1e3a8a"/>
+                                
+                                <!-- April 2024: 70% (30% drop) -->
+                                <circle cx="200" cy="218" r="5" fill="#ef4444"/>
+                                
+                                <!-- May 2024: 75% -->
+                                <circle cx="280" cy="210" r="5" fill="#f59e0b"/>
+                                
+                                <!-- June 2024: 85% -->
+                                <circle cx="360" cy="194" r="5" fill="#f59e0b"/>
+                                
+                                <!-- July 2024: 110% -->
+                                <circle cx="440" cy="154" r="5" fill="#10b981"/>
+                                
+                                <!-- August 2024: 125% -->
+                                <circle cx="520" cy="130" r="5" fill="#10b981"/>
+                                
+                                <!-- September 2024: 140% -->
+                                <circle cx="560" cy="106" r="6" fill="#0d9488" stroke="white" stroke-width="2"/>
+                                
+                                <!-- Connecting Line -->
+                                <path d="M 120 170 L 200 218 L 280 210 L 360 194 L 440 154 L 520 130 L 560 106" 
+                                      fill="none" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+                                
+                                <!-- X-Axis Labels -->
+                                <text x="120" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b7280">Mar 2024</text>
+                                <text x="200" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b7280">Apr 2024</text>
+                                <text x="280" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b7280">May 2024</text>
+                                <text x="360" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b7280">Jun 2024</text>
+                                <text x="440" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b7280">Jul 2024</text>
+                                <text x="520" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b7280">Aug 2024</text>
+                                <text x="560" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6b7280">Sep 2024</text>
+                                
+                                <!-- Key Annotations -->
+                                <!-- Crisis Point -->
+                                <text x="200" y="240" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#ef4444">
+                                    -30% Drop
+                                </text>
+                                <text x="200" y="252" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#ef4444">
+                                    AI Search Impact
+                                </text>
+                                
+                                <!-- Recovery Point -->
+                                <text x="560" y="90" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#0d9488">
+                                    +40% Growth
+                                </text>
+                                <text x="560" y="102" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#0d9488">
+                                    AI Optimized
+                                </text>
+                                
+                                <!-- Legend -->
+                                <rect x="400" y="75" width="140" height="45" fill="white" stroke="#e5e7eb" stroke-width="1" rx="4"/>
+                                <circle cx="410" cy="87" r="3" fill="#ef4444"/>
+                                <text x="420" y="91" font-family="Inter, sans-serif" font-size="10" fill="#374151">Traffic Decline</text>
+                                <circle cx="410" cy="102" r="3" fill="#10b981"/>
+                                <text x="420" y="106" font-family="Inter, sans-serif" font-size="10" fill="#374151">AI Search Recovery</text>
+                                
+                                <!-- Watermark -->
+                                <text x="300" y="385" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#9ca3af">
+                                    Real FreecalcHub Data - AI Search Mastery Case Study
+                                </text>
+                            </svg>
                         </div>
                         
                         <!-- Floating Elements for Visual Interest -->
