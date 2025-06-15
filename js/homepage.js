@@ -713,7 +713,9 @@ document.addEventListener('visibilitychange', () => {
     }
 });
 
-// Service Worker Registration for Performance (optional)
+// Service Worker Registration for Performance (commented out for now)
+// Uncomment when you want to add advanced caching capabilities
+/*
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
@@ -725,6 +727,7 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+*/
 
 // Export for module systems if needed
 if (typeof module !== 'undefined' && module.exports) {
