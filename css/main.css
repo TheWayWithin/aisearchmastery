@@ -1961,3 +1961,5 @@ a:hover {
         color: #000;
     }
 }
+/* Add at the end of your existing main.css */
+@import url('/css/blog.css');
