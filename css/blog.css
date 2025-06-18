@@ -157,7 +157,79 @@ nav[role="navigation"] {
     box-shadow: 0 4px 12px rgba(30, 58, 138, 0.35);
 }
 
-/* Search Integration */
+/* ========================================= */
+/* FORCE HEADER STYLING - IMPORTANT OVERRIDES */
+/* ========================================= */
+
+/* Use !important to ensure these styles apply */
+header {
+    border-bottom: 3px solid #E5E7EB !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    background: white !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+}
+
+/* Force navigation link styling */
+nav ul li a {
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important;
+}
+
+nav ul li a:hover {
+    background-color: rgba(30, 58, 138, 0.08) !important;
+    border-color: rgba(30, 58, 138, 0.2) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Force current page styling */
+nav ul li a[aria-current="page"] {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%) !important;
+    color: white !important;
+    border-color: #1E3A8A !important;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3) !important;
+}
+
+/* Force header container spacing */
+header .container {
+    padding: 20px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+/* Force better hero spacing */
+.blog-hero,
+.newsletter-hero {
+    margin-top: 0 !important;
+    padding-top: 80px !important;
+    border-top: 4px solid #F59E0B !important;
+}
+
+/* Add visual break between sections */
+.featured-content,
+.category-navigation,
+.recent-posts {
+    position: relative !important;
+}
+
+.featured-content::before,
+.category-navigation::before,
+.recent-posts::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 60px !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #1E3A8A, #0D9488) !important;
+    border-radius: 2px !important;
+}
 .header-search {
     position: relative;
     flex-shrink: 0;
