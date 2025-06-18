@@ -1,4 +1,159 @@
-/* AI Search Mastery Blog - CSS Integration */
+/* ========================================= */
+/* QUICK HEADER FIX - ADD TO TOP OF blog.css */
+/* ========================================= */
+
+/* Target all headers on blog and newsletter pages */
+body header,
+body .header,
+body [role="banner"] {
+    border-bottom: 3px solid #E5E7EB !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    background: white !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    padding: 0 !important;
+}
+
+/* Target header container */
+body header > div,
+body header .container,
+body .header > div {
+    padding: 24px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    gap: 2rem !important;
+}
+
+/* Target all navigation links */
+body nav ul li a,
+body nav a,
+body .nav-links a {
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    color: #374151 !important;
+}
+
+/* Hover effects for navigation */
+body nav ul li a:hover,
+body nav a:hover,
+body .nav-links a:hover {
+    background-color: rgba(30, 58, 138, 0.08) !important;
+    border-color: rgba(30, 58, 138, 0.2) !important;
+    color: #1E3A8A !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Current page styling - target multiple possible attributes */
+body nav ul li a[aria-current="page"],
+body nav a[aria-current="page"],
+body .nav-links a[aria-current="page"],
+body nav ul li a.current,
+body nav a.current,
+body .nav-links a.current {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%) !important;
+    color: white !important;
+    border-color: #1E3A8A !important;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3) !important;
+    font-weight: 600 !important;
+}
+
+/* Current page hover */
+body nav ul li a[aria-current="page"]:hover,
+body nav a[aria-current="page"]:hover,
+body .nav-links a[aria-current="page"]:hover,
+body nav ul li a.current:hover,
+body nav a.current:hover,
+body .nav-links a.current:hover {
+    background: linear-gradient(135deg, #3B82F6 0%, #1E3A8A 100%) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4) !important;
+}
+
+/* Better spacing for navigation lists */
+body nav ul,
+body .nav-links {
+    display: flex !important;
+    list-style: none !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+}
+
+body nav ul li,
+body .nav-links li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Target main content areas for better separation */
+body main,
+body .blog-hub,
+body .newsletter-page {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Hero sections get better spacing */
+body .blog-hero,
+body .newsletter-hero,
+body main > section:first-child {
+    padding-top: 80px !important;
+    border-top: 4px solid #F59E0B !important;
+    margin-top: 0 !important;
+}
+
+/* Add visual separation between sections */
+body .featured-content,
+body .category-navigation,
+body .recent-posts,
+body .newsletter-content-preview {
+    position: relative !important;
+}
+
+body .featured-content::before,
+body .category-navigation::before,
+body .recent-posts::before,
+body .newsletter-content-preview::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 60px !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #1E3A8A, #0D9488) !important;
+    border-radius: 2px !important;
+    z-index: 10 !important;
+}
+
+/* Search input improvements */
+body input[type="search"],
+body .blog-search-input,
+body .search-input {
+    border: 2px solid #E5E7EB !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    transition: border-color 0.2s ease !important;
+}
+
+body input[type="search"]:focus,
+body .blog-search-input:focus,
+body .search-input:focus {
+    outline: none !important;
+    border-color: #1E3A8A !important;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1) !important;
+}/* AI Search Mastery Blog - CSS Integration */
 /* ========================================= */
 /* Extends existing main.css with blog-specific styles */
 /* Maintains design consistency and performance */
