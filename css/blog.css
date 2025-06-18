@@ -40,16 +40,112 @@
 /* ========================================= */
 .blog-header {
     background: var(--color-white);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border);
     position: sticky;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    transition: box-shadow var(--blog-transition-base);
+    transition: all var(--blog-transition-base);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .blog-header.scrolled {
-    box-shadow: var(--blog-card-shadow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-bottom-color: var(--color-primary);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem var(--container-padding);
+    gap: 2rem;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: transform var(--blog-transition-base);
+}
+
+.logo a:hover {
+    transform: scale(1.02);
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    line-height: 1;
+}
+
+/* Navigation Styling */
+.primary-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: all var(--blog-transition-base);
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+    background-color: rgba(30, 58, 138, 0.05);
+    border-color: rgba(30, 58, 138, 0.1);
+}
+
+.nav-links a[aria-current="page"] {
+    color: var(--color-white);
+    background: var(--gradient-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+}
+
+.nav-links a[aria-current="page"]:hover {
+    color: var(--color-white);
+    background: var(--gradient-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
 }
 
 /* Search Integration */
@@ -69,10 +165,10 @@
     padding: 0.75rem 1rem;
     padding-right: 3rem;
     border: 2px solid var(--color-border);
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     font-size: 0.875rem;
     font-family: var(--font-family);
-    transition: border-color var(--blog-transition-base);
+    transition: all var(--blog-transition-base);
     background: var(--color-white);
 }
 
@@ -80,6 +176,7 @@
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+    background: var(--color-white);
 }
 
 .blog-search-input::placeholder {
@@ -93,8 +190,9 @@
     border: none;
     color: var(--color-text-light);
     cursor: pointer;
-    padding: 0.25rem;
-    transition: color var(--blog-transition-base);
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all var(--blog-transition-base);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,6 +200,7 @@
 
 .search-btn:hover {
     color: var(--color-primary);
+    background-color: rgba(30, 58, 138, 0.05);
 }
 
 .search-results {
@@ -110,9 +209,9 @@
     left: 0;
     right: 0;
     background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    box-shadow: var(--blog-card-shadow-xl);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     max-height: 400px;
     overflow-y: auto;
     z-index: 1001;
@@ -120,24 +219,31 @@
 }
 
 /* ========================================= */
-/* BLOG HUB STYLES */
+/* PAGE CONTENT SEPARATION */
 /* ========================================= */
-.blog-hub {
+
+/* Add visual separation between header and content */
+.blog-hub,
+.newsletter-page {
     background: var(--color-white);
     color: var(--color-text);
+    min-height: calc(100vh - 80px); /* Account for header height */
 }
 
-/* Hero Section */
-.blog-hero {
+/* Hero sections need clear separation from header */
+.blog-hero,
+.newsletter-hero {
     background: var(--gradient-primary);
     color: var(--color-white);
-    padding: var(--blog-section-spacing) 0;
-    text-align: center;
+    padding: 5rem 0 var(--blog-section-spacing);
     position: relative;
     overflow: hidden;
+    margin-top: 0;
+    border-top: 4px solid var(--blog-accent-yellow);
 }
 
-.blog-hero::before {
+.blog-hero::before,
+.newsletter-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -148,9 +254,35 @@
     z-index: 1;
 }
 
-.blog-hero .container {
+.blog-hero .container,
+.newsletter-hero .container {
     position: relative;
     z-index: 2;
+}
+
+/* Ensure content sections have proper spacing and separation */
+.featured-content,
+.category-navigation,
+.recent-posts,
+.newsletter-content-preview,
+.newsletter-sample,
+.newsletter-social-proof {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.featured-content::before,
+.category-navigation::before,
+.recent-posts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
 }
 
 .blog-hero h1 {
