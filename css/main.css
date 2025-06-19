@@ -4030,3 +4030,193 @@ a:hover {
     color: #1d4ed8 !important;
     transform: none !important;
 }
+/* HIGH-SPECIFICITY HEADER FIXES */
+/* Add this at the very end of main.css */
+
+/* Force the new layout with higher specificity */
+.site-header .header-container-full {
+    display: flex !important;
+    align-items: center !important;
+    padding: 1rem 2rem !important; /* Reduced padding to prevent overflow */
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    position: relative !important;
+    min-height: 80px !important;
+    gap: 1rem !important; /* Smaller gap to fit everything */
+    justify-content: space-between !important;
+}
+
+/* Logo positioning - smaller */
+.site-header .header-container-full .logo {
+    flex-shrink: 0 !important;
+    width: 250px !important; /* Reduced width */
+    margin-right: 0 !important;
+}
+
+/* Navigation centering - more compact */
+.site-header .header-container-full .primary-nav {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    max-width: 500px !important; /* Reduced max width */
+    margin: 0 auto !important;
+    position: static !important;
+    transform: none !important;
+}
+
+.site-header .primary-nav .nav-links {
+    display: flex !important;
+    list-style: none !important;
+    gap: 2rem !important; /* Reduced gap between items */
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.site-header .nav-links li {
+    margin: 0 !important;
+    position: relative !important;
+}
+
+/* CLEAN TEXT LINKS - Remove button styling */
+.site-header .nav-links a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+    padding: 0.75rem 1rem !important; /* Smaller padding */
+    color: #374151 !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important; /* Slightly smaller text */
+    transition: all 0.2s ease !important;
+    border-radius: 0.5rem !important;
+    white-space: nowrap !important;
+    border: none !important;
+    background: transparent !important; /* Remove any button background */
+    box-shadow: none !important; /* Remove any button shadows */
+}
+
+.site-header .nav-links a:hover {
+    background-color: rgba(59, 130, 246, 0.08) !important;
+    color: #1d4ed8 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: none !important; /* No shadow on hover */
+}
+
+/* Remove any button-like styling from current page */
+.site-header .nav-links a[aria-current="page"] {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    color: #1d4ed8 !important;
+    font-weight: 600 !important;
+    box-shadow: none !important; /* No shadow */
+    border: none !important; /* No border */
+}
+
+/* Search section - more compact */
+.site-header .header-search {
+    flex-shrink: 0 !important;
+    position: relative !important;
+    width: 220px !important; /* Reduced width */
+    margin: 0 0.5rem !important; /* Smaller margins */
+}
+
+.header-search .search-container {
+    position: relative !important;
+    width: 100% !important;
+}
+
+.header-search .blog-search-input {
+    width: 100% !important;
+    padding: 0.5rem 0.75rem 0.5rem 2.25rem !important; /* Smaller padding */
+    border: 1px solid #d1d5db !important;
+    border-radius: 0.5rem !important;
+    font-size: 0.85rem !important; /* Smaller text */
+    transition: all 0.2s ease !important;
+    background: #f9fafb !important;
+}
+
+.header-search .search-btn {
+    position: absolute !important;
+    left: 0.65rem !important; /* Adjusted position */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: none !important;
+    border: none !important;
+    color: #6b7280 !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    font-size: 0.8rem !important; /* Smaller icon */
+}
+
+/* CTA Button - ensure it fits */
+.site-header .header-cta {
+    flex-shrink: 0 !important;
+    width: 220px !important; /* Reduced width to fit */
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-left: 0 !important;
+}
+
+.site-header .header-cta .btn {
+    padding: 0.6rem 1.25rem !important; /* Smaller padding */
+    font-weight: 600 !important;
+    font-size: 0.85rem !important; /* Smaller text */
+    border-radius: 0.5rem !important;
+    transition: all 0.2s ease !important;
+    color: white !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    border: none !important;
+    overflow: visible !important; /* Ensure button is visible */
+}
+
+/* Dropdown fixes */
+.site-header .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+    padding: 0.5rem 0 !important;
+    list-style: none !important;
+    min-width: 200px !important; /* Slightly smaller */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-10px) !important;
+    transition: all 0.2s ease !important;
+    z-index: 50 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.site-header .nav-dropdown:hover .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.site-header .dropdown-menu li {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.site-header .dropdown-menu a {
+    display: block !important;
+    padding: 0.65rem 1rem !important; /* Smaller padding */
+    color: #374151 !important;
+    border-radius: 0.5rem !important;
+    margin: 0 0.5rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    font-size: 0.85rem !important; /* Smaller text */
+}
+
+.site-header .dropdown-menu a:hover {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    color: #1d4ed8 !important;
+    transform: none !important;
+}
