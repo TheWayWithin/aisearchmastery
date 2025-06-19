@@ -151,8 +151,8 @@
     
     <!-- Header -->
     <header class="site-header" role="banner">
-        <div class="container header-container">
-            <!-- ENHANCED LOGO - Notion-inspired positioning and styling -->
+        <div class="header-container-full">
+            <!-- LOGO - Far left like Matomo -->
             <div class="logo">
                 <a href="/" aria-label="AI Search Mastery Home">
                     <img src="/images/logos/logo-primary.png" 
@@ -164,15 +164,16 @@
                 </a>
             </div>
             
+            <!-- NAVIGATION - Centered like Matomo -->
             <nav class="primary-nav" role="navigation" aria-label="Main navigation">
                 <ul class="nav-links">
-                    
                     <li class="nav-dropdown">
                         <a href="/blog" aria-expanded="false" aria-haspopup="true">
                             Insights
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="/blog" role="menuitem">All Insights</a></li>
                             <li><a href="/blog/fundamentals" role="menuitem">AI Search Fundamentals</a></li>
                             <li><a href="/blog/case-studies" role="menuitem">Case Studies</a></li>
                             <li><a href="/blog/how-to-guides" role="menuitem">How-To Guides</a></li>
@@ -180,12 +181,33 @@
                         </ul>
                     </li>
                     <li><a href="/newsletter">Newsletter</a></li>
-                    <li><a href="/free-page-audit">Free Assessment</a></li>
-                    <li><a href="/about">About Jamie</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li class="nav-dropdown">
+                        <a href="/free-page-audit" aria-expanded="false" aria-haspopup="true">
+                            Resources
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/free-page-audit" role="menuitem">Free Page Assessment</a></li>
+                            <li><a href="/blog/tools-resources" role="menuitem">Tools & Resources</a></li>
+                            <li><a href="/templates" role="menuitem">Templates</a></li>
+                            <li><a href="/archive" role="menuitem">Archive</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="/about" aria-expanded="false" aria-haspopup="true">
+                            About
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/about" role="menuitem">About Jamie</a></li>
+                            <li><a href="/contact" role="menuitem">Contact</a></li>
+                            <li><a href="/privacy" role="menuitem">Privacy Policy</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             
+            <!-- CTA BUTTON - Far right like Matomo -->
             <div class="header-cta">
                 <a href="/newsletter" class="btn btn-primary">Join AI Search Weekly</a>
             </div>
