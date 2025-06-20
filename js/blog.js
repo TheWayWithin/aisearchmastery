@@ -77,61 +77,66 @@ class AISearchMasteryBlog {
     // MOBILE MENU FUNCTIONALITY
     // ============================================
     setupMobileMenu() {
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const primaryNav = document.querySelector('.primary-nav');
-        const body = document.body;
-        
-        if (!mobileMenuBtn || !primaryNav) return;
-        
-        // Mobile menu toggle
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            this.toggleMobileMenu();
-        });
-        
-        // Close menu when clicking nav links
-        const navLinks = primaryNav.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (this.mobileMenuOpen) {
-                    this.closeMobileMenu();
-                }
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (this.mobileMenuOpen && !e.target.closest('.blog-header')) {
-                this.closeMobileMenu();
-            }
-        });
-        
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768 && this.mobileMenuOpen) {
-                this.closeMobileMenu();
-            }
-        });
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const primaryNav = document.querySelector('.primary-nav');
+    const body = document.body;
+    
+    if (!mobileMenuBtn || !primaryNav) {
+        console.log('Mobile menu elements not found');
+        return;
     }
     
-    toggleMobileMenu() {
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const primaryNav = document.querySelector('.primary-nav');
-        const body = document.body;
+    // Mobile menu toggle
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         
-        this.mobileMenuOpen = !this.mobileMenuOpen;
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        const newState = !isExpanded;
         
-        mobileMenuBtn.setAttribute('aria-expanded', this.mobileMenuOpen);
-        primaryNav.classList.toggle('mobile-open', this.mobileMenuOpen);
-        body.classList.toggle('mobile-menu-open', this.mobileMenuOpen);
+        mobileMenuBtn.setAttribute('aria-expanded', newState.toString());
+        primaryNav.classList.toggle('mobile-open', newState);
+        body.classList.toggle('mobile-menu-open', newState);
         
-        // Track mobile menu usage
-        if (this.mobileMenuOpen && typeof gtag !== 'undefined') {
-            gtag('event', 'mobile_menu_open', {
-                event_category: 'navigation',
-                event_label: 'blog_mobile_menu'
-            });
+        console.log('Mobile menu toggled:', newState);
+    });
+    
+    // Close menu when clicking nav links
+    const navLinks = primaryNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('mobile-open');
+            body.classList.remove('mobile-menu-open');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.site-header')) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('mobile-open');
+            body.classList.remove('mobile-menu-open');
         }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('mobile-open');
+            body.classList.remove('mobile-menu-open');
+        }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('mobile-open');
+            body.classList.remove('mobile-menu-open');
+        }
+    });
     }
     
     closeMobileMenu() {
