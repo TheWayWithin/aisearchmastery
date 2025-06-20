@@ -1914,3 +1914,191 @@ a:hover {
         color: #000;
     }
 }
+/* MOBILE NAVIGATION FIXES */
+/* Add to end of main.css - replaces existing mobile styles */
+
+/* Mobile Navigation - Better Breakpoints */
+@media (max-width: 950px) {
+    .site-header .header-container-full {
+        padding: 1rem 1.5rem !important;
+        gap: 0.5rem !important;
+    }
+    
+    .site-header .logo {
+        width: auto !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .site-header .nav-links {
+        gap: 1rem !important;
+    }
+    
+    .site-header .nav-links a {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .site-header .header-search {
+        width: 180px !important;
+    }
+    
+    .site-header .header-cta {
+        width: auto !important;
+    }
+    
+    .site-header .header-cta .btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 850px) {
+    /* Hide search on smaller tablets */
+    .site-header .header-search {
+        display: none !important;
+    }
+    
+    .site-header .nav-links {
+        gap: 0.5rem !important;
+    }
+    
+    .site-header .nav-links a {
+        padding: 0.5rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Full mobile menu activation */
+    .site-header .header-container-full {
+        padding: 1rem !important;
+        justify-content: space-between !important;
+        gap: 1rem !important;
+    }
+    
+    .site-header .logo {
+        margin-right: 0 !important;
+        width: auto !important;
+        flex: 0 0 auto !important;
+    }
+    
+    .site-header .logo-text {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Hide desktop navigation */
+    .site-header .primary-nav {
+        position: fixed !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: white !important;
+        border-top: 1px solid #e5e7eb !important;
+        padding: 2rem !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transform: translateY(-10px) !important;
+        transition: all 0.3s ease !important;
+        z-index: 999 !important;
+        max-width: none !important;
+        margin: 0 !important;
+        flex: none !important;
+        justify-content: flex-start !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Mobile menu open state */
+    .site-header .primary-nav.mobile-open {
+        top: 100% !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+    }
+    
+    .site-header .nav-links {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+    }
+    
+    .site-header .nav-links li {
+        width: 100% !important;
+    }
+    
+    .site-header .nav-links a {
+        padding: 1rem !important;
+        justify-content: space-between !important;
+        background-color: rgba(0, 0, 0, 0.02) !important;
+        border-radius: 0.5rem !important;
+        width: 100% !important;
+        text-align: left !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+    }
+    
+    .site-header .nav-links a:hover {
+        background-color: rgba(59, 130, 246, 0.1) !important;
+    }
+    
+    /* Mobile dropdown menus */
+    .site-header .dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: rgba(0, 0, 0, 0.02) !important;
+        margin-top: 0.5rem !important;
+        border-radius: 0.5rem !important;
+        padding: 0.5rem !important;
+    }
+    
+    .site-header .dropdown-menu a {
+        padding: 0.75rem 1.25rem !important;
+        margin: 0 !important;
+        background: none !important;
+        font-size: 0.9rem !important;
+        opacity: 0.8 !important;
+    }
+    
+    .site-header .dropdown-menu a:hover {
+        background-color: rgba(59, 130, 246, 0.1) !important;
+        opacity: 1 !important;
+    }
+    
+    /* Show mobile menu button */
+    .site-header .mobile-menu-btn {
+        display: flex !important;
+        order: 3 !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Hamburger animation */
+    .site-header .mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px) !important;
+    }
+    
+    .site-header .mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(2) {
+        opacity: 0 !important;
+    }
+    
+    .site-header .mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px) !important;
+    }
+    
+    /* Hide desktop CTA and search */
+    .site-header .header-cta,
+    .site-header .header-search {
+        display: none !important;
+    }
+    
+    /* Prevent body scroll when menu is open */
+    body.mobile-menu-open {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
+    }
+}
