@@ -75,47 +75,67 @@ class AISearchMasteryHomepage {
     
     // Mobile Menu Functionality
     setupMobileMenu() {
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const primaryNav = document.querySelector('.primary-nav');
-        const body = document.body;
-        
-        if (mobileMenuBtn && primaryNav) {
-            mobileMenuBtn.addEventListener('click', () => {
-                const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-                
-                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-                primaryNav.classList.toggle('mobile-open');
-                body.classList.toggle('mobile-menu-open');
-            });
-        }
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.header-container')) {
-                mobileMenuBtn?.setAttribute('aria-expanded', 'false');
-                primaryNav?.classList.remove('mobile-open');
-                body.classList.remove('mobile-menu-open');
-            }
-        });
-        
-        // Close mobile menu on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                mobileMenuBtn?.setAttribute('aria-expanded', 'false');
-                primaryNav?.classList.remove('mobile-open');
-                body.classList.remove('mobile-menu-open');
-            }
-        });
-        
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                mobileMenuBtn?.setAttribute('aria-expanded', 'false');
-                primaryNav?.classList.remove('mobile-open');
-                body.classList.remove('mobile-menu-open');
-            }
-        });
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const primaryNav = document.querySelector('.primary-nav');
+    const body = document.body;
+    
+    if (!mobileMenuBtn || !primaryNav) {
+        console.log('Mobile menu elements not found');
+        return;
     }
+    
+    // Mobile menu toggle
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        const newState = !isExpanded;
+        
+        mobileMenuBtn.setAttribute('aria-expanded', newState.toString());
+        primaryNav.classList.toggle('mobile-open', newState);
+        body.classList.toggle('mobile-menu-open', newState);
+        
+        console.log('Mobile menu toggled:', newState);
+    });
+    
+    // Close menu when clicking nav links
+    const navLinks = primaryNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('mobile-open');
+            body.classList.remove('mobile-menu-open');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.site-header')) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('mobile-open');
+            body.classList.remove('mobile-menu-open');
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('mobile-open');
+            body.classList.remove('mobile-menu-open');
+        }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('mobile-open');
+            body.classList.remove('mobile-menu-open');
+        }
+    });
+}
     
     // Smooth Scrolling for Anchor Links
     setupSmoothScrolling() {
