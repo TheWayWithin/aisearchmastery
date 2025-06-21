@@ -2024,6 +2024,33 @@ a:hover {
     }
 }
 
+/* Blog page specific navigation fixes */
+body.blog-page .header-cta {
+    display: block;
+}
+
+@media (max-width: 1300px) {
+    body.blog-page .header-cta {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    body.blog-page .header-search {
+        margin: 0 1rem;
+    }
+    
+    body.blog-page .search-container {
+        width: 180px;
+    }
+}
+
+@media (max-width: 950px) {
+    body.blog-page .header-search {
+        display: none !important;
+    }
+}
+
 /* ========================================= */
 /* END OF NAVIGATION FIX */
 /* ========================================= */
