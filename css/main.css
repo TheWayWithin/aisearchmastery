@@ -2054,3 +2054,172 @@ body.blog-page .header-cta {
 /* ========================================= */
 /* END OF NAVIGATION FIX */
 /* ========================================= */
+
+/* ========================================= */
+/* CATEGORY ICON STYLING - Add to end of main.css */
+/* ========================================= */
+
+/* Category Section Icons - Blog Page */
+.blog-page .category-section {
+    position: relative;
+    padding-left: 60px; /* Make room for icon */
+    margin-bottom: 3rem;
+}
+
+.blog-page .category-section > i:first-child,
+.blog-page .category-section > .category-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+/* Specific icon colors and backgrounds */
+/* Fundamentals - Graduation Cap */
+.blog-page .category-section:has(h3 a[href*="fundamentals"]) > i:first-child,
+.fundamentals-icon {
+    background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%);
+    color: #4338CA;
+}
+
+.blog-page .category-section:has(h3 a[href*="fundamentals"]):hover > i:first-child,
+.fundamentals-icon:hover {
+    background: linear-gradient(135deg, #C7D2FE 0%, #A5B4FC 100%);
+    transform: scale(1.1);
+}
+
+/* Case Studies - Chart Icon */
+.blog-page .category-section:has(h3 a[href*="case-studies"]) > i:first-child,
+.case-studies-icon {
+    background: linear-gradient(135deg, #CCFBF1 0%, #99F6E4 100%);
+    color: #0D9488;
+}
+
+.blog-page .category-section:has(h3 a[href*="case-studies"]):hover > i:first-child,
+.case-studies-icon:hover {
+    background: linear-gradient(135deg, #99F6E4 0%, #5EEAD4 100%);
+    transform: scale(1.1);
+}
+
+/* How-To Guides - Tools Icon */
+.blog-page .category-section:has(h3 a[href*="how-to-guides"]) > i:first-child,
+.how-to-icon {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    color: #D97706;
+}
+
+.blog-page .category-section:has(h3 a[href*="how-to-guides"]):hover > i:first-child,
+.how-to-icon:hover {
+    background: linear-gradient(135deg, #FDE68A 0%, #FCD34D 100%);
+    transform: scale(1.1);
+}
+
+/* Industry Updates - Newspaper Icon */
+.blog-page .category-section:has(h3 a[href*="industry-updates"]) > i:first-child,
+.industry-icon {
+    background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+    color: #059669;
+}
+
+.blog-page .category-section:has(h3 a[href*="industry-updates"]):hover > i:first-child,
+.industry-icon:hover {
+    background: linear-gradient(135deg, #A7F3D0 0%, #6EE7B7 100%);
+    transform: scale(1.1);
+}
+
+/* Tools & Resources - Toolbox Icon */
+.blog-page .category-section:has(h3 a[href*="tools-resources"]) > i:first-child,
+.tools-icon {
+    background: linear-gradient(135deg, #FECACA 0%, #FCA5A5 100%);
+    color: #DC2626;
+}
+
+.blog-page .category-section:has(h3 a[href*="tools-resources"]):hover > i:first-child,
+.tools-icon:hover {
+    background: linear-gradient(135deg, #FCA5A5 0%, #F87171 100%);
+    transform: scale(1.1);
+}
+
+/* Alternative simpler approach if :has() not supported */
+/* You can add classes directly to the HTML instead */
+.category-icon-fundamentals {
+    background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%);
+    color: #4338CA;
+}
+
+.category-icon-case-studies {
+    background: linear-gradient(135deg, #CCFBF1 0%, #99F6E4 100%);
+    color: #0D9488;
+}
+
+.category-icon-how-to {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    color: #D97706;
+}
+
+.category-icon-industry {
+    background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+    color: #059669;
+}
+
+.category-icon-tools {
+    background: linear-gradient(135deg, #FECACA 0%, #FCA5A5 100%);
+    color: #DC2626;
+}
+
+/* Category page header icons */
+.category-header .category-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 40px;
+}
+
+/* Icon improvements for better visual hierarchy */
+.blog-page h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-page .category-section p {
+    margin-left: 0;
+    color: var(--text-secondary);
+}
+
+/* Article count and metadata styling */
+.blog-page .category-section .article-count {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .blog-page .category-section {
+        padding-left: 50px;
+    }
+    
+    .blog-page .category-section > i:first-child,
+    .blog-page .category-section > .category-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+}
+
+/* ========================================= */
+/* END OF CATEGORY ICON STYLING */
+/* ========================================= */
