@@ -1915,3 +1915,115 @@ a:hover {
     }
 }
 
+/* ========================================= */
+/* RESPONSIVE NAVIGATION FIX - ADD TO END OF main.css */
+/* ========================================= */
+/* This fixes the overlapping navigation issue */
+
+/* Remove any existing media queries between 768px and 1200px for the header */
+/* Then add these: */
+
+/* Hide CTA button at 1024px to prevent overlap with About */
+@media (max-width: 1024px) {
+    .header-cta {
+        display: none !important;
+    }
+    
+    .header-container-full {
+        padding: 0 2rem;
+    }
+    
+    /* If blog page, keep search visible */
+    .header-search {
+        margin: 0 1.5rem;
+    }
+    
+    .search-container {
+        width: 220px;
+    }
+}
+
+/* Further compress navigation at 950px */
+@media (max-width: 950px) and (min-width: 769px) {
+    .header-container-full {
+        padding: 0 1.5rem;
+    }
+    
+    .logo {
+        margin-right: 2rem;
+    }
+    
+    .logo-text {
+        font-size: 1.15rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Tighten dropdown spacing */
+    .nav-dropdown .fa-chevron-down {
+        font-size: 0.7rem;
+        margin-left: 0.25rem;
+    }
+    
+    /* For blog page search */
+    .header-search {
+        margin: 0 1rem;
+        display: none; /* Hide search on tablets */
+    }
+}
+
+/* Additional compression at 850px if needed */
+@media (max-width: 850px) and (min-width: 769px) {
+    .nav-links {
+        gap: 0.75rem;
+    }
+    
+    .nav-links a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .logo {
+        margin-right: 1.5rem;
+    }
+}
+
+/* Ensure mobile menu works properly at 768px and below */
+@media (max-width: 768px) {
+    /* Your existing mobile styles should work here */
+    /* Just ensure the mobile menu button is visible */
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+    
+    .primary-nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--gray-200);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 998;
+    }
+    
+    .primary-nav.mobile-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* ========================================= */
+/* END OF NAVIGATION FIX */
+/* ========================================= */
