@@ -2029,7 +2029,7 @@ body.blog-page .header-cta {
     display: block;
 }
 
-@media (max-width: 1384px) {
+@media (max-width: 1467px) {
     body.blog-page .header-cta {
         display: none !important;
     }
