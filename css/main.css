@@ -2035,7 +2035,7 @@ body.blog-page .header-cta {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1320px) {
     body.blog-page .header-search {
         margin: 0 1rem;
     }
