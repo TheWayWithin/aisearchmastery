@@ -2071,19 +2071,19 @@ body.blog-page .header-cta {
     color: #4338CA !important;
 }
 
-.fa-chart-line, .fa-chart-bar {
+.fa-chart-line, .fa-chart-bar, .fa-arrow-trend-up {
     color: #0D9488 !important;
 }
 
-.fa-tools, .fa-wrench, .fa-hammer {
+.fa-tools, .fa-wrench, .fa-hammer, .fa-screwdriver-wrench {
     color: #D97706 !important;
 }
 
-.fa-newspaper, .fa-bell {
+.fa-newspaper, .fa-bell, .fa-rss {
     color: #059669 !important;
 }
 
-.fa-toolbox, .fa-cog, .fa-cogs {
+.fa-toolbox, .fa-cog, .fa-cogs, .fa-wrench {
     color: #DC2626 !important;
 }
 
