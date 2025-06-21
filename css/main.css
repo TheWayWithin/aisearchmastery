@@ -2045,7 +2045,7 @@ body.blog-page .header-cta {
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1026px) {
     body.blog-page .header-search {
         display: none !important;
     }
