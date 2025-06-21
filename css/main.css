@@ -1923,8 +1923,8 @@ a:hover {
 /* Remove any existing media queries between 768px and 1200px for the header */
 /* Then add these: */
 
-/* Hide CTA button at 1084px to prevent overlap with About */
-@media (max-width: 1084px) {
+/* Hide CTA button at 1184px to prevent overlap with About */
+@media (max-width: 1184px) {
     .header-cta {
         display: none !important;
     }
