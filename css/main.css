@@ -2071,11 +2071,11 @@ body.blog-page .header-cta {
     color: #4338CA !important;
 }
 
-.fa-chart-line, .fa-chart-bar, .fa-arrow-trend-up {
+.fa-chart-line, .fa-chart-bar, .fa-arrow-trend-up, .fa-chart-simple {
     color: #0D9488 !important;
 }
 
-.fa-tools, .fa-wrench, .fa-hammer, .fa-screwdriver-wrench {
+.fa-tools, .fa-hammer, .fa-screwdriver-wrench {
     color: #D97706 !important;
 }
 
@@ -2085,6 +2085,27 @@ body.blog-page .header-cta {
 
 .fa-toolbox, .fa-cog, .fa-cogs, .fa-wrench {
     color: #DC2626 !important;
+}
+
+/* Newsletter page specific icons */
+.fa-users, .fa-user-friends, .fa-people-group {
+    color: #7C3AED !important; /* Purple for community */
+}
+
+.fa-lightbulb, .fa-bulb {
+    color: #F59E0B !important; /* Amber for ideas */
+}
+
+.fa-flask, .fa-vial {
+    color: #06B6D4 !important; /* Cyan for testing */
+}
+
+.fa-triangle-exclamation, .fa-exclamation-triangle, .fa-warning {
+    color: #EF4444 !important; /* Red for alerts */
+}
+
+.fa-question-circle, .fa-circle-question {
+    color: #8B5CF6 !important; /* Violet for Q&A */
 }
 
 /* Add colored background to icons that are inside .category-icon divs */
