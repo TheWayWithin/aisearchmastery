@@ -500,7 +500,17 @@
             <!-- Navigation - Centered -->
             <nav class="primary-nav" role="navigation" aria-label="Main navigation">
                 <ul class="nav-links">
-                    <li><a href="/mastery-ai-framework">MASTERY-AI Framework</a></li>
+                    <li class="nav-dropdown">
+                        <a href="/mastery-ai-framework" aria-expanded="false" aria-haspopup="true">
+                            MASTERY-AI
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/mastery-ai-framework" role="menuitem">MASTERY-AI Framework</a></li>
+                            <li><a href="/aimpactscanner" role="menuitem">AImpactScanner</a></li>
+                            <li><a href="/implementation-guide" role="menuitem">Implementation Guide</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-dropdown">
                         <a href="/blog" aria-expanded="false" aria-haspopup="true">
                             Insights
@@ -514,15 +524,25 @@
                             <li><a href="/blog/industry-updates" role="menuitem">Industry Updates</a></li>
                         </ul>
                     </li>
-                    <li><a href="/aimpactscanner">AImpactScanner</a></li>
-                    <li><a href="/newsletter">Newsletter</a></li>
+                    <li class="nav-dropdown">
+                        <a href="/resources" aria-expanded="false" aria-haspopup="true">
+                            Resources
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/newsletter" role="menuitem">Newsletter</a></li>
+                            <li><a href="/free-page-assessment" role="menuitem">Free Page Assessment</a></li>
+                            <li><a href="/templates" role="menuitem">Templates</a></li>
+                            <li><a href="/tools-resources" role="menuitem">Tools & Resources</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-dropdown">
                         <a href="/about" aria-expanded="false" aria-haspopup="true">
                             About
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/about" role="menuitem">About</a></li>
+                            <li><a href="/about" role="menuitem">About AI Search Mastery</a></li>
                             <li><a href="/contact" role="menuitem">Contact</a></li>
                             <li><a href="/privacy" role="menuitem">Privacy Policy</a></li>
                         </ul>
