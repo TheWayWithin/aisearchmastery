@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>AI Search How-To Guides - Step-by-Step Implementation | AI Search Mastery</title>
+    <meta name="description" content="Step-by-step instructions for implementing AI search strategies on your own website. Actionable guides you can follow immediately.">
+    <meta name="keywords" content="AI search how to, AI SEO guide, ChatGPT optimization tutorial, Perplexity SEO steps, AI search implementation">
+    <meta name="author" content="Jamie Watters">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aisearchmastery.com/blog/how-to-guides/">
+    <meta property="og:title" content="AI Search How-To Guides - Step-by-Step Implementation">
+    <meta property="og:description" content="Step-by-step instructions for implementing AI search strategies on your own website.">
+    <meta property="og:image" content="https://aisearchmastery.com/images/og/how-to-guides-social-share.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aisearchmastery.com/blog/how-to-guides/">
+    <meta property="twitter:title" content="AI Search How-To Guides - Step-by-Step Implementation">
+    <meta property="twitter:description" content="Step-by-step instructions for implementing AI search strategies on your own website.">
+    <meta property="twitter:image" content="https://aisearchmastery.com/images/og/how-to-guides-social-share.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aisearchmastery.com/blog/how-to-guides/">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PMQG5CBD');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body class="blog-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMQG5CBD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="header-container-full">
+            <!-- Logo - Far Left -->
+            <div class="logo">
+                <a href="/" aria-label="AI Search Mastery - Go to Homepage">
+                    <img src="/images/logos/logo-primary.png" 
+                         alt="AI Search Mastery Logo" 
+                         width="48" 
+                         height="48"
+                         class="logo-image">
+                    <span class="logo-text">AI Search Mastery</span>
+                </a>
+            </div>
+            
+            <!-- Navigation - Centered -->
+            <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li class="nav-dropdown">
+                        <a href="/blog" aria-expanded="false" aria-haspopup="true">
+                            Insights
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/blog" role="menuitem">All Insights</a></li>
+                            <li><a href="/blog/fundamentals" role="menuitem">AI Search Fundamentals</a></li>
+                            <li><a href="/blog/case-studies" role="menuitem">Case Studies</a></li>
+                            <li><a href="/blog/how-to-guides" role="menuitem" aria-current="page">How-To Guides</a></li>
+                            <li><a href="/blog/industry-updates" role="menuitem">Industry Updates</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/newsletter">Newsletter</a></li>
+                    <li class="nav-dropdown">
+                        <a href="/free-page-audit" aria-expanded="false" aria-haspopup="true">
+                            Resources
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/free-page-audit" role="menuitem">Free Page Assessment</a></li>
+                            <li><a href="/blog/tools-resources" role="menuitem">Tools & Resources</a></li>
+                            <li><a href="/templates" role="menuitem">Templates</a></li>
+                            <li><a href="/archive" role="menuitem">Archive</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="/about" aria-expanded="false" aria-haspopup="true">
+                            About
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/about" role="menuitem">About Jamie</a></li>
+                            <li><a href="/contact" role="menuitem">Contact</a></li>
+                            <li><a href="/privacy" role="menuitem">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Search Box -->
+            <div class="header-search">
+                <form class="search-container" role="search" action="/blog/search" method="get">
+                    <input type="search" 
+                           class="search-input" 
+                           placeholder="Search insights..." 
+                           aria-label="Search blog posts"
+                           name="q">
+                    <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                </form>
+            </div>
+            
+            <!-- CTA Button - Far Right -->
+            <div class="header-cta">
+                <a href="/newsletter" class="btn btn-primary">Join AI Search Weekly</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="blog-category-page" role="main">
+        <div class="container">
+            <!-- Category Header -->
+            <section class="category-header">
+                <div class="category-icon how-to">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h1>How-To Guides</h1>
+                <p class="category-description">
+                    Step-by-step instructions for implementing AI search strategies on your own website. 
+                    Each guide includes screenshots, code examples, and actionable checklists you can follow immediately.
+                </p>
+                <div class="category-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span class="stat-number">15</span> articles
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-tasks"></i>
+                        <span class="stat-label">Actionable</span>
+                    </span>
+                </div>
+            </section>
+            
+            <!-- Articles Grid -->
+            <section class="articles-grid">
+                <h2 class="sr-only">How-To Guide Articles</h2>
+                
+                <!-- Article Card Example 1 -->
+                <article class="article-card">
+                    <div class="article-meta">
+                        <time datetime="2024-12-18">December 18, 2024</time>
+                        <span class="reading-time">15 min read</span>
+                        <span class="difficulty-badge">Beginner</span>
+                    </div>
+                    <h3><a href="/blog/how-to-guides/optimize-for-chatgpt-step-by-step">How to Optimize Your Site for ChatGPT: Complete Guide</a></h3>
+                    <p>Follow this 10-step process to make your content more likely to be cited by ChatGPT. Includes templates and real examples.</p>
+                    <div class="guide-features">
+                        <span class="feature-item">
+                            <i class="fas fa-check"></i>
+                            10 Steps
+                        </span>
+                        <span class="feature-item">
+                            <i class="fas fa-code"></i>
+                            Code Examples
+                        </span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">ChatGPT</span>
+                        <span class="tag">Step-by-Step</span>
+                    </div>
+                </article>
+                
+                <!-- Article Card Example 2 -->
+                <article class="article-card">
+                    <div class="article-meta">
+                        <time datetime="2024-12-15">December 15, 2024</time>
+                        <span class="reading-time">20 min read</span>
+                        <span class="difficulty-badge">Intermediate</span>
+                    </div>
+                    <h3><a href="/blog/how-to-guides/implement-schema-markup-ai-search">Implementing Schema Markup for AI Search Engines</a></h3>
+                    <p>Complete tutorial on adding structured data that AI search engines understand. Copy-paste code included for all page types.</p>
+                    <div class="guide-features">
+                        <span class="feature-item">
+                            <i class="fas fa-copy"></i>
+                            Copy-Paste Code
+                        </span>
+                        <span class="feature-item">
+                            <i class="fas fa-image"></i>
+                            Screenshots
+                        </span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">Schema</span>
+                        <span class="tag">Technical SEO</span>
+                    </div>
+                </article>
+                
+                <!-- Article Card Example 3 -->
+                <article class="article-card">
+                    <div class="article-meta">
+                        <time datetime="2024-12-12">December 12, 2024</time>
+                        <span class="reading-time">10 min read</span>
+                        <span class="difficulty-badge">Beginner</span>
+                    </div>
+                    <h3><a href="/blog/how-to-guides/write-ai-friendly-content">How to Write AI-Friendly Content in 5 Steps</a></h3>
+                    <p>Transform your existing content to be more discoverable by AI search engines. No technical knowledge required.</p>
+                    <div class="guide-features">
+                        <span class="feature-item">
+                            <i class="fas fa-list-ol"></i>
+                            5 Simple Steps
+                        </span>
+                        <span class="feature-item">
+                            <i class="fas fa-pencil"></i>
+                            Writing Tips
+                        </span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">Content</span>
+                        <span class="tag">Non-Technical</span>
+                    </div>
+                </article>
+                
+                <!-- Article Card Example 4 -->
+                <article class="article-card">
+                    <div class="article-meta">
+                        <time datetime="2024-12-08">December 8, 2024</time>
+                        <span class="reading-time">25 min read</span>
+                        <span class="difficulty-badge">Advanced</span>
+                    </div>
+                    <h3><a href="/blog/how-to-guides/build-ai-search-dashboard">Build Your Own AI Search Performance Dashboard</a></h3>
+                    <p>Create a custom dashboard to track AI search citations and visibility. Includes Google Sheets template and API setup.</p>
+                    <div class="guide-features">
+                        <span class="feature-item">
+                            <i class="fas fa-download"></i>
+                            Free Template
+                        </span>
+                        <span class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            Analytics Setup
+                        </span>
+                    </div>
+                    <div class="article-tags">
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Advanced</span>
+                    </div>
+                </article>
+                
+                <!-- Add more article cards as needed -->
+            </section>
+            
+            <!-- Newsletter CTA -->
+            <section class="category-newsletter-cta">
+                <div class="newsletter-box">
+                    <h2>Get Step-by-Step AI Search Guides</h2>
+                    <p>Join 2,000+ business owners getting actionable tutorials and proven strategies every week.</p>
+                    <a href="/newsletter" class="btn btn-primary btn-large">Join AI Search Weekly</a>
+                    <p class="disclaimer">No spam, ever. Unsubscribe anytime.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/logos/logo-primary.png" alt="AI Search Mastery" width="40" height="40">
+                        <span class="footer-logo-text">AI Search Mastery</span>
+                    </div>
+                    <p class="footer-description">
+                        Real strategies from the FreecalcHub transformation journey. 
+                        Learn to thrive in the AI search era.
+                    </p>
+                    <div class="footer-contact">
+                        <a href="mailto:support@aisearchmastery.com">support@aisearchmastery.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Insights</h3>
+                    <ul class="footer-links">
+                        <li><a href="/blog/fundamentals">AI Search Fundamentals</a></li>
+                        <li><a href="/blog/case-studies">Case Studies</a></li>
+                        <li><a href="/blog/how-to-guides">How-To Guides</a></li>
+                        <li><a href="/blog/industry-updates">Industry Updates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="/free-page-audit">Free Page Assessment</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                        <li><a href="/templates">Templates</a></li>
+                        <li><a href="/archive">Archive</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about">About Jamie</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 AI Search Mastery. All rights reserved.
+                </p>
+                <div class="footer-legal">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu JavaScript (if not in external file) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const primaryNav = document.querySelector('.primary-nav');
+        
+        if (mobileMenuBtn && primaryNav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                const isOpen = primaryNav.classList.contains('mobile-open');
+                primaryNav.classList.toggle('mobile-open');
+                this.setAttribute('aria-expanded', !isOpen);
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    primaryNav.classList.remove('mobile-open');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>
