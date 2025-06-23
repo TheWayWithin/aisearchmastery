@@ -1504,5 +1504,36 @@
     
     <!-- Blog JavaScript -->
     <script src="/js/blog.js" defer></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const primaryNav = document.querySelector('.primary-nav');
+    const body = document.body;
+    
+    if (mobileMenuBtn && primaryNav) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = primaryNav.classList.contains('mobile-open');
+            primaryNav.classList.toggle('mobile-open');
+            body.classList.toggle('mobile-menu-open');
+            this.setAttribute('aria-expanded', !isOpen);
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.site-header') && !e.target.closest('.primary-nav')) {
+                primaryNav.classList.remove('mobile-open');
+                body.classList.remove('mobile-menu-open');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Prevent clicks inside nav from closing it
+        primaryNav.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+});
+</script>
 </body>
 </html>
