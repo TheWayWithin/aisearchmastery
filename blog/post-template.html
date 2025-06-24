@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!-- SEO Meta Tags -->
-    <title>[POST TITLE] | AI Search Mastery</title>
-    <meta name="description" content="[META DESCRIPTION - 155 characters max]">
-    <meta name="keywords" content="[KEYWORDS, comma, separated]">
+    <title>[POST TITLE] | MASTERY-AI Framework Insights | AI Search Mastery</title>
+    <meta name="description" content="[META DESCRIPTION - 155 characters max focusing on MASTERY-AI Framework application]">
+    <meta name="keywords" content="MASTERY-AI Framework, [SPECIFIC PILLAR], [KEYWORDS], 132 atomic factors, AI search optimization">
     <meta name="author" content="Jamie Watters">
     <meta name="publish-date" content="[YYYY-MM-DD]">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -19,7 +19,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://aisearchmastery.com/blog/[CATEGORY-SLUG]/[POST-SLUG]/">
-    <meta property="og:title" content="[POST TITLE]">
+    <meta property="og:title" content="[POST TITLE] | MASTERY-AI Framework">
     <meta property="og:description" content="[META DESCRIPTION]">
     <meta property="og:image" content="https://aisearchmastery.com/images/blog/[POST-IMAGE].jpg">
     <meta property="og:site_name" content="AI Search Mastery">
@@ -31,7 +31,7 @@
     <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://aisearchmastery.com/blog/[CATEGORY-SLUG]/[POST-SLUG]/">
-    <meta property="twitter:title" content="[POST TITLE]">
+    <meta property="twitter:title" content="[POST TITLE] | MASTERY-AI Framework">
     <meta property="twitter:description" content="[META DESCRIPTION]">
     <meta property="twitter:image" content="https://aisearchmastery.com/images/blog/[POST-IMAGE].jpg">
     
@@ -89,9 +89,14 @@
         "@id": "https://aisearchmastery.com/blog/[CATEGORY-SLUG]/[POST-SLUG]/"
       },
       "articleSection": "[CATEGORY]",
-      "keywords": "[KEYWORDS]",
+      "keywords": "MASTERY-AI Framework, [KEYWORDS]",
       "wordCount": "[WORD COUNT]",
-      "timeRequired": "PT[X]M"
+      "timeRequired": "PT[X]M",
+      "about": {
+        "@type": "Thing",
+        "name": "MASTERY-AI Framework v2.1",
+        "description": "The industry's most comprehensive AI search optimization methodology with 132 atomic factors"
+      }
     }
     </script>
     
@@ -110,8 +115,10 @@
         flex-wrap: wrap;
     }
     
-    .post-category {
-        display: inline-block;
+    .framework-pillar-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
         padding: 0.375rem 0.75rem;
         background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
         color: var(--white);
@@ -122,8 +129,13 @@
         transition: transform 0.2s ease;
     }
     
-    .post-category:hover {
+    .framework-pillar-badge:hover {
         transform: translateY(-1px);
+        text-decoration: none;
+    }
+    
+    .framework-pillar-badge i {
+        font-size: 0.875rem;
     }
     
     .post-date, .reading-time {
@@ -249,10 +261,22 @@
         color: var(--primary-blue);
         margin-top: 0;
         margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .framework-callout h4 i {
+        font-size: 1.25rem;
     }
     
     .framework-callout p {
         margin-bottom: 0;
+    }
+    
+    .framework-callout ul {
+        margin-bottom: 0;
+        margin-top: 0.5rem;
     }
     
     /* Table of Contents */
@@ -268,6 +292,13 @@
         margin-top: 0;
         margin-bottom: 1rem;
         font-size: 1.125rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .table-of-contents h3 i {
+        color: var(--primary-blue);
     }
     
     .table-of-contents ul {
@@ -348,7 +379,7 @@
     
     .related-post-card {
         background: var(--white);
-        border: 1px solid var(--gray-200);
+        border: 2px solid var(--gray-200);
         border-radius: var(--radius-lg);
         padding: 1.5rem;
         transition: all 0.3s ease;
@@ -360,12 +391,20 @@
         border-color: var(--primary-blue);
     }
     
-    .related-post-category {
+    .related-post-pillar {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
         font-size: 0.75rem;
         color: var(--primary-blue);
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+    }
+    
+    .related-post-pillar i {
+        font-size: 0.875rem;
     }
     
     .related-post-title {
@@ -581,10 +620,85 @@
     <!-- Skip to Main Content -->
     <a href="#main-content" class="sr-only">Skip to main content</a>
     
-    <!-- Header - Copy from homepage, no search box for blog posts -->
+    <!-- Header - WITHOUT SEARCH for blog posts -->
     <header class="site-header" role="banner">
         <div class="header-container-full">
-            <!-- Copy exact navigation from homepage without search -->
+            <!-- Logo - Far Left -->
+            <div class="logo">
+                <a href="/" aria-label="AI Search Mastery - Go to Homepage">
+                    <img src="/images/logos/logo-primary.png" 
+                         alt="AI Search Mastery Logo" 
+                         width="48" 
+                         height="48"
+                         class="logo-image">
+                    <span class="logo-text">AI Search Mastery</span>
+                </a>
+            </div>
+            
+            <!-- Navigation - Centered -->
+            <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li class="nav-dropdown">
+                        <a href="/mastery-ai-framework" aria-expanded="false" aria-haspopup="true">
+                            MASTERY-AI
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/mastery-ai-framework" role="menuitem">MASTERY-AI Framework</a></li>
+                            <li><a href="/aimpactscanner" role="menuitem">AImpactScanner</a></li>
+                            <li><a href="/implementation-guide" role="menuitem">Implementation Guide</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="/blog" aria-expanded="false" aria-haspopup="true">
+                            Insights
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/blog" role="menuitem">All Insights</a></li>
+                            <li><a href="/blog/fundamentals" role="menuitem">AI Search Fundamentals</a></li>
+                            <li><a href="/blog/case-studies" role="menuitem">Case Studies</a></li>
+                            <li><a href="/blog/how-to-guides" role="menuitem">How-To Guides</a></li>
+                            <li><a href="/blog/industry-updates" role="menuitem">Industry Updates</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="/resources" aria-expanded="false" aria-haspopup="true">
+                            Resources
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/newsletter" role="menuitem">Newsletter</a></li>
+                            <li><a href="/free-page-assessment" role="menuitem">Free Page Assessment</a></li>
+                            <li><a href="/templates" role="menuitem">Templates</a></li>
+                            <li><a href="/tools-resources" role="menuitem">Tools & Resources</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="/about" aria-expanded="false" aria-haspopup="true">
+                            About
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/about" role="menuitem">About AI Search Mastery</a></li>
+                            <li><a href="/contact" role="menuitem">Contact</a></li>
+                            <li><a href="/privacy" role="menuitem">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- CTA Button - Far Right -->
+            <div class="header-cta">
+                <a href="/aimpactscanner" class="btn btn-primary">Get MASTERY-AI Assessment</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </header>
     
@@ -592,7 +706,7 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol>
             <li><a href="/">Home</a> <span class="separator">/</span></li>
-            <li><a href="/blog/">Blog</a> <span class="separator">/</span></li>
+            <li><a href="/blog/">Insights</a> <span class="separator">/</span></li>
             <li><a href="/blog/[CATEGORY-SLUG]/">[CATEGORY]</a> <span class="separator">/</span></li>
             <li><span class="current">[POST TITLE - SHORT]</span></li>
         </ol>
@@ -605,12 +719,15 @@
             <header class="post-header">
                 <div class="container">
                     <div class="post-meta">
-                        <a href="/blog/[CATEGORY-SLUG]/" class="post-category">[CATEGORY]</a>
+                        <a href="/blog/[CATEGORY-SLUG]/" class="framework-pillar-badge">
+                            <i class="fas fa-[ICON]"></i>
+                            [FRAMEWORK PILLAR NAME]
+                        </a>
                         <time datetime="[YYYY-MM-DD]" class="post-date">[FORMATTED DATE]</time>
                         <span class="reading-time">[X] min read</span>
                     </div>
                     <h1 class="post-title">[POST TITLE]</h1>
-                    <p class="post-excerpt">[META DESCRIPTION/EXCERPT]</p>
+                    <p class="post-excerpt">[META DESCRIPTION/EXCERPT - Focus on MASTERY-AI Framework application]</p>
                 </div>
             </header>
             
@@ -618,11 +735,12 @@
             <div class="post-content">
                 <!-- Optional Table of Contents for longer posts -->
                 <nav class="table-of-contents">
-                    <h3>Table of Contents</h3>
+                    <h3><i class="fas fa-list"></i> In This Article</h3>
                     <ul>
                         <li><a href="#section-1">[Section 1 Title]</a></li>
                         <li><a href="#section-2">[Section 2 Title]</a></li>
                         <li><a href="#section-3">[Section 3 Title]</a></li>
+                        <li><a href="#framework-application">MASTERY-AI Framework Application</a></li>
                     </ul>
                 </nav>
                 
@@ -631,9 +749,16 @@
                 
                 <!-- Example Framework Callout Box -->
                 <div class="framework-callout">
-                    <h4>MASTERY-AI Framework Application</h4>
-                    <p>This concept relates to [Pillar Name] of the MASTERY-AI Framework v2.1, specifically addressing [specific factors].</p>
+                    <h4><i class="fas fa-layer-group"></i> MASTERY-AI Framework Application</h4>
+                    <p>This implementation leverages the following MASTERY-AI Framework v2.1 components:</p>
+                    <ul>
+                        <li><strong>[Pillar Name] ([X]%):</strong> [Specific factors addressed]</li>
+                        <li><strong>[Pillar Name] ([X]%):</strong> [Specific factors addressed]</li>
+                    </ul>
                 </div>
+                
+                <!-- More content sections... -->
+                
             </div>
             
             <!-- Social Share Buttons -->
@@ -674,7 +799,7 @@
                          height="80">
                     <div class="author-info">
                         <h3>Jamie Watters</h3>
-                        <p class="author-title">Creator of MASTERY-AI Framework v2.1</p>
+                        <p class="author-title">Creator of MASTERY-AI Framework v2.1 Enhanced Edition</p>
                     </div>
                 </div>
                 <div class="author-bio-content">
@@ -700,7 +825,7 @@
                     Join 5,000+ professionals mastering AI search optimization. 
                     Every Tuesday, get exclusive insights on implementing the 132 atomic factors.
                 </p>
-                <form class="newsletter-form" action="#" method="post">
+                <form class="newsletter-form" action="/newsletter-signup" method="post">
                     <input type="email" 
                            name="email" 
                            placeholder="Enter your email" 
@@ -712,11 +837,14 @@
             
             <!-- Related Posts -->
             <section class="related-posts">
-                <h2>Related Articles</h2>
+                <h2>Related MASTERY-AI Framework Articles</h2>
                 <div class="related-posts-grid">
                     <!-- Related Post 1 -->
                     <article class="related-post-card">
-                        <div class="related-post-category">[CATEGORY]</div>
+                        <div class="related-post-pillar">
+                            <i class="fas fa-[ICON]"></i>
+                            [FRAMEWORK PILLAR]
+                        </div>
                         <h3 class="related-post-title">
                             <a href="[URL]">[RELATED POST TITLE 1]</a>
                         </h3>
@@ -727,7 +855,10 @@
                     
                     <!-- Related Post 2 -->
                     <article class="related-post-card">
-                        <div class="related-post-category">[CATEGORY]</div>
+                        <div class="related-post-pillar">
+                            <i class="fas fa-[ICON]"></i>
+                            [FRAMEWORK PILLAR]
+                        </div>
                         <h3 class="related-post-title">
                             <a href="[URL]">[RELATED POST TITLE 2]</a>
                         </h3>
@@ -738,7 +869,10 @@
                     
                     <!-- Related Post 3 -->
                     <article class="related-post-card">
-                        <div class="related-post-category">[CATEGORY]</div>
+                        <div class="related-post-pillar">
+                            <i class="fas fa-[ICON]"></i>
+                            [FRAMEWORK PILLAR]
+                        </div>
                         <h3 class="related-post-title">
                             <a href="[URL]">[RELATED POST TITLE 3]</a>
                         </h3>
@@ -751,9 +885,66 @@
         </article>
     </main>
     
-    <!-- Footer - Copy from homepage -->
+    <!-- Footer - EXACT COPY FROM HOMEPAGE -->
     <footer class="site-footer" role="contentinfo">
-        <!-- Copy exact footer from homepage -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/logos/logo-primary.png" alt="AI Search Mastery" width="40" height="40">
+                        <span class="footer-logo-text">AI Search Mastery</span>
+                    </div>
+                    <p class="footer-description">
+                        Creator of the MASTERY-AI Framework v2.1 Enhanced Edition. 
+                        Helping businesses thrive in the AI search era through systematic optimization.
+                    </p>
+                    <div class="footer-contact">
+                        <a href="mailto:support@aisearchmastery.com">support@aisearchmastery.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Framework</h3>
+                    <ul class="footer-links">
+                        <li><a href="/mastery-ai-framework">MASTERY-AI Framework</a></li>
+                        <li><a href="/aimpactscanner">AImpactScanner</a></li>
+                        <li><a href="/blog/case-studies">Case Studies</a></li>
+                        <li><a href="/blog/fundamentals">Getting Started</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="/blog">AI Search Insights</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                        <li><a href="/templates">Templates</a></li>
+                        <li><a href="/free-page-assessment">Free Assessment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 AI Search Mastery. All rights reserved.
+                </p>
+                <div class="footer-legal">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                </div>
+            </div>
+        </div>
     </footer>
     
     <!-- Mobile Menu JavaScript -->
@@ -764,7 +955,8 @@
         const body = document.body;
         
         if (mobileMenuBtn && primaryNav) {
-            mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
                 const isOpen = primaryNav.classList.contains('mobile-open');
                 primaryNav.classList.toggle('mobile-open');
                 body.classList.toggle('mobile-menu-open');
@@ -773,11 +965,16 @@
             
             // Close menu when clicking outside
             document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-header')) {
+                if (!e.target.closest('.site-header') && !e.target.closest('.primary-nav')) {
                     primaryNav.classList.remove('mobile-open');
                     body.classList.remove('mobile-menu-open');
                     mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 }
+            });
+            
+            // Prevent clicks inside nav from closing it
+            primaryNav.addEventListener('click', function(e) {
+                e.stopPropagation();
             });
         }
     });
