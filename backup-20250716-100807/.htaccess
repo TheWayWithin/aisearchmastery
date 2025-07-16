@@ -1,0 +1,226 @@
+# ============================================
+# AI Search Mastery - Security Headers
+# ============================================
+# This file implements comprehensive security headers
+# to protect against common web vulnerabilities
+
+# Enable mod_headers
+<IfModule mod_headers.c>
+
+    # ========================================
+    # Content Security Policy (CSP)
+    # ========================================
+    # Defines which resources can be loaded from where
+    Header always set Content-Security-Policy "\
+        default-src 'self'; \
+        script-src 'self' 'unsafe-inline' \
+            https://www.googletagmanager.com \
+            https://www.google-analytics.com \
+            https://tagmanager.google.com; \
+        style-src 'self' 'unsafe-inline' \
+            https://fonts.googleapis.com \
+            https://cdnjs.cloudflare.com; \
+        font-src 'self' \
+            https://fonts.gstatic.com \
+            https://cdnjs.cloudflare.com; \
+        img-src 'self' data: \
+            https://www.googletagmanager.com \
+            https://www.google-analytics.com; \
+        connect-src 'self' \
+            https://www.google-analytics.com \
+            https://api.convertkit.com \
+            https://stats.g.doubleclick.net; \
+        frame-src 'none'; \
+        object-src 'none'; \
+        base-uri 'self'; \
+        form-action 'self'; \
+        upgrade-insecure-requests; \
+        block-all-mixed-content"
+
+    # ========================================
+    # Frame Options
+    # ========================================
+    # Prevents the page from being embedded in frames (clickjacking protection)
+    Header always set X-Frame-Options "DENY"
+
+    # ========================================
+    # Content Type Options
+    # ========================================
+    # Prevents MIME type sniffing attacks
+    Header always set X-Content-Type-Options "nosniff"
+
+    # ========================================
+    # Strict Transport Security (HSTS)
+    # ========================================
+    # Forces HTTPS connections for enhanced security
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+    # ========================================
+    # XSS Protection
+    # ========================================
+    # Enables XSS filtering in older browsers
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # ========================================
+    # Referrer Policy
+    # ========================================
+    # Controls how much referrer information is sent
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # ========================================
+    # Permissions Policy
+    # ========================================
+    # Controls which browser features can be used
+    Header always set Permissions-Policy "\
+        accelerometer=(), \
+        camera=(), \
+        geolocation=(), \
+        gyroscope=(), \
+        magnetometer=(), \
+        microphone=(), \
+        payment=(), \
+        usb=(), \
+        interest-cohort=()"
+
+    # ========================================
+    # Additional Security Headers
+    # ========================================
+    
+    # Cross-Origin Embedder Policy
+    Header always set Cross-Origin-Embedder-Policy "require-corp"
+    
+    # Cross-Origin Opener Policy
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    
+    # Cross-Origin Resource Policy
+    Header always set Cross-Origin-Resource-Policy "cross-origin"
+
+    # ========================================
+    # Remove Server Information
+    # ========================================
+    # Hide server version information
+    Header always unset Server
+    Header always unset X-Powered-By
+
+</IfModule>
+
+# ============================================
+# Error Pages Security
+# ============================================
+# Prevent information disclosure in error pages
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# ============================================
+# File Access Security
+# ============================================
+# Protect sensitive files from being accessed
+
+# Block access to .htaccess and other sensitive files
+<Files ~ "^\.ht">
+    Require all denied
+</Files>
+
+# Block access to backup files
+<FilesMatch "\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)$">
+    Require all denied
+</FilesMatch>
+
+# Block access to common sensitive files
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+    Require all denied
+</FilesMatch>
+
+# ============================================
+# MIME Type Security
+# ============================================
+# Proper MIME type handling for security
+<IfModule mod_mime.c>
+    # Remove charset from specific file types to prevent XSS
+    RemoveType .html .htm
+    AddType text/html .html .htm
+    
+    # Ensure JavaScript files are served with correct MIME type
+    AddType application/javascript .js
+    
+    # Ensure CSS files are served with correct MIME type
+    AddType text/css .css
+</IfModule>
+
+# ============================================
+# HTTP Methods Security
+# ============================================
+# Restrict HTTP methods to only what's needed
+<LimitExcept GET POST HEAD>
+    Require all denied
+</LimitExcept>
+
+# ============================================
+# Directory Browsing Security
+# ============================================
+# Disable directory browsing
+Options -Indexes
+
+# ============================================
+# SSL/TLS Security
+# ============================================
+# Force HTTPS redirect
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ============================================
+# Cache Control for Security
+# ============================================
+# Proper cache control for sensitive content
+<IfModule mod_headers.c>
+    # No caching for HTML files (dynamic content)
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+    
+    # Cache static assets but with validation
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# ============================================
+# Additional Security Measures
+# ============================================
+
+# Block common attack patterns
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block SQL injection attempts
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*object.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*embed.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [NC,OR]
+    RewriteCond %{QUERY_STRING} base64_(en|de)code[^(]*\([^)]*\) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*meta.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*link.*(\>|%3E) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# ============================================
+# Performance Optimizations (Security Related)
+# ============================================
+
+# Compress files for better performance (reduces attack surface)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript
+</IfModule>
+
+# ============================================
+# End of Security Configuration
+# ============================================
