@@ -4,10 +4,10 @@
 // Kit (ConvertKit) Integration Class
 class KitNewsletterIntegration {
     constructor() {
-        // These will be replaced with actual credentials
-        this.apiKey = 'YOUR_KIT_API_KEY';
-        this.formId = 'YOUR_KIT_FORM_ID';
-        this.baseUrl = 'https://api.convertkit.com/v3';
+        // API keys should be configured server-side for security
+        this.apiKey = null; // Configure server-side
+        this.formId = null; // Configure server-side
+        this.baseUrl = '/api/newsletter'; // Use server-side proxy
     }
     
     async subscribeUser(formData) {
@@ -307,18 +307,43 @@ class AISearchMasteryHomepage {
     }
     
     showFormSuccess(form) {
-        form.innerHTML = `
-            <div class="form-success">
-                <i class="fas fa-check-circle"></i>
-                <h3>Welcome to AI Search Weekly!</h3>
-                <p>Thanks for joining! Check your email for a confirmation message. 
-                   Your first insights from my FreecalcHub journey will arrive next Tuesday.</p>
-                <div class="success-note">
-                    <strong>What's next?</strong> I'll share the exact strategies I used to grow 
-                    FreecalcHub's traffic by 40% after the AI search changes.
-                </div>
-            </div>
-        `;
+        // Clear form contents securely
+        while (form.firstChild) {
+            form.removeChild(form.firstChild);
+        }
+        
+        // Create success container
+        const successDiv = document.createElement('div');
+        successDiv.className = 'form-success';
+        
+        // Create icon
+        const icon = document.createElement('i');
+        icon.className = 'fas fa-check-circle';
+        successDiv.appendChild(icon);
+        
+        // Create heading
+        const heading = document.createElement('h3');
+        heading.textContent = 'Welcome to AI Search Weekly!';
+        successDiv.appendChild(heading);
+        
+        // Create main message
+        const mainMessage = document.createElement('p');
+        mainMessage.textContent = 'Thanks for joining! Check your email for a confirmation message. Your first insights from my FreecalcHub journey will arrive next Tuesday.';
+        successDiv.appendChild(mainMessage);
+        
+        // Create success note
+        const successNote = document.createElement('div');
+        successNote.className = 'success-note';
+        
+        const strongText = document.createElement('strong');
+        strongText.textContent = "What's next? ";
+        successNote.appendChild(strongText);
+        
+        const noteText = document.createTextNode("I'll share the exact strategies I used to grow FreecalcHub's traffic by 40% after the AI search changes.");
+        successNote.appendChild(noteText);
+        
+        successDiv.appendChild(successNote);
+        form.appendChild(successDiv);
         
         // Scroll to form for better UX
         form.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -333,16 +358,25 @@ class AISearchMasteryHomepage {
         
         const errorDiv = document.createElement('div');
         errorDiv.className = 'form-error';
-        errorDiv.innerHTML = `
-            <i class="fas fa-exclamation-triangle"></i>
-            <p>${message || 'Something went wrong. Please try again or contact support@aisearchmastery.com'}</p>
-        `;
         errorDiv.setAttribute('role', 'alert');
+        
+        // Create icon
+        const icon = document.createElement('i');
+        icon.className = 'fas fa-exclamation-triangle';
+        errorDiv.appendChild(icon);
+        
+        // Create message paragraph
+        const messageParagraph = document.createElement('p');
+        messageParagraph.textContent = message || 'Something went wrong. Please try again or contact support@aisearchmastery.com';
+        errorDiv.appendChild(messageParagraph);
+        
         form.insertBefore(errorDiv, form.firstChild);
         
         // Remove error after 8 seconds
         setTimeout(() => {
-            errorDiv.remove();
+            if (errorDiv.parentNode) {
+                errorDiv.remove();
+            }
         }, 8000);
         
         // Scroll to error for better UX

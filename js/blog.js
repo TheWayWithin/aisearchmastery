@@ -352,21 +352,45 @@ class AISearchMasteryBlog {
         const searchResults = document.querySelector('.search-results');
         if (!searchResults) return;
         
+        // Clear existing results
+        while (searchResults.firstChild) {
+            searchResults.removeChild(searchResults.firstChild);
+        }
+        
         if (results.length === 0) {
-            searchResults.innerHTML = `
-                <div class="no-results">
-                    <p>No articles found for "${query}". Try different keywords.</p>
-                    <p>Popular topics: AI Search, ChatGPT, Claude, Perplexity, FreecalcHub</p>
-                </div>
-            `;
+            const noResultsDiv = document.createElement('div');
+            noResultsDiv.className = 'no-results';
+            
+            const noResultsText = document.createElement('p');
+            noResultsText.textContent = `No articles found for "${query}". Try different keywords.`;
+            noResultsDiv.appendChild(noResultsText);
+            
+            const popularTopics = document.createElement('p');
+            popularTopics.textContent = 'Popular topics: AI Search, ChatGPT, Claude, Perplexity, FreecalcHub';
+            noResultsDiv.appendChild(popularTopics);
+            
+            searchResults.appendChild(noResultsDiv);
         } else {
-            searchResults.innerHTML = results.map(article => `
-                <a href="${article.url}" class="search-result">
-                    <h4>${this.highlightSearchTerms(article.title, query)}</h4>
-                    <p>${this.highlightSearchTerms(article.excerpt, query)}</p>
-                    <span class="result-category">${article.category}</span>
-                </a>
-            `).join('');
+            results.forEach(article => {
+                const resultLink = document.createElement('a');
+                resultLink.href = article.url;
+                resultLink.className = 'search-result';
+                
+                const title = document.createElement('h4');
+                title.innerHTML = this.highlightSearchTerms(article.title, query);
+                resultLink.appendChild(title);
+                
+                const excerpt = document.createElement('p');
+                excerpt.innerHTML = this.highlightSearchTerms(article.excerpt, query);
+                resultLink.appendChild(excerpt);
+                
+                const category = document.createElement('span');
+                category.className = 'result-category';
+                category.textContent = article.category;
+                resultLink.appendChild(category);
+                
+                searchResults.appendChild(resultLink);
+            });
         }
         
         searchResults.style.display = 'block';
@@ -375,8 +399,16 @@ class AISearchMasteryBlog {
     }
     
     highlightSearchTerms(text, query) {
-        const regex = new RegExp(`(${query})`, 'gi');
-        return text.replace(regex, '<mark>$1</mark>');
+        // Escape special regex characters to prevent injection
+        const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(${escapedQuery})`, 'gi');
+        
+        // Create a text node first to ensure safety, then convert to HTML
+        const tempDiv = document.createElement('div');
+        tempDiv.textContent = text;
+        const safeText = tempDiv.innerHTML;
+        
+        return safeText.replace(regex, '<mark>$1</mark>');
     }
     
     hideSearchResults() {
@@ -481,18 +513,56 @@ class AISearchMasteryBlog {
     showNewsletterSuccess(form) {
         const container = form.closest('.newsletter-content') || form.parentElement;
         
-        container.innerHTML = `
-            <div class="form-success">
-                <i class="fas fa-check-circle"></i>
-                <h3>Welcome to AI Search Weekly!</h3>
-                <p>Thanks for joining! Check your email for confirmation.</p>
-                <p><strong>What's next?</strong> Your first insights from the FreecalcHub journey arrive next Tuesday.</p>
-                <p>I'll share the exact strategies I used to grow FreecalcHub's traffic by 40% after the AI search changes.</p>
-                <div style="margin-top: 2rem;">
-                    <a href="/free-page-audit" class="btn btn-primary">Get Your Free Page Assessment</a>
-                </div>
-            </div>
-        `;
+        // Clear container contents securely
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
+        
+        // Create success container
+        const successDiv = document.createElement('div');
+        successDiv.className = 'form-success';
+        
+        // Create icon
+        const icon = document.createElement('i');
+        icon.className = 'fas fa-check-circle';
+        successDiv.appendChild(icon);
+        
+        // Create heading
+        const heading = document.createElement('h3');
+        heading.textContent = 'Welcome to AI Search Weekly!';
+        successDiv.appendChild(heading);
+        
+        // Create confirmation message
+        const confirmMessage = document.createElement('p');
+        confirmMessage.textContent = 'Thanks for joining! Check your email for confirmation.';
+        successDiv.appendChild(confirmMessage);
+        
+        // Create "What's next?" message
+        const nextMessage = document.createElement('p');
+        const strongText = document.createElement('strong');
+        strongText.textContent = "What's next? ";
+        nextMessage.appendChild(strongText);
+        const nextText = document.createTextNode('Your first insights from the FreecalcHub journey arrive next Tuesday.');
+        nextMessage.appendChild(nextText);
+        successDiv.appendChild(nextMessage);
+        
+        // Create strategy message
+        const strategyMessage = document.createElement('p');
+        strategyMessage.textContent = "I'll share the exact strategies I used to grow FreecalcHub's traffic by 40% after the AI search changes.";
+        successDiv.appendChild(strategyMessage);
+        
+        // Create CTA container
+        const ctaContainer = document.createElement('div');
+        ctaContainer.style.marginTop = '2rem';
+        
+        const ctaLink = document.createElement('a');
+        ctaLink.href = '/free-page-audit';
+        ctaLink.className = 'btn btn-primary';
+        ctaLink.textContent = 'Get Your Free Page Assessment';
+        ctaContainer.appendChild(ctaLink);
+        
+        successDiv.appendChild(ctaContainer);
+        container.appendChild(successDiv);
         
         // Scroll to success message
         container.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -510,10 +580,15 @@ class AISearchMasteryBlog {
         messageDiv.setAttribute('role', 'alert');
         
         if (type === 'error') {
-            messageDiv.innerHTML = `
-                <i class="fas fa-exclamation-triangle"></i>
-                <p>${message}</p>
-            `;
+            // Create icon
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-exclamation-triangle';
+            messageDiv.appendChild(icon);
+            
+            // Create message paragraph
+            const messageParagraph = document.createElement('p');
+            messageParagraph.textContent = message;
+            messageDiv.appendChild(messageParagraph);
         }
         
         form.insertBefore(messageDiv, form.firstChild);
@@ -919,8 +994,10 @@ class AISearchMasteryBlog {
 // ============================================
 class KitIntegration {
     constructor() {
-        this.apiKey = null; // Will be set when Jamie provides credentials
-        this.formId = null; // Will be set when Jamie provides credentials
+        // API keys should be configured server-side for security
+        this.apiKey = null; // Configure server-side
+        this.formId = null; // Configure server-side
+        this.baseUrl = '/api/newsletter'; // Use server-side proxy
     }
     
     // Ready for Kit integration
