@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>LLMs.txt Tool - Transform Websites Into AI Training Data | AI Search Mastery</title>
+    <meta name="description" content="Generate perfect LLM training data in minutes. Convert any website into clean, formatted text files optimized for AI training. Free tier available - start today!">
+    <meta name="keywords" content="llm training data, ai training datasets, website to text conversion, llm.txt generator, ai data preparation, machine learning datasets">
+    <meta name="author" content="Jamie Watters">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aisearchmastery.com/llms-txt-tool/">
+    <meta property="og:title" content="LLMs.txt Tool - Transform Websites Into AI Training Data">
+    <meta property="og:description" content="Generate perfect LLM training data in minutes. Convert any website into clean, formatted text files optimized for AI training. Free tier available.">
+    <meta property="og:image" content="https://aisearchmastery.com/images/og/llms-txt-tool-share.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aisearchmastery.com/llms-txt-tool/">
+    <meta property="twitter:title" content="LLMs.txt Tool - Transform Websites Into AI Training Data">
+    <meta property="twitter:description" content="Generate perfect LLM training data in minutes. Convert any website into clean, formatted text files optimized for AI training.">
+    <meta property="twitter:image" content="https://aisearchmastery.com/images/og/llms-txt-tool-share.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aisearchmastery.com/llms-txt-tool/">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* LLM TXT Tool Specific Styles */
+        .llm-tool-hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .value-bullets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .value-bullet {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary-teal);
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.3);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+        
+        .social-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .use-case-card {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-teal);
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            display: none;
+            color: var(--gray-600);
+        }
+        
+        /* Email Capture Modal */
+        .email-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray-400);
+        }
+        
+        .modal-form {
+            margin-top: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+        }
+        
+        .cta-button {
+            background: var(--primary-teal);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: var(--accent-teal);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.3);
+        }
+        
+        .cta-button.large {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .llm-tool-hero {
+                padding: 2rem 0;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .modal-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <img src="/images/logos/ai-search-mastery-logo.png" alt="AI Search Mastery" class="logo">
+                <span class="brand-text">AI Search Mastery</span>
+            </a>
+            
+            <button class="navbar-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="navbar-menu" id="navMenu">
+                <a href="/" class="navbar-item">Home</a>
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item dropdown-trigger">
+                        Tools <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/llms-txt-tool/" class="dropdown-item">LLMs.txt Tool</a>
+                        <a href="/ai-impact-scanner/" class="dropdown-item">AI Impact Scanner</a>
+                    </div>
+                </div>
+                <a href="/blog/" class="navbar-item">Blog</a>
+                <a href="/about/" class="navbar-item">About</a>
+                <a href="/contact/" class="navbar-item">Contact</a>
+                <a href="/newsletter/" class="navbar-item cta-nav">Newsletter</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="llm-tool-hero">
+        <div class="container">
+            <h1 class="hero-title">Transform Any Website Into AI Training Gold</h1>
+            <p class="hero-subtitle">
+                Convert entire websites into structured, clean text files optimized for LLM training. 
+                From the creator of the MASTERY-AI Framework - now with intelligent analysis that 
+                discovers, categorizes, and formats web content to maximize AI learning efficiency.
+            </p>
+            
+            <div class="value-bullets">
+                <div class="value-bullet">
+                    <div class="bullet-icon">⚡</div>
+                    <h3>100x Faster</h3>
+                    <p>2-5 minutes vs. 8-12 hours manual collection</p>
+                </div>
+                <div class="value-bullet">
+                    <div class="bullet-icon">🧠</div>
+                    <h3>AI-Powered</h3>
+                    <p>ML-enhanced quality scoring and categorization</p>
+                </div>
+                <div class="value-bullet">
+                    <div class="bullet-icon">💰</div>
+                    <h3>90% Cost Savings</h3>
+                    <p>$25/month vs. $500-2000 per manual analysis</p>
+                </div>
+                <div class="value-bullet">
+                    <div class="bullet-icon">🎯</div>
+                    <h3>Perfect Quality</h3>
+                    <p>Optimized for all major LLM frameworks</p>
+                </div>
+            </div>
+            
+            <button class="cta-button large" id="heroCTA">Start Your Free Analysis Today</button>
+            
+            <div class="trust-indicators" style="margin-top: 2rem; opacity: 0.9;">
+                <p><strong>Created by Jamie Watters, MASTERY-AI Framework Developer</strong></p>
+                <p>Trusted by 1000+ AI developers and data scientists</p>
+                <p>99% page discovery rate, 85% average content quality</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Building Quality AI Training Data Is Painfully Slow and Expensive</h2>
+                <p class="section-subtitle">
+                    Most teams waste weeks collecting and cleaning web content for LLM training
+                </p>
+            </div>
+            
+            <div class="problem-solution-grid">
+                <div class="problem-card">
+                    <h3>The Traditional Way</h3>
+                    <ul class="pain-points">
+                        <li><strong>Manual Collection:</strong> 8-12 hours per 1000-page site</li>
+                        <li><strong>Poor Quality:</strong> Inconsistent formatting, noise, duplicates</li>
+                        <li><strong>High Costs:</strong> $500-2000 per site analysis with manual labor</li>
+                        <li><strong>Technical Complexity:</strong> Requires specialized skills and tools</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <h3>The Smart Way with LLMs.txt Tool</h3>
+                    <ul class="solution-benefits">
+                        <li><strong>Intelligent Automation:</strong> Advanced sitemap parsing + fallback crawling</li>
+                        <li><strong>AI-Optimized Extraction:</strong> Proprietary HTML cleaning preserves semantic structure</li>
+                        <li><strong>Smart Caching:</strong> 70% faster analysis for returning users</li>
+                        <li><strong>Quality Scoring:</strong> ML-powered assessment for high-value content focus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Intelligent Features That Save Time and Improve Quality</h2>
+                <p class="section-subtitle">
+                    Advanced capabilities designed for professional AI development teams
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Intelligent Site Analysis</h3>
+                    <p><strong>Automatically Discovers Entire Website Structures</strong></p>
+                    <p>Saves 10+ hours of manual content collection per site. Advanced sitemap parsing + fallback crawling ensures 99% page discovery.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>AI-Optimized Content Extraction</h3>
+                    <p><strong>Extracts Clean, Formatted Text Perfect for LLM Training</strong></p>
+                    <p>Improves model training efficiency by 40-60%. Proprietary HTML cleaning removes noise, preserves semantic structure.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Smart Caching System</h3>
+                    <p><strong>Remembers Analyzed Sites to Avoid Duplicate Work</strong></p>
+                    <p>70% faster analysis for returning users, 80% cost reduction. Content fingerprinting detects real changes vs. cosmetic updates.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Quality Scoring & Categorization</h3>
+                    <p><strong>Rates Content Quality and Automatically Categorizes Pages</strong></p>
+                    <p>Focus training on high-value content, skip low-quality pages. ML-powered quality assessment considers relevance, uniqueness, depth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Choose Your Plan</h2>
+                <p class="section-subtitle">
+                    Start free, upgrade when you need more power
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MOST POPULAR</div>
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">0</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-description">Perfect for Testing & Small Projects</p>
+                    <ul class="feature-list">
+                        <li>✅ 1 analysis per day</li>
+                        <li>✅ 50 pages maximum</li>
+                        <li>✅ HTML extraction</li>
+                        <li>✅ Basic categorization</li>
+                        <li>✅ No credit card required</li>
+                    </ul>
+                    <button class="cta-button full-width" data-plan="starter">Start Free Analysis</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Growth</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">25</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-description">For Professional Developers</p>
+                    <ul class="feature-list">
+                        <li>✅ Unlimited analyses</li>
+                        <li>✅ 1,000 pages per analysis</li>
+                        <li>✅ AI-enhanced analysis (first 200 pages)</li>
+                        <li>✅ Smart caching</li>
+                        <li>✅ Advanced quality scoring</li>
+                    </ul>
+                    <button class="cta-button full-width" data-plan="growth">Upgrade to Growth</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Scale</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="plan-description">For Enterprise Teams</p>
+                    <ul class="feature-list">
+                        <li>✅ Unlimited everything</li>
+                        <li>✅ Unlimited pages per analysis</li>
+                        <li>✅ Full AI analysis on all pages</li>
+                        <li>✅ Priority processing</li>
+                        <li>✅ API access</li>
+                        <li>✅ White-label options</li>
+                    </ul>
+                    <button class="cta-button full-width" data-plan="scale">Contact for Enterprise</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Trusted by Leading AI Teams</h2>
+                <p class="section-subtitle">
+                    See how teams across industries use LLMs.txt Tool to accelerate their AI development
+                </p>
+            </div>
+            
+            <div class="social-proof-grid">
+                <div class="use-case-card">
+                    <h4>Enterprise AI Training</h4>
+                    <blockquote>
+                        "Reduced our training data preparation time from 3 weeks to 2 days"
+                    </blockquote>
+                    <ul>
+                        <li>10,000+ page enterprise knowledge base</li>
+                        <li>Generated 50MB of clean training data</li>
+                        <li>Improved model accuracy by 35%</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h4>Academic Research</h4>
+                    <blockquote>
+                        "Analyzed 500 academic websites for our NLP research in one afternoon"
+                    </blockquote>
+                    <ul>
+                        <li>Comparative analysis across multiple domains</li>
+                        <li>Standardized format enabled cross-site comparisons</li>
+                        <li>Published in top-tier AI conference</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h4>Startup MVP Development</h4>
+                    <blockquote>
+                        "Built our domain-specific AI assistant in weeks, not months"
+                    </blockquote>
+                    <ul>
+                        <li>Industry-specific training data collection</li>
+                        <li>Rapid prototyping and iteration</li>
+                        <li>Faster time-to-market</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>How It Works</h2>
+                <p class="section-subtitle">
+                    Three simple steps to transform any website into perfect LLM training data
+                </p>
+            </div>
+            
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Enter Website URL</h3>
+                    <p>Simply paste any website URL into our intelligent analysis system</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Analysis Begins</h3>
+                    <p>Our intelligent system discovers and analyzes content with ML-powered quality scoring</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Download LLM.txt</h3>
+                    <p>Get perfectly formatted training data in minutes, ready for your LLM framework</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">
+                    Everything you need to know about LLMs.txt Tool
+                </p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What file formats do you support?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We support standard LLM.txt format compatible with OpenAI, Anthropic, and local models. Custom formats are available on the Scale tier for enterprise customers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How accurate is the content extraction?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We achieve a 99% page discovery rate with our advanced crawling technology. Our ML-powered quality scoring ensures you focus on high-value content that improves training efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is my data secure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we use end-to-end encryption and offer optional data deletion after analysis. We're GDPR compliant and SOC 2 ready for enterprise customers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I analyze private/password-protected sites?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, we support public websites only. Private site analysis with authentication is coming in Q4 2025.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's the difference between tiers?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Free tier is perfect for testing with 50 pages max. Growth tier offers professional features with 1000 pages and AI enhancement. Scale tier provides unlimited pages, API access, and enterprise features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section cta-final">
+        <div class="container text-center">
+            <h2>Ready to Transform Your AI Training Data Process?</h2>
+            <p class="cta-subtitle">
+                Join 1000+ AI developers who've already discovered the smart way to build training datasets. 
+                Start your free analysis today - no credit card required.
+            </p>
+            
+            <button class="cta-button large" id="finalCTA">Get Your Free LLM.txt Analysis</button>
+            
+            <div class="risk-reversal">
+                <p>✅ No credit card required for free tier</p>
+                <p>✅ Cancel anytime on paid plans</p>
+                <p>✅ 30-day money-back guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Capture Modal -->
+    <div class="email-modal" id="emailModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2>Start Your Free LLM.txt Analysis</h2>
+            <p>Get instant access to:</p>
+            <ul>
+                <li>✅ 1 free website analysis (up to 50 pages)</li>
+                <li>✅ AI-optimized content extraction</li>
+                <li>✅ Quality scoring and categorization</li>
+                <li>✅ Perfect LLM.txt format output</li>
+            </ul>
+            
+            <form class="modal-form" id="emailCaptureForm">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="first_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company/Organization</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                
+                <div class="form-group">
+                    <label for="useCase">Use Case</label>
+                    <select id="useCase" name="use_case">
+                        <option value="">Select use case</option>
+                        <option value="enterprise">Enterprise AI Training</option>
+                        <option value="academic">Academic Research</option>
+                        <option value="startup">Startup Development</option>
+                        <option value="personal">Personal Project</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="cta-button full-width">Create Free Account</button>
+            </form>
+            
+            <p class="privacy-note">No spam, unsubscribe anytime. We respect your privacy.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI Search Mastery</h4>
+                    <p>The industry's most comprehensive AI search optimization methodology. Created by Jamie Watters.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/llms-txt-tool/">LLMs.txt Tool</a></li>
+                        <li><a href="/ai-impact-scanner/">AI Impact Scanner</a></li>
+                        <li><a href="/mastery-framework/">MASTERY-AI Framework</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/newsletter/">Newsletter</a></li>
+                        <li><a href="/case-studies/">Case Studies</a></li>
+                        <li><a href="/guides/">Implementation Guides</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/terms/">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Search Mastery. All rights reserved. Created by Jamie Watters.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/homepage.js"></script>
+    <script>
+        // LLM TXT Tool specific JavaScript
+        class LLMToolLandingPage {
+            constructor() {
+                this.modal = document.getElementById('emailModal');
+                this.modalShown = false;
+                this.timeOnPage = 0;
+                this.scrollThreshold = false;
+                
+                this.init();
+            }
+            
+            init() {
+                this.bindEvents();
+                this.startTracking();
+            }
+            
+            bindEvents() {
+                // CTA button clicks
+                document.querySelectorAll('[id$="CTA"], .cta-button').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.showModal();
+                    });
+                });
+                
+                // Modal close
+                document.getElementById('modalClose').addEventListener('click', () => {
+                    this.hideModal();
+                });
+                
+                // Click outside modal to close
+                this.modal.addEventListener('click', (e) => {
+                    if (e.target === this.modal) {
+                        this.hideModal();
+                    }
+                });
+                
+                // Form submission
+                document.getElementById('emailCaptureForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.handleFormSubmission(e);
+                });
+                
+                // FAQ accordions
+                document.querySelectorAll('.faq-question').forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        const icon = question.querySelector('i');
+                        
+                        if (answer.style.display === 'block') {
+                            answer.style.display = 'none';
+                            icon.classList.remove('fa-chevron-up');
+                            icon.classList.add('fa-chevron-down');
+                        } else {
+                            answer.style.display = 'block';
+                            icon.classList.remove('fa-chevron-down');
+                            icon.classList.add('fa-chevron-up');
+                        }
+                    });
+                });
+                
+                // Scroll tracking
+                window.addEventListener('scroll', () => {
+                    this.trackScroll();
+                });
+                
+                // Exit intent
+                document.addEventListener('mouseleave', (e) => {
+                    if (e.clientY <= 0 && !this.modalShown) {
+                        this.showModal();
+                    }
+                });
+            }
+            
+            startTracking() {
+                // Time on page tracking
+                setInterval(() => {
+                    this.timeOnPage += 1;
+                    
+                    // Show modal after 2 minutes
+                    if (this.timeOnPage === 120 && !this.modalShown) {
+                        this.showModal();
+                    }
+                }, 1000);
+            }
+            
+            trackScroll() {
+                const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+                
+                // Show modal at 70% scroll
+                if (scrollPercentage >= 70 && !this.scrollThreshold && !this.modalShown) {
+                    this.scrollThreshold = true;
+                    setTimeout(() => {
+                        if (!this.modalShown) {
+                            this.showModal();
+                        }
+                    }, 3000); // Delay 3 seconds after reaching threshold
+                }
+            }
+            
+            showModal() {
+                if (this.modalShown) return;
+                
+                this.modal.style.display = 'flex';
+                this.modalShown = true;
+                document.body.style.overflow = 'hidden';
+                
+                // Track modal show event
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'modal_shown', {
+                        'event_category': 'engagement',
+                        'event_label': 'email_capture_modal'
+                    });
+                }
+            }
+            
+            hideModal() {
+                this.modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+            
+            handleFormSubmission(e) {
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData);
+                
+                // Track email capture
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'email_capture', {
+                        'event_category': 'lead_generation',
+                        'event_label': data.use_case || 'unknown',
+                        'value': 1
+                    });
+                }
+                
+                // Submit to ConvertKit (placeholder)
+                this.submitToConvertKit(data);
+                
+                // Show success message and redirect
+                alert('Thank you! Redirecting to your dashboard...');
+                window.location.href = '/llms-txt-tool/dashboard/';
+            }
+            
+            submitToConvertKit(data) {
+                // Placeholder for ConvertKit integration
+                console.log('Submitting to ConvertKit:', data);
+                
+                // In production, this would be:
+                // fetch('/api/convertkit-submit', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify(data)
+                // });
+            }
+        }
+        
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new LLMToolLandingPage();
+        });
+    </script>
+</body>
+</html>

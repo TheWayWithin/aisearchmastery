@@ -2152,3 +2152,150 @@ body.blog-page .header-cta {
 /* ========================================= */
 /* END OF SIMPLE ICON FIX */
 /* ========================================= */
+
+/* Utility Classes for Landing Pages */
+.section {
+    padding: 4rem 0;
+}
+
+.section.bg-light {
+    background-color: var(--gray-50);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    margin-top: 0.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Problem/Solution Grid */
+.problem-solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.problem-card, .solution-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.problem-card {
+    border-left: 4px solid var(--error);
+}
+
+.solution-card {
+    border-left: 4px solid var(--success);
+}
+
+.pain-points, .solution-benefits {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.pain-points li, .solution-benefits li {
+    margin-bottom: 0.75rem;
+    padding-left: 0;
+}
+
+/* How It Works */
+.how-it-works {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-teal);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -1rem;
+    width: 2rem;
+    height: 2px;
+    background: var(--gray-300);
+    transform: translateX(50%);
+}
+
+/* Final CTA Section */
+.cta-final {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+    color: white;
+}
+
+.cta-final h2 {
+    color: white;
+}
+
+.cta-subtitle {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    margin: 1rem 0 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.risk-reversal {
+    margin-top: 2rem;
+    opacity: 0.9;
+}
+
+.risk-reversal p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .how-it-works {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step:not(:last-child)::after {
+        display: none;
+    }
+    
+    .problem-solution-grid {
+        grid-template-columns: 1fr;
+    }
+}
