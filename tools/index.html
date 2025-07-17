@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>AI Tools & Resources | AI Search Mastery</title>
+    <meta name="description" content="Discover powerful AI tools and resources from AI Search Mastery. Transform websites into training data, optimize AI search presence, and accelerate your AI development with our proven tools.">
+    <meta name="keywords" content="ai tools, ai resources, llm training data, ai search optimization, website analysis, ai development tools">
+    <meta name="author" content="Jamie Watters">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aisearchmastery.com/tools/">
+    <meta property="og:title" content="AI Tools & Resources | AI Search Mastery">
+    <meta property="og:description" content="Discover powerful AI tools and resources from AI Search Mastery. Transform websites into training data and optimize your AI search presence.">
+    <meta property="og:image" content="https://aisearchmastery.com/images/og/tools-share.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aisearchmastery.com/tools/">
+    <meta property="twitter:title" content="AI Tools & Resources | AI Search Mastery">
+    <meta property="twitter:description" content="Discover powerful AI tools and resources from AI Search Mastery.">
+    <meta property="twitter:image" content="https://aisearchmastery.com/images/og/tools-share.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aisearchmastery.com/tools/">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <style>
+        .tools-hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .tool-card.featured {
+            border-color: var(--primary-teal);
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.3);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tool-icon {
+            font-size: 3rem;
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+        
+        .tool-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-teal);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .tool-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+        
+        .tool-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .tool-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .tool-features li {
+            margin-bottom: 0.5rem;
+            color: var(--gray-700);
+        }
+        
+        .tool-features li::before {
+            content: "✅";
+            margin-right: 0.5rem;
+        }
+        
+        .tool-cta {
+            background: var(--primary-teal);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .tool-cta:hover {
+            background: var(--accent-teal);
+            transform: translateY(-2px);
+        }
+        
+        .coming-soon {
+            opacity: 0.7;
+            position: relative;
+        }
+        
+        .coming-soon::after {
+            content: "Coming Soon";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--gray-800);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            z-index: 10;
+        }
+        
+        .resources-section {
+            background: var(--gray-50);
+            padding: 4rem 0;
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .resource-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--primary-blue);
+        }
+        
+        .resource-icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-hero {
+                padding: 2rem 0;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <img src="/images/logos/ai-search-mastery-logo.png" alt="AI Search Mastery" class="logo">
+                <span class="brand-text">AI Search Mastery</span>
+            </a>
+            
+            <button class="navbar-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="navbar-menu" id="navMenu">
+                <a href="/" class="navbar-item">Home</a>
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item dropdown-trigger">
+                        Tools <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/tools/" class="dropdown-item">All Tools</a>
+                        <a href="/tools/llms-txt-tool/" class="dropdown-item">LLMs.txt Tool</a>
+                        <a href="/aimpactscanner/" class="dropdown-item">AI Impact Scanner</a>
+                    </div>
+                </div>
+                <a href="/blog/" class="navbar-item">Blog</a>
+                <a href="/about/" class="navbar-item">About</a>
+                <a href="/contact/" class="navbar-item">Contact</a>
+                <a href="/newsletter/" class="navbar-item cta-nav">Newsletter</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="tools-hero">
+        <div class="container">
+            <h1>AI Tools & Resources</h1>
+            <p class="hero-subtitle">
+                Powerful tools and resources to accelerate your AI development and optimization.
+                Created by Jamie Watters, developer of the MASTERY-AI Framework v2.1.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>AI Development Tools</h2>
+                <p class="section-subtitle">
+                    Professional-grade tools designed to streamline your AI workflow and maximize efficiency
+                </p>
+            </div>
+            
+            <div class="tools-grid">
+                <!-- LLMs.txt Tool - Featured -->
+                <div class="tool-card featured">
+                    <div class="tool-badge">NEW</div>
+                    <div class="tool-icon">🤖</div>
+                    <h3 class="tool-title">LLMs.txt Tool</h3>
+                    <p class="tool-description">
+                        Transform any website into clean, structured AI training data in minutes. 
+                        Generate perfect LLM.txt files with intelligent content extraction and quality scoring.
+                    </p>
+                    <ul class="tool-features">
+                        <li>99% page discovery rate with smart crawling</li>
+                        <li>AI-powered content quality scoring</li>
+                        <li>Multiple output formats (OpenAI, Anthropic, custom)</li>
+                        <li>Smart caching for 70% faster re-analysis</li>
+                        <li>Free tier available - no credit card required</li>
+                    </ul>
+                    <a href="/tools/llms-txt-tool/" class="tool-cta">Try Free Analysis</a>
+                </div>
+                
+                <!-- AI Impact Scanner -->
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h3 class="tool-title">AI Impact Scanner</h3>
+                    <p class="tool-description">
+                        Comprehensive AI search optimization assessment using the MASTERY-AI Framework v2.1. 
+                        Get detailed analysis across 132 atomic factors.
+                    </p>
+                    <ul class="tool-features">
+                        <li>MASTERY-AI Framework v2.1 assessment</li>
+                        <li>132 atomic factor analysis</li>
+                        <li>Dynamic E-E-A-T scoring</li>
+                        <li>RAG optimization recommendations</li>
+                        <li>Detailed improvement roadmap</li>
+                    </ul>
+                    <a href="/aimpactscanner/" class="tool-cta">Get Assessment</a>
+                </div>
+                
+                <!-- Framework Analyzer - Coming Soon -->
+                <div class="tool-card coming-soon">
+                    <div class="tool-icon">🧠</div>
+                    <h3 class="tool-title">Framework Analyzer</h3>
+                    <p class="tool-description">
+                        Advanced analysis tool for evaluating AI search optimization strategies 
+                        and competitive positioning across multiple domains.
+                    </p>
+                    <ul class="tool-features">
+                        <li>Multi-domain competitive analysis</li>
+                        <li>AI search trend identification</li>
+                        <li>Strategy recommendation engine</li>
+                        <li>Performance tracking dashboard</li>
+                        <li>Custom reporting suite</li>
+                    </ul>
+                    <a href="#" class="tool-cta">Coming Q4 2025</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Resources & Guides</h2>
+                <p class="section-subtitle">
+                    Comprehensive resources to help you master AI search optimization
+                </p>
+            </div>
+            
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📖</div>
+                    <h3>MASTERY-AI Framework Guide</h3>
+                    <p>Complete implementation guide for the industry's most comprehensive AI search optimization methodology with 132 atomic factors.</p>
+                    <a href="/mastery-ai-framework/" class="tool-cta">Learn More</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📝</div>
+                    <h3>Implementation Templates</h3>
+                    <p>Ready-to-use templates and checklists for implementing AI search optimization strategies across different industries and use cases.</p>
+                    <a href="/templates/" class="tool-cta">Download Templates</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>Case Studies</h3>
+                    <p>Real-world examples of successful AI search optimization implementations with detailed analysis and measurable results.</p>
+                    <a href="/blog/case-studies/" class="tool-cta">View Case Studies</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">🎯</div>
+                    <h3>Free Page Assessment</h3>
+                    <p>Get a complimentary analysis of your page's AI search optimization potential with actionable recommendations.</p>
+                    <a href="/free-page-assessment/" class="tool-cta">Get Free Assessment</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📡</div>
+                    <h3>AI Search Weekly</h3>
+                    <p>Stay updated with the latest AI search developments, insights, and optimization strategies delivered to your inbox.</p>
+                    <a href="/newsletter/" class="tool-cta">Subscribe Now</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">💬</div>
+                    <h3>Expert Consultation</h3>
+                    <p>One-on-one consultation with Jamie Watters to discuss your specific AI search optimization challenges and opportunities.</p>
+                    <a href="/contact/" class="tool-cta">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-final">
+        <div class="container text-center">
+            <h2>Ready to Transform Your AI Strategy?</h2>
+            <p class="cta-subtitle">
+                Start with our free tools and resources, then upgrade to advanced features as you scale your AI initiatives.
+            </p>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="/tools/llms-txt-tool/" class="cta-button large">Try LLMs.txt Tool Free</a>
+                <a href="/aimpactscanner/" class="cta-button large" style="background: var(--primary-blue);">Get AI Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI Search Mastery</h4>
+                    <p>The industry's most comprehensive AI search optimization methodology. Created by Jamie Watters.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/tools/llms-txt-tool/">LLMs.txt Tool</a></li>
+                        <li><a href="/aimpactscanner/">AI Impact Scanner</a></li>
+                        <li><a href="/mastery-ai-framework/">MASTERY-AI Framework</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/newsletter/">Newsletter</a></li>
+                        <li><a href="/case-studies/">Case Studies</a></li>
+                        <li><a href="/templates/">Templates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/tools/">Tools & Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Search Mastery. All rights reserved. Created by Jamie Watters.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/homepage.js"></script>
+</body>
+</html>
