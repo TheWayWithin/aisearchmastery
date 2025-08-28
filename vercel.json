@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ],
+  "env": {
+    "KIT_API_KEY": "@kit-api-key",
+    "KIT_FORM_ID": "@kit-form-id"
+  },
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 10
+    }
+  }
+}

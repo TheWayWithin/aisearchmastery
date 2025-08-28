@@ -4,28 +4,41 @@
 // Kit (ConvertKit) Integration Class
 class KitNewsletterIntegration {
     constructor() {
-        // API keys should be configured server-side for security
-        this.apiKey = null; // Configure server-side
-        this.formId = null; // Configure server-side
-        this.baseUrl = '/api/newsletter'; // Use server-side proxy
+        // Use server-side proxy for security (API keys handled server-side)
+        this.baseUrl = '/api/newsletter';
     }
     
     async subscribeUser(formData) {
+        // Prepare data for our server-side proxy
         const subscriberData = {
-            api_key: this.apiKey,
-            email: formData.email,
-            first_name: formData.first_name,
-            fields: {
-                business_type: formData.business_type,
-                source_page: 'homepage',
-                signup_date: new Date().toISOString(),
-                subscriber_type: 'authentic_positioning'
-            },
-            tags: ['homepage_signup', 'ai_search_weekly', 'solopreneur_focus']
+            email: formData.email?.toLowerCase()?.trim(),
+            first_name: formData.first_name?.trim(),
+            company: formData.company?.trim() || formData.business_type?.trim(),
+            use_case: formData.use_case || this.inferUseCase(formData),
+            source_page: formData.source_page || 'homepage'
         };
+
+        // Validate required fields
+        if (!subscriberData.email || !subscriberData.first_name) {
+            return { 
+                success: false, 
+                error: 'Email and first name are required' 
+            };
+        }
+
+        // Basic email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(subscriberData.email)) {
+            return { 
+                success: false, 
+                error: 'Please enter a valid email address' 
+            };
+        }
         
         try {
-            const response = await fetch(`${this.baseUrl}/forms/${this.formId}/subscribe`, {
+            console.log('Submitting to KIT via proxy:', subscriberData);
+            
+            const response = await fetch(this.baseUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -35,23 +48,95 @@ class KitNewsletterIntegration {
             
             const result = await response.json();
             
-            if (response.ok) {
+            if (response.ok && result.success) {
                 // Track successful subscription
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'newsletter_signup', {
                         event_category: 'engagement',
-                        event_label: 'homepage_form_authentic',
-                        value: 1
+                        event_label: `${subscriberData.source_page}_form`,
+                        event_value: 1,
+                        custom_parameters: {
+                            use_case: subscriberData.use_case,
+                            source_page: subscriberData.source_page
+                        }
                     });
                 }
                 
-                return { success: true, data: result };
+                return { 
+                    success: true, 
+                    data: result,
+                    message: result.message || 'Successfully subscribed!'
+                };
             } else {
-                throw new Error(result.message || 'Subscription failed');
+                // Handle API errors gracefully
+                const errorMessage = result.error || result.message || 'Subscription failed';
+                console.error('KIT API error:', result);
+                
+                return { 
+                    success: false, 
+                    error: errorMessage,
+                    already_subscribed: result.already_subscribed || false
+                };
             }
         } catch (error) {
-            console.error('Kit subscription error:', error);
-            return { success: false, error: error.message };
+            console.error('Kit subscription network error:', error);
+            
+            // Provide user-friendly error messages
+            let errorMessage = 'Network error occurred. Please check your connection and try again.';
+            
+            if (error.name === 'TypeError') {
+                errorMessage = 'Unable to connect to our servers. Please try again in a moment.';
+            }
+            
+            return { 
+                success: false, 
+                error: errorMessage 
+            };
+        }
+    }
+
+    // Helper method to infer use case from other form data
+    inferUseCase(formData) {
+        const company = (formData.company || formData.business_type || '').toLowerCase();
+        
+        if (company.includes('university') || company.includes('research') || company.includes('academic')) {
+            return 'academic';
+        } else if (company.includes('enterprise') || company.includes('corp') || company.includes('inc')) {
+            return 'enterprise';
+        } else if (company.includes('startup') || company.includes('llc')) {
+            return 'startup';
+        } else {
+            return 'personal';
+        }
+    }
+
+    // Method to check if email is valid format
+    isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Method for testing the API connection
+    async testConnection() {
+        try {
+            const testData = {
+                email: 'test@example.com',
+                first_name: 'Test',
+                source_page: 'connection_test'
+            };
+            
+            console.log('Testing KIT API connection...');
+            const result = await this.subscribeUser(testData);
+            
+            return {
+                connected: result.success || result.already_subscribed,
+                message: result.success ? 'Connection successful' : result.error
+            };
+        } catch (error) {
+            return {
+                connected: false,
+                message: `Connection failed: ${error.message}`
+            };
         }
     }
 }
@@ -268,45 +353,35 @@ class AISearchMasteryHomepage {
         submitBtn.classList.add('loading');
         
         try {
-            // For now, simulate success since we don't have real Kit credentials
-            // Replace this with actual Kit integration when credentials are available
-            await this.simulateKitIntegration(data);
+            // Use real KIT integration
+            const result = await this.kitIntegration.subscribeUser(data);
             
-            this.showFormSuccess(form);
-            
-            // Track conversion
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'newsletter_signup', {
-                    event_category: 'engagement',
-                    event_label: 'homepage_authentic_positioning',
-                    value: 1
-                });
+            if (result.success) {
+                this.showFormSuccess(form, result.message);
+                
+                // Analytics tracking is handled in KitNewsletterIntegration class
+            } else {
+                // Handle subscription errors
+                if (result.already_subscribed) {
+                    this.showFormSuccess(form, 'Welcome back! You\'re already subscribed to our newsletter.');
+                } else {
+                    throw new Error(result.error || 'Subscription failed');
+                }
             }
         } catch (error) {
+            console.error('Form submission error:', error);
             this.showFormError(form, error.message);
             
-            // Reset button
+            // Reset button state
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
             submitBtn.classList.remove('loading');
         }
     }
     
-    // Simulate Kit integration for demo purposes
-    async simulateKitIntegration(data) {
-        // Simulate API call delay
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Simulate occasional errors for testing
-        if (Math.random() < 0.1) {
-            throw new Error('Network error occurred. Please try again.');
-        }
-        
-        console.log('Newsletter signup data:', data);
-        return { success: true };
-    }
+    // Note: simulateKitIntegration method removed - now using real KIT integration
     
-    showFormSuccess(form) {
+    showFormSuccess(form, customMessage = null) {
         // Clear form contents securely
         while (form.firstChild) {
             form.removeChild(form.firstChild);
@@ -328,7 +403,7 @@ class AISearchMasteryHomepage {
         
         // Create main message
         const mainMessage = document.createElement('p');
-        mainMessage.textContent = 'Thanks for joining! Check your email for a confirmation message. Your first insights from my FreecalcHub journey will arrive next Tuesday.';
+        mainMessage.textContent = customMessage || 'Thanks for joining! Check your email for a confirmation message. Your first insights from my FreecalcHub journey will arrive next Tuesday.';
         successDiv.appendChild(mainMessage);
         
         // Create success note

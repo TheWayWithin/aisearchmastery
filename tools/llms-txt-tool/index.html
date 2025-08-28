@@ -288,8 +288,8 @@
                     </a>
                     <div class="dropdown-menu">
                         <a href="/tools/" class="dropdown-item">All Tools</a>
-                        <a href="/tools/llms-txt-tool/" class="dropdown-item">LLMs.txt Tool</a>
-                        <a href="/aimpactscanner/" class="dropdown-item">AI Impact Scanner</a>
+                        <a href="https://www.llmtxtmastery.com" class="dropdown-item" target="_blank">LLMs.txt Tool</a>
+                        <a href="https://www.aimpactscanner.com" class="dropdown-item" target="_blank">AI Impact Scanner</a>
                     </div>
                 </div>
                 <a href="/blog/" class="navbar-item">Blog</a>
@@ -718,8 +718,8 @@
                 <div class="footer-section">
                     <h4>Tools</h4>
                     <ul>
-                        <li><a href="/llms-txt-tool/">LLMs.txt Tool</a></li>
-                        <li><a href="/ai-impact-scanner/">AI Impact Scanner</a></li>
+                        <li><a href="https://www.llmtxtmastery.com" target="_blank">LLMs.txt Tool</a></li>
+                        <li><a href="https://www.aimpactscanner.com" target="_blank">AI Impact Scanner</a></li>
                         <li><a href="/mastery-framework/">MASTERY-AI Framework</a></li>
                     </ul>
                 </div>
@@ -875,9 +875,14 @@
                 document.body.style.overflow = '';
             }
             
-            handleFormSubmission(e) {
+            async handleFormSubmission(e) {
+                e.preventDefault();
+                
                 const formData = new FormData(e.target);
                 const data = Object.fromEntries(formData);
+                
+                // Add source page for tracking
+                data.source_page = 'llms_txt_tool';
                 
                 // Show loading state
                 const submitButton = e.target.querySelector('button[type="submit"]');
@@ -885,52 +890,72 @@
                 submitButton.textContent = 'Creating Account...';
                 submitButton.disabled = true;
                 
-                // Track email capture
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'email_capture', {
-                        'event_category': 'lead_generation',
-                        'event_label': data.use_case || 'unknown',
-                        'value': 1
-                    });
-                }
-                
-                // Submit to ConvertKit (placeholder)
-                this.submitToConvertKit(data)
-                    .then(() => {
-                        // Show success message
-                        this.showSuccessMessage();
-                    })
-                    .catch(() => {
-                        // Reset button on error
-                        submitButton.textContent = originalText;
-                        submitButton.disabled = false;
-                        alert('Something went wrong. Please try again or contact support.');
-                    });
-            }
-            
-            submitToConvertKit(data) {
-                // Simulate API call for demo purposes
-                return new Promise((resolve, reject) => {
-                    console.log('Submitting to ConvertKit:', data);
+                try {
+                    // Use real KIT integration via our proxy
+                    const result = await this.submitToKIT(data);
                     
-                    // Simulate 2-second API call
-                    setTimeout(() => {
-                        // For demo, always succeed
-                        resolve({ success: true });
+                    if (result.success) {
+                        // Track successful email capture
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'email_capture', {
+                                'event_category': 'lead_generation',
+                                'event_label': data.use_case || 'unknown',
+                                'value': 1
+                            });
+                        }
                         
-                        // In production, this would be:
-                        // fetch('/api/convertkit-submit', {
-                        //     method: 'POST',
-                        //     headers: { 'Content-Type': 'application/json' },
-                        //     body: JSON.stringify(data)
-                        // }).then(response => response.json())
-                        //   .then(resolve)
-                        //   .catch(reject);
-                    }, 2000);
-                });
+                        // Show success message
+                        this.showSuccessMessage(result.message);
+                    } else {
+                        throw new Error(result.error || 'Subscription failed');
+                    }
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    
+                    // Reset button on error
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                    
+                    // Show user-friendly error
+                    this.showErrorMessage(error.message || 'Something went wrong. Please try again or contact support.');
+                }
             }
             
-            showSuccessMessage() {
+            async submitToKIT(data) {
+                try {
+                    console.log('Submitting to KIT:', data);
+                    
+                    const response = await fetch('/api/newsletter', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (response.ok && result.success) {
+                        return {
+                            success: true,
+                            message: result.message || 'Successfully subscribed!'
+                        };
+                    } else {
+                        return {
+                            success: false,
+                            error: result.error || 'Subscription failed'
+                        };
+                    }
+                } catch (error) {
+                    console.error('KIT submission error:', error);
+                    return {
+                        success: false,
+                        error: 'Network error. Please check your connection and try again.'
+                    };
+                }
+            }
+            
+            showSuccessMessage(customMessage = null) {
                 // Replace modal content with success message
                 const modalContent = document.querySelector('.modal-content');
                 modalContent.innerHTML = `
@@ -962,6 +987,42 @@
                 setTimeout(() => {
                     this.hideModal();
                 }, 10000);
+            }
+            
+            showErrorMessage(errorMessage) {
+                // Create error alert
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'form-error';
+                errorDiv.style.cssText = `
+                    background: #FEE2E2;
+                    border: 1px solid #FECACA;
+                    color: #DC2626;
+                    padding: 1rem;
+                    border-radius: 0.5rem;
+                    margin: 1rem 0;
+                    font-weight: 500;
+                `;
+                errorDiv.innerHTML = `
+                    <div style="display: flex; align-items: center;">
+                        <i class="fas fa-exclamation-triangle" style="margin-right: 0.5rem;"></i>
+                        <span>${errorMessage}</span>
+                    </div>
+                `;
+                
+                // Insert error at top of modal form
+                const modalForm = document.getElementById('emailCaptureForm');
+                const existingError = modalForm.querySelector('.form-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+                modalForm.insertBefore(errorDiv, modalForm.firstChild);
+                
+                // Auto-remove error after 8 seconds
+                setTimeout(() => {
+                    if (errorDiv.parentNode) {
+                        errorDiv.remove();
+                    }
+                }, 8000);
             }
         }
         

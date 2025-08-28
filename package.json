@@ -1,0 +1,33 @@
+{
+  "name": "aisearchmastery-api",
+  "version": "1.0.0",
+  "description": "API endpoints for AI Search Mastery website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for serverless functions'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamiewatters/aisearchmastery.git"
+  },
+  "keywords": [
+    "ai",
+    "search",
+    "optimization",
+    "convertkit",
+    "email-marketing"
+  ],
+  "author": "Jamie Watters",
+  "license": "MIT"
+}

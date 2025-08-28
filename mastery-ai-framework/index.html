@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>MASTERY-AI Framework v3.1.1 | Revolutionary AI Search Optimization | Jamie Watters</title>
+    <meta name="description" content="Discover the MASTERY-AI Framework v3.1.1 - The industry's most comprehensive AI search optimization methodology with 148 atomic factors across 8 strategic pillars. Revolutionary MCP integration and LLMs.txt support.">
+    <meta name="keywords" content="MASTERY-AI Framework, AI search optimization, 148 atomic factors, MCP integration, LLMs.txt, AI optimization methodology, Jamie Watters">
+    <meta name="author" content="Jamie Watters">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aisearchmastery.com/mastery-ai-framework/">
+    <meta property="og:title" content="MASTERY-AI Framework v3.1.1 | Revolutionary AI Search Optimization">
+    <meta property="og:description" content="The industry's most comprehensive AI optimization methodology with 148 atomic factors. MCP integration, LLMs.txt support, and mathematically precise scoring.">
+    <meta property="og:image" content="https://aisearchmastery.com/images/og/mastery-framework-share.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aisearchmastery.com/mastery-ai-framework/">
+    <meta property="twitter:title" content="MASTERY-AI Framework v3.1.1 | Revolutionary AI Search Optimization">
+    <meta property="twitter:description" content="148 atomic factors across 8 strategic pillars. The complete AI optimization methodology.">
+    <meta property="twitter:image" content="https://aisearchmastery.com/images/og/mastery-framework-share.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aisearchmastery.com/mastery-ai-framework/">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <style>
+        .framework-hero {
+            background: linear-gradient(135deg, #1E3A8A 0%, #0D9488 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .framework-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-20px) translateX(10px); }
+            50% { transform: translateY(10px) translateX(-10px); }
+            75% { transform: translateY(-10px) translateX(20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .framework-hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .framework-hero .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pillars-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .pillar-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1E3A8A, #0D9488);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .pillar-letter {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1E3A8A, #0D9488);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .pillar-weight {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f0f9ff;
+            color: #1E3A8A;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .pillar-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .pillar-description {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .pillar-factors {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .factor-count {
+            color: #0D9488;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .differentiators-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .differentiators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+        }
+
+        .diff-item {
+            text-align: center;
+        }
+
+        .diff-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #1E3A8A, #0D9488);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .diff-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .diff-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .implementation-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .phase-timeline {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .phase-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .phase-item::before {
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: 50px;
+            bottom: -40px;
+            width: 2px;
+            background: #e5e7eb;
+        }
+
+        .phase-item:last-child::before {
+            display: none;
+        }
+
+        .phase-number {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: 3px solid #0D9488;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #0D9488;
+            margin-right: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .phase-content {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .phase-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .phase-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1E3A8A 0%, #0D9488 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-title {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1E3A8A;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .framework-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .framework-hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-stats {
+                gap: 25px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .phase-item {
+                flex-direction: column;
+            }
+            
+            .phase-number {
+                margin: 0 auto 20px;
+            }
+            
+            .phase-item::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="/" class="logo">AI Search Mastery</a>
+                </div>
+                
+                <nav class="primary-nav">
+                    <ul class="nav-links">
+                        <li class="nav-dropdown">
+                            <a href="/mastery-ai-framework" class="active">MASTERY-AI</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/mastery-ai-framework">Framework Overview</a></li>
+                                <li><a href="https://www.aimpactscanner.com" target="_blank">AI Impact Scanner</a></li>
+                                <li><a href="/implementation-guide">Implementation Guide</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="/tools/">Tools</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tools/">All Tools</a></li>
+                                <li><a href="https://www.llmtxtmastery.com" target="_blank">LLMs.txt Tool</a></li>
+                                <li><a href="https://www.aimpactscanner.com" target="_blank">AI Impact Scanner</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="/blog">Insights</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/blog">All Articles</a></li>
+                                <li><a href="/blog/fundamentals">AI Search Fundamentals</a></li>
+                                <li><a href="/blog/case-studies">Case Studies</a></li>
+                                <li><a href="/blog/industry-updates">Industry Updates</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="https://www.aimpactscanner.com" class="btn btn-primary" target="_blank">Get AI Assessment</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="framework-hero">
+        <div class="hero-content">
+            <span class="version-badge">Version 3.1.1 - Latest Release</span>
+            <h1>The MASTERY-AI Framework</h1>
+            <p class="subtitle">The Industry's Most Comprehensive AI Search Optimization Methodology</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">148</span>
+                    <span class="stat-label">Atomic Factors</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Strategic Pillars</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Precision Scoring</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><30s</span>
+                    <span class="stat-label">Assessment Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section class="pillars-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The 8 Strategic Pillars</h2>
+                <p>Each pillar is precisely weighted to reflect its impact on AI optimization success</p>
+            </div>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <span class="pillar-letter">AI</span>
+                    <span class="pillar-weight">23.8%</span>
+                    <h3 class="pillar-name">AI Response Optimization</h3>
+                    <p class="pillar-description">Core AI system optimization including MCP integration for AI agent connectivity and citation targeting across platforms.</p>
+                    <div class="pillar-factors">
+                        <span class="factor-count">23 factors</span>
+                        <i class="fas fa-arrow-right" style="color: #0D9488;"></i>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-letter">A</span>
+                    <span class="pillar-weight">17.9%</span>
+                    <h3 class="pillar-name">Authority & Trust</h3>
+                    <p class="pillar-description">Credibility indicators and trust signals that AI systems use to assess source reliability and citation worthiness.</p>
+                    <div class="pillar-factors">
+                        <span class="factor-count">15 factors</span>
+                        <i class="fas fa-arrow-right" style="color: #0D9488;"></i>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-letter">M</span>
+                    <span class="pillar-weight">14.6%</span>
+                    <h3 class="pillar-name">Machine Readability</h3>
+                    <p class="pillar-description">Technical infrastructure including LLMs.txt support for AI content accessibility and processing optimization.</p>
+                    <div class="pillar-factors">
+                        <span class="factor-count">21 factors</span>
+                        <i class="fas fa-arrow-right" style="color: #0D9488;"></i>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-letter">S</span>
+                    <span class="pillar-weight">13.9%</span>
+                    <h3 class="pillar-name">Semantic Content</h3>
+                    <p class="pillar-description">Content depth, semantic richness, and integrity validation including synthetic content detection.</p>
+                    <div class="pillar-factors">
+                        <span class="factor-count">22 factors</span>
+                        <i class="fas fa-arrow-right" style="color: #0D9488;"></i>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-letter">E</span>
+                    <span class="pillar-weight">10.9%</span>
+                    <h3 class="pillar-name">Engagement & UX</h3>
+                    <p class="pillar-description">User experience signals and engagement metrics that validate content value to AI systems.</p>
+                    <div class="pillar-factors">
+                        <span class="factor-count">19 factors</span>
+                        <i class="fas fa-arrow-right" style="color: #0D9488;"></i>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-letter">T</span>
+                    <span class="pillar-weight">8.9%</span>
+                    <h3 class="pillar-name">Topical Expertise</h3>
+                    <p class="pillar-description">Demonstration of subject matter expertise and practical experience in specific domains.</p>
+                    <div class="pillar-factors">
+                        <span class="factor-count">14 factors</span>
+                        <i class="fas fa-arrow-right" style="color: #0D9488;"></i>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-letter">R</span>
+                    <span class="pillar-weight">5.9%</span>
+                    <h3 class="pillar-name">Reference Networks</h3>
+                    <p class="pillar-description">External validation through citations, references, and third-party recognition systems.</p>
+                    <div class="pillar-factors">
+                        <span class="factor-count">19 factors</span>
+                        <i class="fas fa-arrow-right" style="color: #0D9488;"></i>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <span class="pillar-letter">Y</span>
+                    <span class="pillar-weight">4.1%</span>
+                    <h3 class="pillar-name">Yield Optimization</h3>
+                    <p class="pillar-description">Continuous optimization, performance monitoring, and content freshness maintenance.</p>
+                    <div class="pillar-factors">
+                        <span class="factor-count">15 factors</span>
+                        <i class="fas fa-arrow-right" style="color: #0D9488;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators Section -->
+    <section class="differentiators-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why MASTERY-AI is Revolutionary</h2>
+                <p>The only framework designed for the complete AI ecosystem</p>
+            </div>
+            
+            <div class="differentiators-grid">
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="diff-title">MCP Integration Ready</h3>
+                    <p class="diff-description">First framework with native Model Context Protocol support, enabling direct AI agent connectivity and autonomous system integration.</p>
+                </div>
+
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3 class="diff-title">LLMs.txt Support</h3>
+                    <p class="diff-description">Built-in content accessibility standards for efficient AI content discovery and processing through revolutionary consolidation protocols.</p>
+                </div>
+
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="diff-title">Mathematically Precise</h3>
+                    <p class="diff-description">Weighted scoring system with exact 100% distribution ensures consistent, reliable assessments across all optimization areas.</p>
+                </div>
+
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="diff-title">148 Atomic Factors</h3>
+                    <p class="diff-description">The most comprehensive factor set available, covering every aspect of AI optimization from technical infrastructure to semantic quality.</p>
+                </div>
+
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="diff-title">Content Integrity</h3>
+                    <p class="diff-description">Advanced synthetic content detection and provenance tracking for the AI content generation era.</p>
+                </div>
+
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="diff-title">Future-Ready</h3>
+                    <p class="diff-description">Adaptive architecture designed to evolve with AI capabilities while maintaining backward compatibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Section -->
+    <section class="implementation-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Progressive Implementation Path</h2>
+                <p>A strategic four-phase approach to AI optimization excellence</p>
+            </div>
+            
+            <div class="phase-timeline">
+                <div class="phase-item">
+                    <div class="phase-number">1</div>
+                    <div class="phase-content">
+                        <h3 class="phase-title">Foundation Assessment</h3>
+                        <p class="phase-description">Comprehensive baseline assessment of current AI optimization performance. Establish measurement baselines, identify quick wins, and develop your strategic roadmap.</p>
+                    </div>
+                </div>
+
+                <div class="phase-item">
+                    <div class="phase-number">2</div>
+                    <div class="phase-content">
+                        <h3 class="phase-title">Core Optimization</h3>
+                        <p class="phase-description">Implement fundamental content optimization, authority building, and technical infrastructure enhancement. Focus on high-impact areas with immediate ROI.</p>
+                    </div>
+                </div>
+
+                <div class="phase-item">
+                    <div class="phase-number">3</div>
+                    <div class="phase-content">
+                        <h3 class="phase-title">Advanced Integration</h3>
+                        <p class="phase-description">Deploy MCP servers, implement LLMs.txt standards, and establish AI agent connectivity. Achieve cutting-edge optimization capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="phase-item">
+                    <div class="phase-number">4</div>
+                    <div class="phase-content">
+                        <h3 class="phase-title">Ecosystem Leadership</h3>
+                        <p class="phase-description">Comprehensive optimization across all pillars. Establish industry leadership through sustained excellence and continuous innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Master AI Search Optimization?</h2>
+            <p class="cta-description">Start with a comprehensive assessment of your current AI optimization performance across all 148 factors.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://www.aimpactscanner.com" class="btn-white" target="_blank">Get Your AI Assessment</a>
+                <a href="/implementation-guide" class="btn-outline">View Implementation Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI Search Mastery</h4>
+                    <p>Pioneering AI search optimization with the MASTERY-AI Framework v3.1.1</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/jamiewatters" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/in/jamiewatters" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Framework</h4>
+                    <ul>
+                        <li><a href="/mastery-ai-framework">MASTERY-AI Overview</a></li>
+                        <li><a href="https://www.aimpactscanner.com" target="_blank">AI Impact Scanner</a></li>
+                        <li><a href="/implementation-guide">Implementation Guide</a></li>
+                        <li><a href="/case-studies">Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog">Blog & Insights</a></li>
+                        <li><a href="/tools">AI Tools</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                        <li><a href="/about">About Jamie</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/sitemap.html">Sitemap</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Search Mastery. All rights reserved. | Created by Jamie Watters</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/homepage.js"></script>
+</body>
+</html>

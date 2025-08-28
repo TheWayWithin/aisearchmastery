@@ -17,6 +17,13 @@
 
     <!-- Core Pages -->
     <url>
+        <loc>https://aisearchmastery.com/mastery-ai-framework/</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
         <loc>https://aisearchmastery.com/about/</loc>
         <lastmod>2025-07-16</lastmod>
         <changefreq>monthly</changefreq>
