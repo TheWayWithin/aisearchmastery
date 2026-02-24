@@ -1,0 +1,41 @@
+# aisearchmastery.com
+
+> AI Search Mastery helps solopreneurs and small businesses become visible to AI search engines. Two tools: AImpactScanner (diagnoses AI visibility) and LLM.txt Mastery (fixes it). Built on the open MASTERY-AI Framework v3.1.1 with 8 pillars and 27 factors. From $9.95/month vs $129+ for enterprise alternatives.
+
+## The Problem We Solve
+
+93% of queries in Google's AI Mode never reach a website. When someone asks ChatGPT, Claude, or Perplexity for a recommendation in your space, you either show up or you don't. There's no page 2. Most small businesses are invisible to AI search and don't know it.
+
+## Our Tools
+
+### AImpactScanner
+Free AI visibility scanner. 27-factor analysis in 60 seconds. Shows exactly how AI search engines see your site with a prioritised action plan.
+- URL: https://aimpactscanner.com
+
+### LLM.txt Mastery
+Generates and validates llms.txt files. The file that tells AI models how to read your site. Think robots.txt for the AI era.
+- URL: https://llmtxtmastery.com
+- Validator: https://llmtxtmastery.com/validator
+
+## Who We Serve
+
+- Solopreneurs with valuable expertise who are invisible to AI
+- Freelancers and consultants losing business to AI-visible competitors
+- Small agencies wanting to offer AI visibility services to clients
+- Anyone spending $129+/month on enterprise AI SEO tools who wants a 92% cheaper alternative
+
+## Framework
+
+The MASTERY-AI Framework v3.1.1 is our open methodology for measuring AI visibility. 8 pillars, 27 factors, used by both tools.
+
+## Key Pages
+
+- [Home](https://aisearchmastery.com/): Overview and product comparison
+- [AImpactScanner](https://aimpactscanner.com/): Free AI visibility scan
+- [LLM.txt Mastery](https://llmtxtmastery.com/): llms.txt generator and validator
+- [Blog](https://aisearchmastery.com/blog/): AI search insights and guides
+
+## Built By
+
+Jamie Watters, solopreneur and builder. Solving the AI visibility problem because he needed the solution himself.
+- Website: https://jamiewatters.work
