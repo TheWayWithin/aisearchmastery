@@ -27,13 +27,17 @@
   <meta name="twitter:description" content="Diagnose and fix your AI search visibility. AImpactScanner scores your site across 27 factors from $9.95/mo. Growth ($19.95/mo) includes full LLM.txt Mastery — one subscription for everything.">
   <meta name="twitter:image" content="https://aisearchmastery.com/images/og/products.jpg">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (deferred — system font shows instantly, Inter swaps in) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css">
+  <!-- Critical CSS (above-fold, render-blocking) -->
+  <link rel="stylesheet" href="/css/critical.css">
+
+  <!-- Full stylesheet (deferred, loads async) -->
+  <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
 
   <!-- Plausible Analytics (cookieless, GDPR-compliant) -->
   <script async src="https://plausible.io/js/pa-uuYxfgVfBXI1g3QRbub90.js"></script>

@@ -41,3 +41,12 @@ node_modules/
 # Temporary files
 *.tmp
 *.temp
+
+# Environment variables and secrets
+.env
+.env.local
+.env.mcp
+*.pem
+*.key
+# Local Netlify folder
+.netlify
