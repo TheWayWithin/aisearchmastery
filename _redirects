@@ -1,0 +1,39 @@
+# AI Search Mastery - URL Redirect Configuration
+# Generated: 2026-02-21
+# Format: Netlify _redirects (also compatible with most static hosts)
+# 26-URL migration audit: 13 redirects + 6 preserved paths
+
+# Framework path change
+/mastery-ai-framework/  /framework  301
+/mastery-ai-framework   /framework  301
+
+# About subpage merged
+/about/jamie/  /about  301
+/about/jamie   /about  301
+
+# Newsletter retired
+/newsletter/  /contact  301
+/newsletter   /contact  301
+
+# Tools renamed to products
+/tools/  /products  301
+/tools   /products  301
+/tools-resources/  /products  301
+/tools-resources   /products  301
+
+# External product redirect
+/tools/llms-txt-tool/  https://llmtxtmastery.com  301
+/tools/llms-txt-tool   https://llmtxtmastery.com  301
+
+# Blog category pages → filtered hub views
+/blog/fundamentals/  /blog?category=fundamentals  301
+/blog/how-to-guides/  /blog?category=how-to-guides  301
+/blog/industry-updates/  /blog?category=industry-updates  301
+
+# Retired categories
+/blog/case-studies/  /blog  301
+/blog/tools-resources/  /products  301
+
+# Removed content
+/blog/case-studies/freecalchub-innovation-laboratory/  /blog  301
+/blog/industry-updates/mastery-ai-framework-v2-1-announcement.html  /blog/industry-updates/december-ai-search-changes/  301
