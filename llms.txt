@@ -28,14 +28,28 @@ Generates and validates llms.txt files. The file that tells AI models how to rea
 
 The MASTERY-AI Framework v3.1.1 is our open methodology for measuring AI visibility. 8 pillars, 27 factors, used by both tools.
 
+- **M — Machine Readability** (4 factors) — Structured data, semantic markup, crawlability, data freshness
+- **A — Authority Signals** (3 factors) — Expert credentials, author profiles, expertise signals
+- **S — Sentiment & Reviews** (3 factors) — Review sentiment, brand perception, reputation signals
+- **T — Technical Foundations** (4 factors) — Site speed, mobile experience, security, accessibility
+- **E — Entity Recognition** (3 factors) — Brand identity, consistent profiles, knowledge graph presence
+- **R — Relevance & Accuracy** (3 factors) — Content relevance, factual accuracy, topical depth
+- **Y — Youthfulness & Recency** (4 factors) — Content freshness, update frequency, temporal signals
+- **AI — AI-Specific Optimisation** (3 factors) — llms.txt, AI crawler access, structured AI context
+
 ## Key Pages
 
 - [Home](https://aisearchmastery.com/): Overview and product comparison
 - [AImpactScanner](https://aimpactscanner.com/): Free AI visibility scan
 - [LLM.txt Mastery](https://llmtxtmastery.com/): llms.txt generator and validator
+- [Framework](https://aisearchmastery.com/framework): Open MASTERY-AI methodology
 - [Blog](https://aisearchmastery.com/blog/): AI search insights and guides
+- [Products](https://aisearchmastery.com/products): Full product comparison and pricing
+- [About](https://aisearchmastery.com/about): About Jamie Watters
+- [Contact](https://aisearchmastery.com/contact): Get in touch
 
 ## Built By
 
 Jamie Watters, solopreneur and builder. Solving the AI visibility problem because he needed the solution himself.
 - Website: https://jamiewatters.work
+- Contact: support@aisearchmastery.com

@@ -1,1580 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- SEO Meta Tags -->
-    <title>AI Search Insights | MASTERY-AI Framework Blog | AI Search Mastery</title>
-    <meta name="description" content="Expert insights on AI search optimization using the MASTERY-AI Framework v2.1. Learn from real implementations, case studies, and systematic methodologies for AI search success.">
-    <meta name="keywords" content="MASTERY-AI Framework, AI search optimization, 132 atomic factors, AI search insights, systematic optimization, Jamie Watters">
-    <meta name="author" content="Jamie Watters">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://aisearchmastery.com/blog/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aisearchmastery.com/blog/">
-    <meta property="og:title" content="AI Search Insights | MASTERY-AI Framework Blog">
-    <meta property="og:description" content="Expert insights on implementing the MASTERY-AI Framework v2.1 with 132 atomic factors for AI search optimization success.">
-    <meta property="og:image" content="https://aisearchmastery.com/images/og/mastery-blog-share.jpg">
-    <meta property="og:site_name" content="AI Search Mastery">
-    
-    <!-- Twitter Card -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://aisearchmastery.com/blog/">
-    <meta property="twitter:title" content="AI Search Insights | MASTERY-AI Framework Blog">
-    <meta property="twitter:description" content="Expert insights on implementing the MASTERY-AI Framework v2.1 for AI search optimization.">
-    <meta property="twitter:image" content="https://aisearchmastery.com/images/og/mastery-blog-share.jpg">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/main.css">
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PMQG5CBD');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "AI Search Mastery Blog",
-      "description": "Expert insights on AI search optimization using the MASTERY-AI Framework v2.1 Enhanced Edition",
-      "url": "https://aisearchmastery.com/blog/",
-      "author": {
-        "@type": "Person",
-        "name": "Jamie Watters",
-        "jobTitle": "Creator of MASTERY-AI Framework v2.1",
-        "description": "AI search optimization pioneer and creator of the industry's most comprehensive methodology"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "AI Search Mastery",
-        "url": "https://aisearchmastery.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://aisearchmastery.com/images/logos/logo-primary.png"
-        }
-      }
-    }
-    </script>
-    
-    <style>
-    /* Blog Page Specific Styles */
-    .blog-hero {
-        background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
-        padding: 3rem 0 4rem;
-        border-bottom: 1px solid var(--gray-200);
-    }
-    
-    .blog-hero h1 {
-        margin-bottom: 1rem;
-        font-size: 3rem;
-        background: linear-gradient(120deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.25rem;
-        color: var(--gray-600);
-        line-height: 1.7;
-        max-width: 800px;
-    }
-    
-    .blog-stats {
-        display: flex;
-        gap: 3rem;
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid var(--gray-200);
-    }
-    
-    .stat-item {
-        text-align: center;
-    }
-    
-    .stat-number {
-        display: block;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--primary-blue);
-        line-height: 1;
-        margin-bottom: 0.5rem;
-    }
-    
-    .stat-label {
-        display: block;
-        font-size: 0.875rem;
-        color: var(--gray-600);
-    }
-    
-    /* Featured Section */
-    .featured-section {
-        padding: 4rem 0;
-        background: var(--white);
-    }
-    
-    .featured-banner {
-        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
-        color: var(--white);
-        padding: 3rem;
-        border-radius: var(--radius-xl);
-        margin-bottom: 3rem;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .featured-banner::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-        animation: pulse 4s ease-in-out infinite;
-    }
-    
-    @keyframes pulse {
-        0%, 100% { transform: scale(1); opacity: 0.5; }
-        50% { transform: scale(1.1); opacity: 0.3; }
-    }
-    
-    .featured-banner h2 {
-        color: var(--white);
-        margin-bottom: 1rem;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .featured-badge {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.2);
-        padding: 0.5rem 1rem;
-        border-radius: var(--radius-lg);
-        font-size: 0.875rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-    }
-    
-    .featured-banner p {
-        font-size: 1.125rem;
-        margin-bottom: 2rem;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .featured-cta {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .featured-cta .btn {
-        background: var(--white);
-        color: var(--primary-blue);
-        font-weight: 600;
-        padding: 0.875rem 2rem;
-    }
-    
-    .featured-cta .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* Category Filter Pills */
-    .category-filter {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 3rem 0;
-        padding: 1.5rem;
-        background: var(--gray-50);
-        border-radius: var(--radius-lg);
-    }
-    
-    .filter-pill {
-        padding: 0.5rem 1.25rem;
-        background: var(--white);
-        border: 2px solid var(--gray-200);
-        border-radius: var(--radius-lg);
-        color: var(--gray-700);
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.2s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .filter-pill:hover {
-        border-color: var(--primary-blue);
-        color: var(--primary-blue);
-        transform: translateY(-1px);
-        box-shadow: var(--shadow-sm);
-    }
-    
-    .filter-pill.active {
-        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
-        color: var(--white);
-        border-color: var(--primary-blue);
-    }
-    
-    .filter-pill i {
-        font-size: 1rem;
-    }
-    
-    /* Blog Cards Grid */
-    .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-        gap: 2rem;
-        margin-bottom: 4rem;
-    }
-    
-    .blog-card {
-        background: var(--white);
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        box-shadow: var(--shadow-md);
-        transition: all 0.3s ease;
-        border: 2px solid transparent;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .blog-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-xl);
-        border-color: var(--primary-blue);
-    }
-    
-    .card-image {
-        width: 100%;
-        height: 200px;
-        background: var(--gray-100);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .category-badge {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        padding: 0.375rem 0.75rem;
-        background: var(--white);
-        border-radius: var(--radius-md);
-        font-size: 0.75rem;
-        font-weight: 600;
-        box-shadow: var(--shadow-sm);
-    }
-    
-    /* Category-specific badges */
-    .category-badge.fundamentals {
-        color: var(--primary-blue);
-        background: rgba(30, 58, 138, 0.1);
-    }
-    
-    .category-badge.case-studies {
-        color: var(--primary-teal);
-        background: rgba(13, 148, 136, 0.1);
-    }
-    
-    .category-badge.how-to {
-        color: var(--warning);
-        background: rgba(245, 158, 11, 0.1);
-    }
-    
-    .category-badge.framework {
-        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
-        color: var(--white);
-    }
-    
-    .card-content {
-        padding: 1.5rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .card-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0.75rem;
-        font-size: 0.875rem;
-        color: var(--gray-500);
-    }
-    
-    .framework-pillar {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.375rem;
-        padding: 0.25rem 0.625rem;
-        background: var(--gray-100);
-        border-radius: var(--radius-sm);
-        font-size: 0.75rem;
-        color: var(--gray-700);
-    }
-    
-    .framework-pillar i {
-        font-size: 0.875rem;
-        color: var(--primary-blue);
-    }
-    
-    .card-title {
-        margin-bottom: 1rem;
-        flex: 0;
-    }
-    
-    .card-title a {
-        color: var(--gray-900);
-        text-decoration: none;
-        font-size: 1.25rem;
-        font-weight: 600;
-        line-height: 1.3;
-        transition: color 0.2s ease;
-    }
-    
-    .card-title a:hover {
-        color: var(--primary-blue);
-    }
-    
-    .card-excerpt {
-        color: var(--gray-600);
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        flex: 1;
-    }
-    
-    .card-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 1rem;
-        border-top: 1px solid var(--gray-100);
-    }
-    
-    .read-time {
-        display: flex;
-        align-items: center;
-        gap: 0.375rem;
-        color: var(--gray-500);
-        font-size: 0.875rem;
-    }
-    
-    .read-time i {
-        font-size: 0.875rem;
-    }
-    
-    .card-metrics {
-        display: flex;
-        gap: 1rem;
-        font-size: 0.875rem;
-        color: var(--gray-500);
-    }
-    
-    .metric-item {
-        display: flex;
-        align-items: center;
-        gap: 0.375rem;
-    }
-    
-    /* Category Grid Section */
-    .categories-section {
-        padding: 4rem 0;
-        background: var(--gray-50);
-    }
-    
-    .section-header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    
-    .section-header h2 {
-        margin-bottom: 1rem;
-    }
-    
-    .section-subtitle {
-        font-size: 1.125rem;
-        color: var(--gray-600);
-    }
-    
-    .categories-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;
-    }
-    
-    .category-card {
-        background: var(--white);
-        border-radius: var(--radius-lg);
-        padding: 2rem;
-        text-align: center;
-        transition: all 0.3s ease;
-        border: 2px solid var(--gray-200);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .category-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-    }
-    
-    .category-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary-blue);
-    }
-    
-    .category-card:hover::before {
-        transform: scaleX(1);
-    }
-    
-    .category-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        border-radius: var(--radius-lg);
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-    }
-    
-    .category-card h3 {
-        margin-bottom: 0.75rem;
-    }
-    
-    .category-card h3 a {
-        color: var(--gray-900);
-        text-decoration: none;
-    }
-    
-    .category-card:hover h3 a {
-        color: var(--primary-blue);
-    }
-    
-    .category-description {
-        color: var(--gray-600);
-        line-height: 1.6;
-        margin-bottom: 1rem;
-    }
-    
-    .category-stats {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: 1px solid var(--gray-100);
-    }
-    
-    .category-stats span {
-        font-size: 0.875rem;
-        color: var(--gray-500);
-    }
-    
-    /* Newsletter Section */
-    .newsletter-blog {
-        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
-        color: var(--white);
-        padding: 4rem 0;
-        margin-top: 4rem;
-    }
-    
-    .newsletter-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-    }
-    
-    .newsletter-info h2 {
-        color: var(--white);
-        margin-bottom: 1rem;
-    }
-    
-    .newsletter-form-box {
-        background: var(--white);
-        padding: 2rem;
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow-xl);
-    }
-    
-    .newsletter-form-box h3 {
-        color: var(--gray-900);
-        margin-bottom: 1rem;
-    }
-    
-    .form-group {
-        margin-bottom: 1rem;
-    }
-    
-    .form-group input {
-        width: 100%;
-        padding: 0.875rem 1rem;
-        border: 2px solid var(--gray-200);
-        border-radius: var(--radius-md);
-        font-size: 1rem;
-        transition: all 0.2s ease;
-    }
-    
-    .form-group input:focus {
-        outline: none;
-        border-color: var(--primary-blue);
-        box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
-    }
-    
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-        .blog-hero h1 {
-            font-size: 2.25rem;
-        }
-        
-        .blog-stats {
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        
-        .category-filter {
-            padding: 1rem;
-            gap: 0.75rem;
-        }
-        
-        .filter-pill {
-            padding: 0.375rem 0.875rem;
-            font-size: 0.875rem;
-        }
-        
-        .blog-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .categories-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        .newsletter-content {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        
-        .featured-banner {
-            padding: 2rem;
-        }
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Blog Page Enhanced Responsive Navigation Fix */
-    /* Add this CSS to handle the navigation breakpoints properly */
-    
-    /* Critical breakpoint: Hide CTA when it would overlap (1467px) */
-    @media (max-width: 1467px) {
-        body.blog-page .header-cta {
-            display: none !important;
+  <title>AI Search Insights | Blog | AI Search Mastery</title>
+  <meta name="description" content="Practical insights on AI search visibility. Guides, strategies, and industry updates from the MASTERY-AI Framework.">
+
+  <link rel="canonical" href="https://aisearchmastery.com/blog">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Search Insights | Blog | AI Search Mastery">
+  <meta property="og:description" content="Practical insights on AI search visibility. Guides, strategies, and industry updates from the MASTERY-AI Framework.">
+  <meta property="og:image" content="https://aisearchmastery.com/images/og/blog.jpg">
+  <meta property="og:url" content="https://aisearchmastery.com/blog">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Search Insights | Blog | AI Search Mastery">
+  <meta name="twitter:description" content="Practical insights on AI search visibility. Guides, strategies, and industry updates from the MASTERY-AI Framework.">
+  <meta name="twitter:image" content="https://aisearchmastery.com/images/og/blog.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Plausible Analytics (cookieless, GDPR-compliant) -->
+  <script async src="https://plausible.io/js/pa-uuYxfgVfBXI1g3QRbub90.js"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aisearchmastery.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://aisearchmastery.com/blog"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: CollectionPage with ItemList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "AI Search Insights",
+    "description": "Practical insights on AI search visibility. Guides, strategies, and industry updates from the MASTERY-AI Framework.",
+    "url": "https://aisearchmastery.com/blog",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://aisearchmastery.com/blog/fundamentals/is-ai-stealing-your-traffic/"
         }
+      ]
     }
-    
-    /* When search starts hitting About (1380px) - compress navigation */
-    @media (max-width: 1380px) {
-        body.blog-page .header-container-full {
-            padding: 1rem 1.5rem;
-            gap: 1rem;
-        }
-        
-        body.blog-page .nav-links {
-            gap: 1.25rem;
-        }
-        
-        body.blog-page .nav-links a {
-            padding: 0.5rem 0.875rem;
-            font-size: 0.95rem;
-        }
-        
-        body.blog-page .header-search {
-            width: 200px;
-            margin: 0 0.75rem;
-        }
-    }
-    
-    /* Further compression at 1200px */
-    @media (max-width: 1200px) {
-        body.blog-page .logo {
-            width: 200px;
-        }
-        
-        body.blog-page .logo-text {
-            font-size: 1.25rem;
-        }
-        
-        body.blog-page .nav-links {
-            gap: 1rem;
-        }
-        
-        body.blog-page .nav-links a {
-            padding: 0.5rem 0.75rem;
-            font-size: 0.9rem;
-        }
-        
-        body.blog-page .header-search {
-            width: 180px;
-        }
-    }
-    
-    /* At 1100px - more compression */
-    @media (max-width: 1100px) {
-        body.blog-page .nav-links {
-            gap: 0.75rem;
-        }
-        
-        body.blog-page .nav-links a {
-            padding: 0.4rem 0.6rem;
-            font-size: 0.875rem;
-        }
-        
-        body.blog-page .header-search {
-            width: 160px;
-        }
-        
-        body.blog-page .blog-search-input {
-            font-size: 0.825rem;
-            padding: 0.4rem 0.6rem 0.4rem 2rem;
-        }
-    }
-    
-    /* Mobile menu should trigger at 985px for blog page */
-    @media (max-width: 985px) {
-        /* Show mobile menu button */
-        body.blog-page .mobile-menu-btn {
-            display: flex !important;
-        }
-        
-        /* Hide desktop navigation */
-        body.blog-page .primary-nav {
-            position: fixed;
-            top: 80px;
-            left: 0;
-            right: 0;
-            background: var(--white);
-            border-top: 1px solid var(--gray-200);
-            padding: 2rem;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            z-index: 999;
-            max-width: none;
-            margin: 0;
-            flex: none;
-            justify-content: flex-start;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        body.blog-page .primary-nav.mobile-open {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        
-        /* Mobile navigation styles */
-        body.blog-page .nav-links {
-            flex-direction: column;
-            gap: 0.5rem;
-            width: 100%;
-            align-items: stretch;
-        }
-        
-        body.blog-page .nav-links li {
-            width: 100%;
-        }
-        
-        body.blog-page .nav-links a {
-            padding: 1rem;
-            justify-content: space-between;
-            background-color: rgba(0, 0, 0, 0.02);
-            border-radius: var(--radius-md);
-            width: 100%;
-            text-align: left;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-        
-        /* Hide search in mobile menu */
-        body.blog-page .header-search {
-            display: none !important;
-        }
-        
-        /* Mobile dropdown menus */
-        body.blog-page .dropdown-menu {
-            position: static;
-            opacity: 1;
-            visibility: visible;
-            transform: none;
-            box-shadow: none;
-            border: none;
-            background: rgba(0, 0, 0, 0.02);
-            margin-top: 0.5rem;
-            border-radius: var(--radius-md);
-            padding: 0.5rem;
-        }
-    }
-    
-    /* Additional blog page specific styles to prevent logo text wrapping */
-    @media (max-width: 1200px) and (min-width: 986px) {
-        body.blog-page .logo-text {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    
-    /* Ensure proper mobile layout at 768px and below */
-    @media (max-width: 768px) {
-        body.blog-page .blog-hero h1 {
-            font-size: 2.25rem;
-        }
-        
-        body.blog-page .blog-stats {
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        
-        body.blog-page .category-filter {
-            padding: 1rem;
-            gap: 0.75rem;
-        }
-        
-        body.blog-page .filter-pill {
-            padding: 0.375rem 0.875rem;
-            font-size: 0.875rem;
-        }
-        
-        body.blog-page .blog-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        body.blog-page .categories-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        body.blog-page .newsletter-content {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        
-        body.blog-page .featured-banner {
-            padding: 2rem;
-        }
-    }
-    
-    /* Fix for logo text at very tight spaces */
-    @media (max-width: 1100px) and (min-width: 986px) {
-        body.blog-page .logo {
-            width: 48px; /* Just show icon */
-            overflow: hidden;
-        }
-        
-        body.blog-page .logo-text {
-            display: none; /* Hide text, show icon only */
-        }
-    }    
-    
-    </style>
+  }
+  </script>
 </head>
-<body class="blog-page">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMQG5CBD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <!-- Skip to Main Content -->
-    <a href="#main-content" class="sr-only">Skip to main content</a>
-    
-    <!-- Header - EXACT COPY FROM HOMEPAGE WITH SEARCH ADDED -->
-    <header class="site-header" role="banner">
-        <div class="header-container-full">
-            <!-- Logo - Far Left -->
-            <div class="logo">
-                <a href="/" aria-label="AI Search Mastery - Go to Homepage">
-                    <img src="/images/logos/logo-primary.png" 
-                         alt="AI Search Mastery Logo" 
-                         width="48" 
-                         height="48"
-                         class="logo-image">
-                    <span class="logo-text">AI Search Mastery</span>
-                </a>
-            </div>
-            
-            <!-- Navigation - Centered -->
-            <nav class="primary-nav" role="navigation" aria-label="Main navigation">
-                <ul class="nav-links">
-                    <li class="nav-dropdown">
-                        <a href="/mastery-ai-framework" aria-expanded="false" aria-haspopup="true">
-                            MASTERY-AI
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/mastery-ai-framework" role="menuitem">MASTERY-AI Framework</a></li>
-                            <li><a href="https://www.aimpactscanner.com" target="_blank" role="menuitem">AImpactScanner</a></li>
-                            <li><a href="/implementation-guide" role="menuitem">Implementation Guide</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-dropdown">
-                        <a href="/blog" aria-current="page" aria-expanded="false" aria-haspopup="true">
-                            Insights
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/blog" role="menuitem">All Insights</a></li>
-                            <li><a href="/blog/fundamentals" role="menuitem">AI Search Fundamentals</a></li>
-                            <li><a href="/blog/case-studies" role="menuitem">Case Studies</a></li>
-                            <li><a href="/blog/how-to-guides" role="menuitem">How-To Guides</a></li>
-                            <li><a href="/blog/industry-updates" role="menuitem">Industry Updates</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-dropdown">
-                        <a href="/resources" aria-expanded="false" aria-haspopup="true">
-                            Resources
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/newsletter" role="menuitem">Newsletter</a></li>
-                            <li><a href="/free-page-assessment" role="menuitem">Free Page Assessment</a></li>
-                            <li><a href="/templates" role="menuitem">Templates</a></li>
-                            <li><a href="/tools-resources" role="menuitem">Tools & Resources</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-dropdown">
-                        <a href="/about" aria-expanded="false" aria-haspopup="true">
-                            About
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/about" role="menuitem">About AI Search Mastery</a></li>
-                            <li><a href="/contact" role="menuitem">Contact</a></li>
-                            <li><a href="/privacy" role="menuitem">Privacy Policy</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            
-            <!-- Search - Blog Only -->
-            <div class="header-search">
-                <div class="search-container">
-                    <input type="search" 
-                           class="blog-search-input" 
-                           placeholder="Search insights..."
-                           aria-label="Search blog articles"
-                           autocomplete="off">
-                    <button class="search-btn" type="button" aria-label="Search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="search-results" role="listbox" aria-label="Search results"></div>
-            </div>
-            
-            <!-- CTA Button - Far Right -->
-            <div class="header-cta">
-                <a href="https://www.aimpactscanner.com" target="_blank" class="btn btn-primary">Get MASTERY-AI Assessment</a>
-            </div>
-            
-            <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+<body>
+  <!-- Skip Navigation -->
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <!-- ========== HEADER (F-001) ========== -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AI Search Mastery — Home">
+        <span class="header__logo-full">AI Search Mastery</span>
+        <span class="header__logo-compact">ASM</span>
+      </a>
+
+      <nav class="header__nav" id="primary-nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/framework" class="nav__link">Framework</a></li>
+          <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="/products" class="nav__link">Products</a></li>
+          <li class="nav__item"><a href="/blog" class="nav__link nav__link--active" aria-current="page">Blog</a></li>
+          <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://aimpactscanner.com" class="btn btn--primary header__cta" target="_blank" rel="noopener noreferrer"
+         aria-label="Free Site Scan (opens in new tab)" data-track-cta data-product="aimpactscanner" data-location="nav">
+        Free Site Scan
+      </a>
+
+      <button class="header__menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <span class="header__menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== PAGE INTRO ========== -->
+    <section class="section" aria-labelledby="blog-heading">
+      <div class="container max-w-text mx-auto">
+        <h1 id="blog-heading" class="text-display">AI Search Insights</h1>
+        <p class="mt-4">Practical guides, strategies, and industry updates on getting your business found by AI.</p>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORY FILTER ========== -->
+    <section class="section section--alt" aria-label="Filter articles by category">
+      <div class="container">
+        <div class="blog-filter" role="group" aria-label="Category filter">
+          <button class="blog-filter__pill blog-filter__pill--active" data-category="all" type="button">All (1)</button>
+          <button class="blog-filter__pill" data-category="fundamentals" type="button">Fundamentals (1)</button>
         </div>
-    </header>
-    
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-        
-        <!-- Blog Hero Section -->
-        <section class="blog-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>AI Search Insights</h1>
-                    <p class="hero-subtitle">
-                        Expert insights on implementing the MASTERY-AI Framework v2.1 Enhanced Edition. 
-                        Learn how to systematically optimize for AI search engines using our proven 
-                        methodology with 132 atomic factors across 8 strategic pillars.
-                    </p>
-                    
-                    <div class="blog-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">132</span>
-                            <span class="stat-label">Framework Factors Covered</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">8</span>
-                            <span class="stat-label">Strategic Pillars</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">48+</span>
-                            <span class="stat-label">Expert Insights</span>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </section>
+
+    <!-- ========== ARTICLE GRID ========== -->
+    <section class="section" aria-label="Blog articles">
+      <div class="container">
+        <div class="blog-grid">
+
+          <!-- Article 1 -->
+          <article class="card blog-card" data-category="fundamentals">
+            <div class="card__body">
+              <span class="badge badge--fundamentals">Fundamentals</span>
+              <h2 class="card__title"><a href="/blog/fundamentals/is-ai-stealing-your-traffic/">Is AI Stealing Your Traffic? Understanding AI's Impact on Search</a></h2>
+              <p class="blog-card__meta"><time datetime="2024-06-29">29 June 2024</time> &middot; 15 min read</p>
+              <p class="blog-card__excerpt">How AI search is changing website traffic patterns and proven strategies to adapt and thrive.</p>
             </div>
-        </section>
-        
-        <!-- Featured Content Section -->
-        <section class="featured-section">
-            <div class="container">
-                <!-- Featured Banner -->
-                <div class="featured-banner">
-                    <div class="featured-badge">Featured Resource</div>
-                    <h2>Getting Started with MASTERY-AI Framework v2.1</h2>
-                    <p>
-                        Discover how to implement the industry's most comprehensive AI search optimization 
-                        methodology. From understanding the 8 strategic pillars to applying all 132 atomic 
-                        factors for maximum AI search visibility.
-                    </p>
-                    <div class="featured-cta">
-                        <a href="/mastery-ai-framework" class="btn btn-large">
-                            Explore the Complete Framework
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Category Filter Pills -->
-                <div class="category-filter">
-                    <a href="/blog" class="filter-pill active">
-                        <i class="fas fa-th" aria-hidden="true"></i>
-                        All Insights
-                    </a>
-                    <a href="/blog/fundamentals" class="filter-pill">
-                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                        Fundamentals
-                    </a>
-                    <a href="/blog/case-studies" class="filter-pill">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i>
-                        Case Studies
-                    </a>
-                    <a href="/blog/how-to-guides" class="filter-pill">
-                        <i class="fas fa-tools" aria-hidden="true"></i>
-                        How-To Guides
-                    </a>
-                    <a href="/blog/industry-updates" class="filter-pill">
-                        <i class="fas fa-newspaper" aria-hidden="true"></i>
-                        Industry Updates
-                    </a>
-                </div>
-                
-                <!-- Blog Cards Grid -->
-                <div class="blog-grid">
-                    
-                    <!-- FEATURED ARTICLE - AI Traffic Impact -->
-                    <article class="blog-card" style="border: 2px solid #EF4444;">
-                        <div class="card-image">
-                            <img src="/images/blog/ai-traffic-impact-guide.jpg" 
-                                 alt="AI Traffic Impact Analysis" 
-                                 loading="lazy">
-                            <span class="category-badge" style="background: #EF4444; color: white;">⚠️ Critical Alert</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta">
-                                <span class="framework-pillar">
-                                    <i class="fas fa-exclamation-triangle"></i>
-                                    Traffic Impact Analysis
-                                </span>
-                                <time datetime="2024-06-29">June 29, 2024</time>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="/blog/fundamentals/is-ai-stealing-your-traffic/">
-                                    Is AI Stealing Your Traffic? Understanding AI's Impact on Search & Your Website
-                                </a>
-                            </h3>
-                            <p class="card-excerpt">
-                                Discover how AI search is changing website traffic patterns and learn proven strategies to adapt, recover, and thrive. Get your free AI impact assessment and actionable recovery plan.
-                            </p>
-                            <div class="card-footer">
-                                <span class="read-time">
-                                    <i class="fas fa-clock"></i>
-                                    15 min read
-                                </span>
-                                <div class="card-metrics">
-                                    <span class="metric-item" style="color: #EF4444; font-weight: bold;">
-                                        <i class="fas fa-exclamation-triangle"></i>
-                                        Urgent
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Framework Implementation Article -->
-                    <article class="blog-card">
-                        <div class="card-image">
-                            <img src="/images/blog/mastery-ai-implementation.jpg" 
-                                 alt="MASTERY-AI Framework Implementation" 
-                                 loading="lazy">
-                            <span class="category-badge framework">MASTERY-AI Framework</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta">
-                                <span class="framework-pillar">
-                                    <i class="fas fa-layer-group"></i>
-                                    All 8 Pillars
-                                </span>
-                                <time datetime="2024-12-18">Dec 18, 2024</time>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="/blog/how-to-guides/implementing-mastery-ai-framework/">
-                                    Step-by-Step: Implementing the MASTERY-AI Framework v2.1
-                                </a>
-                            </h3>
-                            <p class="card-excerpt">
-                                A comprehensive guide to implementing all 132 atomic factors of the MASTERY-AI 
-                                Framework. Learn how to systematically optimize each of the 8 strategic pillars 
-                                for maximum AI search visibility.
-                            </p>
-                            <div class="card-footer">
-                                <span class="read-time">
-                                    <i class="fas fa-clock"></i>
-                                    18 min read
-                                </span>
-                                <div class="card-metrics">
-                                    <span class="metric-item">
-                                        <i class="fas fa-bookmark"></i>
-                                        Essential
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- FreecalcHub Case Study -->
-                    <article class="blog-card">
-                        <div class="card-image">
-                            <img src="/images/blog/freecalchub-case-study.jpg" 
-                                 alt="FreecalcHub Innovation Laboratory" 
-                                 loading="lazy">
-                            <span class="category-badge case-studies">Case Study</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta">
-                                <span class="framework-pillar">
-                                    <i class="fas fa-robot"></i>
-                                    AI Response Optimization
-                                </span>
-                                <time datetime="2024-12-14">Dec 14, 2024</time>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="/blog/case-studies/freecalchub-innovation-laboratory/">
-                                    FreecalcHub: How an AI Innovation Laboratory Validated MASTERY-AI
-                                </a>
-                            </h3>
-                            <p class="card-excerpt">
-                                Discover how FreecalcHub served as the testing ground for developing the 
-                                MASTERY-AI Framework v2.1. Real data and insights from proactive AI 
-                                experimentation.
-                            </p>
-                            <div class="card-footer">
-                                <span class="read-time">
-                                    <i class="fas fa-clock"></i>
-                                    12 min read
-                                </span>
-                                <div class="card-metrics">
-                                    <span class="metric-item">
-                                        <i class="fas fa-chart-line"></i>
-                                        40% Growth
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Authority Signals Guide -->
-                    <article class="blog-card">
-                        <div class="card-image">
-                            <img src="/images/blog/authority-trust-signals.jpg" 
-                                 alt="Authority and Trust Signals" 
-                                 loading="lazy">
-                            <span class="category-badge how-to">How-To Guide</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta">
-                                <span class="framework-pillar">
-                                    <i class="fas fa-award"></i>
-                                    Authority & Trust (19%)
-                                </span>
-                                <time datetime="2024-12-10">Dec 10, 2024</time>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="/blog/how-to-guides/authority-trust-signals-mastery/">
-                                    Mastering Authority & Trust Signals in AI Search (Pillar 2)
-                                </a>
-                            </h3>
-                            <p class="card-excerpt">
-                                Deep dive into the second pillar of MASTERY-AI Framework. Learn how to build 
-                                authority signals that AI systems recognize and prioritize in search results.
-                            </p>
-                            <div class="card-footer">
-                                <span class="read-time">
-                                    <i class="fas fa-clock"></i>
-                                    15 min read
-                                </span>
-                                <div class="card-metrics">
-                                    <span class="metric-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        Actionable
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- AI Search Fundamentals -->
-                    <article class="blog-card">
-                        <div class="card-image">
-                            <img src="/images/blog/ai-search-fundamentals.jpg" 
-                                 alt="AI Search Fundamentals" 
-                                 loading="lazy">
-                            <span class="category-badge fundamentals">Fundamentals</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta">
-                                <span class="framework-pillar">
-                                    <i class="fas fa-cogs"></i>
-                                    Machine Readability (14%)
-                                </span>
-                                <time datetime="2024-12-08">Dec 8, 2024</time>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="/blog/fundamentals/understanding-machine-readability/">
-                                    Understanding Machine Readability for AI Search Success
-                                </a>
-                            </h3>
-                            <p class="card-excerpt">
-                                Master the third pillar of the MASTERY-AI Framework. Learn how to structure 
-                                content that AI systems can easily parse, understand, and cite in responses.
-                            </p>
-                            <div class="card-footer">
-                                <span class="read-time">
-                                    <i class="fas fa-clock"></i>
-                                    10 min read
-                                </span>
-                                <div class="card-metrics">
-                                    <span class="metric-item">
-                                        <i class="fas fa-user-graduate"></i>
-                                        Beginner
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Dynamic E-E-A-T Article -->
-                    <article class="blog-card">
-                        <div class="card-image">
-                            <img src="/images/blog/dynamic-eeat-scoring.jpg" 
-                                 alt="Dynamic E-E-A-T Scoring" 
-                                 loading="lazy">
-                            <span class="category-badge how-to">How-To Guide</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta">
-                                <span class="framework-pillar">
-                                    <i class="fas fa-sync-alt"></i>
-                                    Advanced Capability
-                                </span>
-                                <time datetime="2024-12-05">Dec 5, 2024</time>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="/blog/how-to-guides/dynamic-eeat-implementation/">
-                                    Implementing Dynamic E-E-A-T Scoring in Your Content Strategy
-                                </a>
-                            </h3>
-                            <p class="card-excerpt">
-                                Learn how to leverage the MASTERY-AI Framework's advanced Dynamic E-E-A-T 
-                                scoring capability to build real-time expertise validation that AI systems 
-                                recognize.
-                            </p>
-                            <div class="card-footer">
-                                <span class="read-time">
-                                    <i class="fas fa-clock"></i>
-                                    14 min read
-                                </span>
-                                <div class="card-metrics">
-                                    <span class="metric-item">
-                                        <i class="fas fa-rocket"></i>
-                                        Advanced
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Industry Update -->
-                    <article class="blog-card">
-                        <div class="card-image">
-                            <img src="/images/blog/ai-search-update-dec.jpg" 
-                                 alt="AI Search Industry Update" 
-                                 loading="lazy">
-                            <span class="category-badge">Industry Update</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta">
-                                <span class="framework-pillar">
-                                    <i class="fas fa-globe"></i>
-                                    Industry News
-                                </span>
-                                <time datetime="2024-12-03">Dec 3, 2024</time>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="/blog/industry-updates/december-ai-search-changes/">
-                                    December 2024: Major AI Search Algorithm Updates & What They Mean
-                                </a>
-                            </h3>
-                            <p class="card-excerpt">
-                                Analysis of the latest AI search algorithm changes and how they align with 
-                                MASTERY-AI Framework principles. Includes actionable adaptation strategies.
-                            </p>
-                            <div class="card-footer">
-                                <span class="read-time">
-                                    <i class="fas fa-clock"></i>
-                                    8 min read
-                                </span>
-                                <div class="card-metrics">
-                                    <span class="metric-item">
-                                        <i class="fas fa-fire"></i>
-                                        Trending
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Categories Section -->
-        <section class="categories-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Explore by Category</h2>
-                    <p class="section-subtitle">
-                        Deep dive into specific aspects of the MASTERY-AI Framework and AI search optimization
-                    </p>
-                </div>
-                
-                <div class="categories-grid">
-                    <div class="category-card">
-                        <div class="category-icon fundamentals">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3><a href="/blog/fundamentals/">AI Search Fundamentals</a></h3>
-                        <p class="category-description">
-                            Master the basics of AI search optimization and understand each of the 8 strategic 
-                            pillars in the MASTERY-AI Framework.
-                        </p>
-                        <div class="category-stats">
-                            <span>12 articles</span>
-                            <span>Beginner friendly</span>
-                        </div>
-                    </div>
-                    
-                    <div class="category-card">
-                        <div class="category-icon case-studies">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3><a href="/blog/case-studies/">Case Studies</a></h3>
-                        <p class="category-description">
-                            Real-world implementations of the MASTERY-AI Framework, including the FreecalcHub 
-                            innovation laboratory story.
-                        </p>
-                        <div class="category-stats">
-                            <span>8 articles</span>
-                            <span>Real examples</span>
-                        </div>
-                    </div>
-                    
-                    <div class="category-card">
-                        <div class="category-icon how-to">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3><a href="/blog/how-to-guides/">How-To Guides</a></h3>
-                        <p class="category-description">
-                            Step-by-step instructions for implementing each pillar and factor of the MASTERY-AI 
-                            Framework on your website.
-                        </p>
-                        <div class="category-stats">
-                            <span>15 articles</span>
-                            <span>Actionable</span>
-                        </div>
-                    </div>
-                    
-                    <div class="category-card">
-                        <div class="category-icon industry">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <h3><a href="/blog/industry-updates/">Industry Updates</a></h3>
-                        <p class="category-description">
-                            Latest changes in AI search algorithms and how they relate to the MASTERY-AI 
-                            Framework principles.
-                        </p>
-                        <div class="category-stats">
-                            <span>6 articles</span>
-                            <span>Current events</span>
-                        </div>
-                    </div>
-                    
-                    <div class="category-card">
-                        <div class="category-icon tools">
-                            <i class="fas fa-wrench"></i>
-                        </div>
-                        <h3><a href="/blog/tools-resources/">Tools & Resources</a></h3>
-                        <p class="category-description">
-                            Reviews of tools that support MASTERY-AI Framework implementation, templates, 
-                            and optimization resources.
-                        </p>
-                        <div class="category-stats">
-                            <span>10 articles</span>
-                            <span>Practical tools</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Newsletter Section -->
-        <section class="newsletter-blog">
-            <div class="container">
-                <div class="newsletter-content">
-                    <div class="newsletter-info">
-                        <h2>Master AI Search with Weekly Framework Insights</h2>
-                        <p class="newsletter-subtitle">
-                            Get exclusive insights on implementing the MASTERY-AI Framework v2.1 Enhanced Edition
-                        </p>
-                        <p class="newsletter-description">
-                            Every Tuesday, receive expert guidance on applying the 132 atomic factors and 8 
-                            strategic pillars to your AI search optimization strategy. Plus, get updates on 
-                            framework enhancements and new advanced capabilities.
-                        </p>
-                        
-                        <div class="newsletter-benefits">
-                            <ul class="benefits-list">
-                                <li>
-                                    <i class="fas fa-layer-group"></i>
-                                    <div>
-                                        <strong>Framework Deep Dives:</strong> Detailed exploration of each pillar 
-                                        and its implementation
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="fas fa-chart-line"></i>
-                                    <div>
-                                        <strong>Real Implementation Data:</strong> Case studies and results from 
-                                        MASTERY-AI applications
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="fas fa-rocket"></i>
-                                    <div>
-                                        <strong>Advanced Strategies:</strong> Dynamic E-E-A-T, RAG optimization, 
-                                        and multimodal techniques
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="newsletter-form-box">
-                        <h3>Join 5,000+ AI Search Professionals</h3>
-                        <p class="form-subtitle">Master the MASTERY-AI Framework</p>
-                        
-                        <form class="newsletter-form" id="blog-newsletter-form">
-                            <div class="form-group">
-                                <input type="email" 
-                                       name="email" 
-                                       placeholder="Enter your email address" 
-                                       required
-                                       aria-label="Email address">
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-large btn-block">
-                                Get Weekly Framework Insights
-                            </button>
-                        </form>
-                        
-                        <p class="form-disclaimer">
-                            <i class="fas fa-shield-alt"></i>
-                            No spam. Unsubscribe anytime. 
-                            <a href="/privacy">Privacy Policy</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </main>
-    
-    <!-- Footer - Copy from homepage -->
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="/images/logos/logo-primary.png" alt="AI Search Mastery" width="40" height="40">
-                        <span class="footer-logo-text">AI Search Mastery</span>
-                    </div>
-                    <p class="footer-description">
-                        Creator of the MASTERY-AI Framework v2.1 Enhanced Edition. 
-                        Helping businesses thrive in the AI search era through systematic optimization.
-                    </p>
-                    <div class="footer-contact">
-                        <a href="mailto:support@aisearchmastery.com">support@aisearchmastery.com</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Framework</h3>
-                    <ul class="footer-links">
-                        <li><a href="/mastery-ai-framework">MASTERY-AI Framework</a></li>
-                        <li><a href="https://www.aimpactscanner.com" target="_blank">AImpactScanner</a></li>
-                        <li><a href="/blog/case-studies">Case Studies</a></li>
-                        <li><a href="/blog/fundamentals">Getting Started</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="/blog">AI Search Insights</a></li>
-                        <li><a href="/newsletter">Newsletter</a></li>
-                        <li><a href="/templates">Templates</a></li>
-                        <li><a href="/free-page-assessment">Free Assessment</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms of Service</a></li>
-                        <li><a href="/sitemap.html">Site Map</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2024 AI Search Mastery. All rights reserved.
-                </p>
-                <div class="footer-legal">
-                    <a href="/privacy">Privacy</a>
-                    <a href="/terms">Terms</a>
-                    <a href="/disclaimer">Disclaimer</a>
-                </div>
-            </div>
+          </article>
+
         </div>
-    </footer>
-    
-    <!-- Mobile Menu JavaScript -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const primaryNav = document.querySelector('.primary-nav');
-        const body = document.body;
-        
-        if (mobileMenuBtn && primaryNav) {
-            mobileMenuBtn.addEventListener('click', function() {
-                const isOpen = primaryNav.classList.contains('mobile-open');
-                primaryNav.classList.toggle('mobile-open');
-                body.classList.toggle('mobile-menu-open');
-                this.setAttribute('aria-expanded', !isOpen);
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-header')) {
-                    primaryNav.classList.remove('mobile-open');
-                    body.classList.remove('mobile-menu-open');
-                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                }
-            });
-        }
-    });
-    </script>
-    
-    <!-- Blog JavaScript -->
-    <script src="/js/blog.js" defer></script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const primaryNav = document.querySelector('.primary-nav');
-    const body = document.body;
-    
-    if (mobileMenuBtn && primaryNav) {
-        mobileMenuBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const isOpen = primaryNav.classList.contains('mobile-open');
-            primaryNav.classList.toggle('mobile-open');
-            body.classList.toggle('mobile-menu-open');
-            this.setAttribute('aria-expanded', !isOpen);
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.site-header') && !e.target.closest('.primary-nav')) {
-                primaryNav.classList.remove('mobile-open');
-                body.classList.remove('mobile-menu-open');
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            }
-        });
-        
-        // Prevent clicks inside nav from closing it
-        primaryNav.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
-    }
-});
-</script>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER (F-002) ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__newsletter container">
+      <!-- Reserved for F-020 Newsletter signup -->
+    </div>
+
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <h3 class="footer__heading">Navigate</h3>
+        <nav aria-label="Footer navigation">
+          <ul class="footer__list">
+            <li><a href="/framework" class="footer__link">Framework</a></li>
+            <li><a href="/about" class="footer__link">About</a></li>
+            <li><a href="/products" class="footer__link">Products</a></li>
+            <li><a href="/blog" class="footer__link">Blog</a></li>
+            <li><a href="/contact" class="footer__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Products</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="https://aimpactscanner.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              AImpactScanner<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://llmtxtmastery.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              LLM.txt Mastery<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://llmtxtmastery.com/validator" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              Free Validator<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Connect</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="https://x.com/Jamie_within" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Follow on X / Twitter (opens in new tab)">
+              X / Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/jamie-watters-solo" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Connect on LinkedIn (opens in new tab)">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://jamiewatters.work" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Build in Public journal (opens in new tab)">
+              Build in Public
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Legal</h3>
+        <ul class="footer__list">
+          <li><a href="/privacy" class="footer__link">Privacy Policy</a></li>
+          <li><a href="/terms" class="footer__link">Terms</a></li>
+          <li><a href="/sitemap.xml" class="footer__link">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copyright">&copy; 2026 AI Search Mastery. All rights reserved.</p>
+        <p class="footer__contact">
+          <a href="mailto:info@aisearchmastery.com" class="footer__link">info@aisearchmastery.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="/js/main.js"></script>
 </body>
 </html>
