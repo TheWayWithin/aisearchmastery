@@ -177,10 +177,32 @@ p + p { margin-top: var(--space-4); }
 .header__menu-btn[aria-expanded="true"] .header__menu-icon::before { top: 0; transform: rotate(45deg); }
 .header__menu-btn[aria-expanded="true"] .header__menu-icon::after { top: 0; transform: rotate(-45deg); }
 
-/* 10. Responsive (above-fold only) */
+/* 10. Cards (visible above-fold on desktop) */
+.card { background-color: var(--color-white); border: var(--card-border); border-radius: var(--card-radius); box-shadow: var(--card-shadow); padding: var(--card-padding); transition: border-color var(--transition-micro), box-shadow var(--transition-micro); }
+.card:hover { border-color: var(--color-stone); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); }
+
+/* 11. Grid system */
+.grid { display: grid; gap: var(--space-6); }
+.grid--cols-2, .grid--cols-3, .grid--cols-4 { grid-template-columns: 1fr; }
+
+/* 12. Homepage components (above-fold on desktop) */
+.hero__subtitle { font-size: var(--text-h4); font-weight: var(--weight-regular); max-width: 600px; margin-top: var(--space-4); }
+.hero__trust { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4); margin-top: var(--space-8); }
+.hero__trust-badge { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-body-sm); font-weight: var(--weight-medium); color: rgba(255, 255, 255, 0.85); background: rgba(255, 255, 255, 0.1); padding: var(--space-2) var(--space-4); border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.2); }
+.hero__trust-badge svg { flex-shrink: 0; }
+.card__icon { color: var(--color-clarity-teal); margin-bottom: var(--space-4); }
+.card__icon svg { display: inline-block; }
+
+/* 13. Footer (prevents CLS when deferred CSS loads) */
+.footer { background-color: var(--color-mastery-blue); color: var(--color-white); padding-block: var(--space-12); }
+.footer a { color: rgba(255, 255, 255, 0.8); text-decoration: none; }
+.footer a:hover { color: var(--color-white); }
+
+/* 14. Responsive (above-fold) */
 @media (min-width: 768px) {
   :root { --container-padding: var(--space-6); }
   .section { padding-block: var(--space-16); }
+  .section--lg { padding-block: var(--space-24); }
   .hero { padding-block: var(--space-24); }
   .hero__actions { flex-direction: row; justify-content: center; gap: var(--space-4); }
   .header__logo-full { display: inline; }
@@ -189,7 +211,15 @@ p + p { margin-top: var(--space-4); }
   .nav__list { flex-direction: row; justify-content: center; gap: var(--space-1); }
   .nav__link { padding: var(--space-2) var(--space-3); font-size: var(--text-body-sm); }
   .header__menu-btn { display: none; }
+  .grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid--cols-4 { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 1280px) {
   :root { --container-padding: var(--space-8); }
+  .text-display { font-size: 3rem; }
+  h1, .text-h1 { font-size: 2.25rem; }
+  h2, .text-h2 { font-size: 1.75rem; }
+  .grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--cols-4 { grid-template-columns: repeat(4, 1fr); }
 }
