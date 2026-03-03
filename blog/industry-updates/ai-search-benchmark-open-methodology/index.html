@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI Search Arena: How Our Open Benchmark Methodology Works | AI Search Mastery</title>
+  <meta name="description" content="A detailed look at the AI Search Arena evaluation framework: 50+ standardised metrics, 6-model consensus scoring, SHA-256 audit packages, and why every detail is published.">
+  <link rel="canonical" href="https://aisearchmastery.com/blog/industry-updates/ai-search-benchmark-open-methodology/">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Search Arena: How Our Open Benchmark Methodology Works | AI Search Mastery">
+  <meta property="og:description" content="A detailed look at the AI Search Arena evaluation framework: 50+ metrics, 6-model consensus, and full transparency.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aisearchmastery.com/blog/industry-updates/ai-search-benchmark-open-methodology/">
+  <meta property="og:site_name" content="AI Search Mastery">
+  <meta property="article:published_time" content="2026-03-02T00:00:00+00:00">
+  <meta property="article:modified_time" content="2026-03-02T00:00:00+00:00">
+  <meta property="article:author" content="Jamie Watters">
+  <meta property="article:section" content="Industry Updates">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Search Arena: How Our Open Benchmark Methodology Works | AI Search Mastery">
+  <meta name="twitter:description" content="A detailed look at the AI Search Arena evaluation framework: 50+ metrics, 6-model consensus, and full transparency.">
+
+  <!-- Google Fonts (deferred — system font shows instantly, Inter swaps in) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- Critical CSS (above-fold, render-blocking) -->
+  <link rel="stylesheet" href="/css/critical.css">
+
+  <!-- Full stylesheet (deferred, loads async) -->
+  <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+
+  <!-- Plausible Analytics (cookieless, GDPR-compliant) -->
+  <script async src="https://plausible.io/js/pa-uuYxfgVfBXI1g3QRbub90.js"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aisearchmastery.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aisearchmastery.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Industry Updates", "item": "https://aisearchmastery.com/blog?category=industry-updates" },
+      { "@type": "ListItem", "position": 4, "name": "AI Search Arena: Open Benchmark Methodology" }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Search Arena: How Our Open Benchmark Methodology Works",
+    "author": {
+      "@type": "Person",
+      "name": "Jamie Watters",
+      "url": "https://aisearchmastery.com/about"
+    },
+    "datePublished": "2026-03-02",
+    "dateModified": "2026-03-02",
+    "description": "A detailed look at the AI Search Arena evaluation framework: 50+ standardised metrics, 6-model consensus scoring, SHA-256 audit packages, and why every detail is published.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Search Mastery",
+      "url": "https://aisearchmastery.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip Navigation -->
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <!-- ========== HEADER (F-001) ========== -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AI Search Mastery — Home">
+        <span class="header__logo-full">AI Search Mastery</span>
+        <span class="header__logo-compact">ASM</span>
+      </a>
+
+      <nav class="header__nav" id="primary-nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/framework" class="nav__link">Framework</a></li>
+          <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="/products" class="nav__link">Products</a></li>
+          <li class="nav__item"><a href="/blog" class="nav__link nav__link--active" aria-current="page">Blog</a></li>
+          <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://aimpactscanner.com" class="btn btn--primary header__cta" target="_blank" rel="noopener noreferrer"
+         aria-label="Free Site Scan (opens in new tab)" data-track-cta data-product="aimpactscanner" data-location="nav">
+        Free Site Scan
+      </a>
+
+      <button class="header__menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <span class="header__menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== ARTICLE HEADER ========== -->
+    <section class="article-header">
+      <div class="container">
+        <a href="/blog?category=industry-updates" class="article-header__category">Industry Updates</a>
+        <h1 class="article-header__title">AI Search Arena: How Our Open Benchmark Methodology Works</h1>
+        <div class="article-header__meta">
+          <a href="/about" class="article-header__author">Jamie Watters</a>
+          <span class="article-header__separator" aria-hidden="true">&middot;</span>
+          <time datetime="2026-03-02">2 March 2026</time>
+          <span class="article-header__separator" aria-hidden="true">&middot;</span>
+          <span class="article-header__read-time">9 min read</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ARTICLE BODY ========== -->
+    <article class="article">
+      <div class="container">
+        <div class="article__body">
+
+          <!-- Table of Contents -->
+          <details class="article__toc" open>
+            <summary class="article__toc-heading">Table of Contents</summary>
+            <nav aria-label="Table of contents">
+              <ol class="article__toc-list">
+                <li><a href="#why-open">Why the Methodology Is Published</a></li>
+                <li><a href="#evaluation-framework">The Evaluation Framework</a></li>
+                <li><a href="#scoring-dimensions">50+ Scoring Dimensions</a></li>
+                <li><a href="#multi-model">6-Model Consensus Scoring</a></li>
+                <li><a href="#test-entities">Test Entity Selection</a></li>
+                <li><a href="#audit-packages">SHA-256 Audit Packages</a></li>
+                <li><a href="#vendor-review">The Vendor Review Window</a></li>
+                <li><a href="#monthly-cycle">The Monthly Cycle</a></li>
+              </ol>
+            </nav>
+          </details>
+
+          <p class="article__intro">When we announced <a href="https://aisearcharena.com" target="_blank" rel="noopener noreferrer">AI Search Arena<span class="visually-hidden"> (opens in new tab)</span></a>, we committed to publishing the complete benchmark methodology before the first results cycle. This article is that commitment, fulfilled. Every scoring dimension, every evaluation step, every transparency mechanism &mdash; documented here so anyone can scrutinise, challenge, or replicate the process.</p>
+
+          <p>If a benchmark's methodology isn't public, its results are just opinions with a spreadsheet. We're building something that earns trust through transparency, not authority.</p>
+
+          <h2 id="why-open">Why the Methodology Is Published</h2>
+
+          <p>The AI search optimisation market is young enough that no one has established benchmarking credibility yet. That means any new benchmark &mdash; including ours &mdash; starts from zero trust. The only way to build that trust is to show the work.</p>
+
+          <p>Publishing the methodology serves three purposes:</p>
+
+          <ul>
+            <li><strong>Accountability</strong> &mdash; If our methodology has flaws, the community can identify them. We'd rather fix a methodological issue before it produces misleading results than defend bad data after publication.</li>
+            <li><strong>Reproducibility</strong> &mdash; Anyone with access to the same tools can run the same evaluation and verify our findings. This isn't possible with proprietary scoring systems.</li>
+            <li><strong>Industry standards</strong> &mdash; By publishing how we measure, we're proposing a shared vocabulary for evaluating AI search tools. Even if others disagree with specific metrics, the conversation moves forward.</li>
+          </ul>
+
+          <h2 id="evaluation-framework">The Evaluation Framework</h2>
+
+          <p>The AI Search Arena evaluation framework is structured as a pipeline with four stages:</p>
+
+          <ol>
+            <li><strong>Discovery</strong> &mdash; Identify each tool's claimed capabilities, supported platforms, and target audience</li>
+            <li><strong>Execution</strong> &mdash; Run each tool against the standardised set of test entities under controlled conditions</li>
+            <li><strong>Evaluation</strong> &mdash; Score the results across 50+ dimensions using the 6-model consensus method</li>
+            <li><strong>Publication</strong> &mdash; Compile results, generate audit packages, run vendor review, and publish</li>
+          </ol>
+
+          <p>Each stage has defined inputs, outputs, and quality gates. No stage proceeds until the previous stage's outputs are verified.</p>
+
+          <h2 id="scoring-dimensions">50+ Scoring Dimensions</h2>
+
+          <p>The scoring framework evaluates tools across multiple categories. Each dimension is scored on a standardised scale with defined criteria at each level. Here are the primary categories:</p>
+
+          <h3>AI Visibility Analysis</h3>
+          <p>Does the tool accurately assess how AI systems perceive a website? Dimensions include: structured data evaluation, authority signal detection, entity recognition, content quality assessment, freshness signals, and AI-specific optimisation checks (llms.txt, AI crawler access).</p>
+
+          <h3>Content Optimisation</h3>
+          <p>Does the tool help improve content for AI citation? Dimensions include: recommendation quality, actionability of suggestions, priority ranking of improvements, and expected impact estimation.</p>
+
+          <h3>Technical Implementation</h3>
+          <p>Does the tool handle technical analysis correctly? Dimensions include: JavaScript rendering capability, mobile analysis, page speed evaluation, schema validation depth, and crawl coverage completeness.</p>
+
+          <h3>Reporting Quality</h3>
+          <p>Are the results presented in a useful format? Dimensions include: clarity of findings, visualisation quality, export options, historical tracking, and benchmarking against competitors.</p>
+
+          <h3>Accuracy and Reliability</h3>
+          <p>Does the tool produce correct findings? Dimensions include: false positive rate, false negative rate, consistency across runs, and alignment with manual expert evaluation.</p>
+
+          <h3>Value and Accessibility</h3>
+          <p>Is the tool accessible to its target audience? Dimensions include: pricing fairness relative to capabilities, free tier usefulness, onboarding quality, documentation, and support responsiveness.</p>
+
+          <p>The full dimension specification, including scoring rubrics at each level, is published on the <a href="https://aisearcharena.com" target="_blank" rel="noopener noreferrer">AI Search Arena methodology page<span class="visually-hidden"> (opens in new tab)</span></a>.</p>
+
+          <h2 id="multi-model">6-Model Consensus Scoring</h2>
+
+          <p>Single-evaluator benchmarks have an inherent problem: the evaluator's biases become the benchmark's biases. If one person (or one AI model) systematically overweights certain factors, the results skew accordingly. You don't know if a tool scored well because it's genuinely good or because the evaluator happens to value its specific approach.</p>
+
+          <p>AI Search Arena addresses this with multi-model consensus. Each tool is evaluated independently by 6 frontier AI models. Each model receives the same evaluation prompt, the same tool outputs, and the same scoring rubric. They evaluate independently &mdash; no model sees another model's scores.</p>
+
+          <p>The final score uses median-based synthesis rather than averaging. Median synthesis is more robust to outliers: if one model produces an anomalously high or low score, it doesn't distort the final result the way an average would. The median represents the central tendency of the evaluator pool.</p>
+
+          <p>Why 6 models? Fewer than 5 makes the median unstable. More than 7 adds cost without significantly improving reliability. Six provides a good balance: enough diversity to eliminate individual bias, manageable enough to run monthly.</p>
+
+          <h2 id="test-entities">Test Entity Selection</h2>
+
+          <p>The choice of test entities &mdash; the websites that tools are run against &mdash; is one of the most consequential decisions in benchmark design. A tool might perform brilliantly on a WordPress blog but poorly on a React SPA. Testing against only one type of site would produce misleading results.</p>
+
+          <p>The test entity set is designed to cover the diversity of real-world sites that use AI search optimisation tools:</p>
+
+          <ul>
+            <li><strong>Industry spread</strong> &mdash; SaaS products, e-commerce stores, content publishers, professional services, local businesses</li>
+            <li><strong>Technical diversity</strong> &mdash; Static HTML, WordPress, React SPAs, Next.js, Vue/Nuxt, server-rendered and client-rendered</li>
+            <li><strong>Size range</strong> &mdash; Small sites (under 50 pages), medium sites (50&ndash;500 pages), and larger sites (500+ pages)</li>
+            <li><strong>Optimisation baseline</strong> &mdash; Some entities have strong existing AI optimisation; others are starting from zero. This tests both diagnostic accuracy and improvement recommendation quality.</li>
+          </ul>
+
+          <p>Test entities are refreshed periodically to prevent tools from optimising specifically for the benchmark set. The exact entities used in each cycle are published in the audit package after results are released.</p>
+
+          <h2 id="audit-packages">SHA-256 Audit Packages</h2>
+
+          <p>Every benchmark cycle produces a cryptographically verifiable audit package. This package contains:</p>
+
+          <ul>
+            <li><strong>Raw model responses</strong> &mdash; The complete evaluation output from each of the 6 AI models for every tool and test entity</li>
+            <li><strong>Scoring calculations</strong> &mdash; The mathematical steps from raw scores to final published results</li>
+            <li><strong>Test entity details</strong> &mdash; The specific sites used, their characteristics at time of testing, and any notes on testing conditions</li>
+            <li><strong>Tool versions</strong> &mdash; The exact version of each tool tested, including any configuration used</li>
+            <li><strong>SHA-256 hashes</strong> &mdash; Cryptographic hashes of every component, allowing anyone to verify that published results match the underlying data</li>
+          </ul>
+
+          <p>The audit package serves as a receipt. If anyone questions whether a specific score is accurate, they can verify it against the cryptographic record. If the data has been altered after the fact, the hashes won't match.</p>
+
+          <p>This is standard practice in software integrity verification and academic reproducibility. It's unusual in tool benchmarking &mdash; but it shouldn't be.</p>
+
+          <h2 id="vendor-review">The Vendor Review Window</h2>
+
+          <p>Before results are published, every evaluated vendor receives a review window. During this period, vendors can:</p>
+
+          <ul>
+            <li><strong>Flag factual errors</strong> &mdash; If the benchmark tested the wrong version, used incorrect configuration, or mischaracterised a feature, this is the window to catch it</li>
+            <li><strong>Request clarification</strong> &mdash; If a score seems anomalous, vendors can ask for the scoring breakdown so they understand how the result was produced</li>
+            <li><strong>Provide context</strong> &mdash; If a feature was recently shipped or a known issue was recently fixed, vendors can note this for inclusion in the published report</li>
+          </ul>
+
+          <p>The vendor review window is not an opportunity to negotiate scores. Scores are determined by the evaluation framework and cannot be adjusted based on vendor feedback. But factual accuracy matters &mdash; and catching errors before publication benefits everyone.</p>
+
+          <h2 id="monthly-cycle">The Monthly Cycle</h2>
+
+          <p>AI search optimisation tools ship updates constantly. A tool that underperformed in January may have shipped critical improvements by February. Quarterly or annual benchmarks miss this evolution entirely.</p>
+
+          <p>AI Search Arena runs monthly evaluation cycles:</p>
+
+          <ol>
+            <li><strong>Week 1</strong> &mdash; Test entity preparation and tool version documentation</li>
+            <li><strong>Week 2</strong> &mdash; Execution: run all tools against all test entities under controlled conditions</li>
+            <li><strong>Week 3</strong> &mdash; Evaluation: 6-model consensus scoring, audit package generation, vendor review window</li>
+            <li><strong>Week 4</strong> &mdash; Publication: results, analysis, and audit packages released</li>
+          </ol>
+
+          <p>Monthly cadence creates a living record of the market's evolution. Tools can track their improvement trajectory. Buyers can see which tools are actively developing and which have plateaued. The industry gets a pulse check, not a snapshot.</p>
+
+          <p>The first benchmark cycle launches March 2026. The methodology is live, the evaluation framework is defined, and the first set of 27+ tools is queued for assessment.</p>
+
+          <p>If you build, sell, or use AI search optimisation tools, this affects you. The era of unverified claims is ending. What replaces it is measured, transparent, and open to scrutiny.</p>
+
+          <!-- End-of-Article CTA: AI Search Arena -->
+          <div class="earn-the-ask earn-the-ask--compact mt-8">
+            <div class="earn-the-ask__inner">
+              <div class="earn-the-ask__slot earn-the-ask__problem">
+                <p class="earn-the-ask__text"><strong>Every metric, every model, every score &mdash; published</strong></p>
+              </div>
+              <div class="earn-the-ask__slot earn-the-ask__fix">
+                <p class="earn-the-ask__text">Explore the full methodology and first benchmark results at AI Search Arena.</p>
+              </div>
+              <div class="earn-the-ask__slot earn-the-ask__action">
+                <a href="https://aisearcharena.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer"
+                   data-track-cta data-product="aisearcharena" data-location="article_end">
+                  View Methodology
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ========== INLINE NEWSLETTER (F-020) ========== -->
+    <section class="container">
+      <div class="newsletter newsletter--inline">
+        <div class="newsletter__copy">
+          <h2 class="newsletter__heading">Stay ahead of AI search</h2>
+          <p class="newsletter__desc">Get weekly insights on AI search visibility delivered to your inbox.</p>
+        </div>
+        <div class="newsletter__form-wrap">
+          <form class="newsletter__form" data-location="article_inline">
+            <div class="newsletter__fields">
+              <label for="newsletter-email-inline" class="visually-hidden">Email address</label>
+              <input type="email" id="newsletter-email-inline" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="hp-company-inline">Company</label>
+                <input type="text" id="hp-company-inline" name="hp_company" tabindex="-1" autocomplete="off">
+              </div>
+              <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
+            </div>
+            <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
+          </form>
+          <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER (F-002) ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="newsletter container">
+      <div class="newsletter__copy">
+        <h2 class="newsletter__heading">AI Search Arena</h2>
+        <p class="newsletter__desc">Weekly insights on AI search visibility, direct from the research.</p>
+      </div>
+      <div class="newsletter__form-wrap">
+        <form class="newsletter__form" data-location="footer">
+          <div class="newsletter__fields">
+            <label for="newsletter-email-footer" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email-footer" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="hp-company-footer">Company</label>
+              <input type="text" id="hp-company-footer" name="hp_company" tabindex="-1" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
+          </div>
+          <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
+        </form>
+        <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
+      </div>
+    </div>
+
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <h3 class="footer__heading">Navigate</h3>
+        <nav aria-label="Footer navigation">
+          <ul class="footer__list">
+            <li><a href="/framework" class="footer__link">Framework</a></li>
+            <li><a href="/about" class="footer__link">About</a></li>
+            <li><a href="/products" class="footer__link">Products</a></li>
+            <li><a href="/blog" class="footer__link">Blog</a></li>
+            <li><a href="/contact" class="footer__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Products</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="https://aimpactscanner.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              AImpactScanner<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://llmtxtmastery.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              LLM.txt Mastery<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://llmtxtmastery.com/validator" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              Free Validator<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="/products#aimpactmonitor" class="footer__link">
+              AImpactMonitor <span class="text-secondary">(Coming Soon)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://aisearcharena.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              AI Search Arena<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Connect</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="https://x.com/Jamie_within" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Follow on X / Twitter (opens in new tab)">
+              X / Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/jamie-watters-solo" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Connect on LinkedIn (opens in new tab)">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://jamiewatters.work" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Build in Public journal (opens in new tab)">
+              Build in Public
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Legal</h3>
+        <ul class="footer__list">
+          <li><a href="/privacy" class="footer__link">Privacy Policy</a></li>
+          <li><a href="/terms" class="footer__link">Terms</a></li>
+          <li><a href="/sitemap.xml" class="footer__link">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copyright">&copy; 2026 AI Search Mastery. All rights reserved.</p>
+        <p class="footer__contact">
+          <a href="mailto:info@aisearchmastery.com" class="footer__link">info@aisearchmastery.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Uncomfortable Truth About llms.txt Generators | AI Search Mastery</title>
+  <meta name="description" content="We tested four llms.txt generators on the same site. The results were wildly inconsistent — from 21 pages to 147. Here's what actually matters when choosing a generator.">
+  <link rel="canonical" href="https://aisearchmastery.com/blog/fundamentals/uncomfortable-truth-llmstxt-generators/">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Uncomfortable Truth About llms.txt Generators | AI Search Mastery">
+  <meta property="og:description" content="We tested four llms.txt generators on the same site. The results were wildly inconsistent. Here's what actually matters.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aisearchmastery.com/blog/fundamentals/uncomfortable-truth-llmstxt-generators/">
+  <meta property="og:site_name" content="AI Search Mastery">
+  <meta property="article:published_time" content="2025-12-19T00:00:00+00:00">
+  <meta property="article:modified_time" content="2025-12-19T00:00:00+00:00">
+  <meta property="article:author" content="Jamie Watters">
+  <meta property="article:section" content="Fundamentals">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Uncomfortable Truth About llms.txt Generators | AI Search Mastery">
+  <meta name="twitter:description" content="We tested four llms.txt generators on the same site. The results were wildly inconsistent. Here's what actually matters.">
+
+  <!-- Google Fonts (deferred — system font shows instantly, Inter swaps in) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- Critical CSS (above-fold, render-blocking) -->
+  <link rel="stylesheet" href="/css/critical.css">
+
+  <!-- Full stylesheet (deferred, loads async) -->
+  <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+
+  <!-- Plausible Analytics (cookieless, GDPR-compliant) -->
+  <script async src="https://plausible.io/js/pa-uuYxfgVfBXI1g3QRbub90.js"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aisearchmastery.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aisearchmastery.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Fundamentals", "item": "https://aisearchmastery.com/blog?category=fundamentals" },
+      { "@type": "ListItem", "position": 4, "name": "The Uncomfortable Truth About llms.txt Generators" }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Uncomfortable Truth About llms.txt Generators",
+    "author": {
+      "@type": "Person",
+      "name": "Jamie Watters",
+      "url": "https://aisearchmastery.com/about"
+    },
+    "datePublished": "2025-12-19",
+    "dateModified": "2025-12-19",
+    "description": "We tested four llms.txt generators on the same site. The results were wildly inconsistent — from 21 pages to 147. Here's what actually matters when choosing a generator.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Search Mastery",
+      "url": "https://aisearchmastery.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip Navigation -->
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <!-- ========== HEADER (F-001) ========== -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AI Search Mastery — Home">
+        <span class="header__logo-full">AI Search Mastery</span>
+        <span class="header__logo-compact">ASM</span>
+      </a>
+
+      <nav class="header__nav" id="primary-nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/framework" class="nav__link">Framework</a></li>
+          <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="/products" class="nav__link">Products</a></li>
+          <li class="nav__item"><a href="/blog" class="nav__link nav__link--active" aria-current="page">Blog</a></li>
+          <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://aimpactscanner.com" class="btn btn--primary header__cta" target="_blank" rel="noopener noreferrer"
+         aria-label="Free Site Scan (opens in new tab)" data-track-cta data-product="aimpactscanner" data-location="nav">
+        Free Site Scan
+      </a>
+
+      <button class="header__menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <span class="header__menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== ARTICLE HEADER ========== -->
+    <section class="article-header">
+      <div class="container">
+        <a href="/blog?category=fundamentals" class="article-header__category">Fundamentals</a>
+        <h1 class="article-header__title">The Uncomfortable Truth About llms.txt Generators</h1>
+        <div class="article-header__meta">
+          <a href="/about" class="article-header__author">Jamie Watters</a>
+          <span class="article-header__separator" aria-hidden="true">&middot;</span>
+          <time datetime="2025-12-19">19 December 2025</time>
+          <span class="article-header__separator" aria-hidden="true">&middot;</span>
+          <span class="article-header__read-time">8 min read</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ARTICLE BODY ========== -->
+    <article class="article">
+      <div class="container">
+        <div class="article__body">
+
+          <!-- Table of Contents -->
+          <details class="article__toc" open>
+            <summary class="article__toc-heading">Table of Contents</summary>
+            <nav aria-label="Table of contents">
+              <ol class="article__toc-list">
+                <li><a href="#the-promise">The Promise of llms.txt</a></li>
+                <li><a href="#the-test">Same Site, Four Generators, Four Different Answers</a></li>
+                <li><a href="#the-junk-problem">The Junk Problem</a></li>
+                <li><a href="#javascript-gap">The JavaScript Rendering Gap</a></li>
+                <li><a href="#quality-scoring">Why Quality Scoring Matters</a></li>
+                <li><a href="#landscape">The Generator Landscape in 2025</a></li>
+                <li><a href="#what-to-look-for">What to Look for in a Generator</a></li>
+              </ol>
+            </nav>
+          </details>
+
+          <p class="article__intro">The llms.txt standard emerged in 2024 as a way to tell AI systems which pages on your site actually matter. Think of it as a curated menu for ChatGPT, Claude, and Perplexity &mdash; directing them to your best content instead of leaving them to guess. The concept is sound. The execution, from most generators, is not.</p>
+
+          <p>We tested four different llms.txt generators on the same website &mdash; a calculator site with roughly 150 pages. The results ranged from 21 pages to 147. Same site. Same pages. Wildly different outputs. And the differences matter more than the numbers suggest.</p>
+
+          <h2 id="the-promise">The Promise of llms.txt</h2>
+
+          <p>The llms.txt specification is straightforward: a text file at your domain root that lists the pages you want AI systems to prioritise when they reference your site. It's like robots.txt for AI visibility &mdash; except instead of telling crawlers what to avoid, it tells them what to focus on.</p>
+
+          <p>When an AI engine encounters your llms.txt file, it uses it as a guide to understand which pages contain your most valuable, authoritative content. A well-structured llms.txt file can be the difference between AI citing your best work and AI citing your cookie policy.</p>
+
+          <p>The problem isn't the standard. The problem is the tools generating these files.</p>
+
+          <h2 id="the-test">Same Site, Four Generators, Four Different Answers</h2>
+
+          <p>We ran four llms.txt generators against the same website &mdash; FreecalcHub.com, a calculator site with approximately 150 pages of content. Here's what each tool produced:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Generator</th>
+                <th>Pages Found</th>
+                <th>Quality Scoring</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LLM.txt Mastery</td>
+                <td>147</td>
+                <td>Yes (1&ndash;10 scale)</td>
+              </tr>
+              <tr>
+                <td>Keploy (free)</td>
+                <td>133</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Writesonic</td>
+                <td>53</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>SiteSpeakAI</td>
+                <td>21</td>
+                <td>No</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>That's a 7x difference between the lowest and highest page counts. SiteSpeakAI found 21 pages on a 150-page site. That means it missed 86% of the content. Writesonic found barely a third. Even Keploy, which found 133 pages, missed 14 pages that LLM.txt Mastery detected.</p>
+
+          <p>Page count alone doesn't tell the full story &mdash; but when a generator misses the majority of your content, the llms.txt file it produces is fundamentally incomplete. AI systems relying on it won't know your best pages exist.</p>
+
+          <h2 id="the-junk-problem">The Junk Problem</h2>
+
+          <p>Finding pages is one thing. Deciding which ones to include is another.</p>
+
+          <p>Keploy found 133 pages &mdash; close to the full site. But its output was a raw URL dump with no filtering or prioritisation. The generated file included the homepage, the privacy policy, the terms of service, the cookie consent page, and the contact form. All listed alongside the site's actual calculator tools &mdash; the pages that AI systems should be referencing.</p>
+
+          <p>An llms.txt file that lists everything is functionally useless. The whole point of the standard is curation. If you're telling AI to treat your cookie policy with the same weight as your flagship product page, you're not guiding AI discovery &mdash; you're creating noise.</p>
+
+          <p>This is where quality scoring matters. A page that explains a complex financial calculation in depth is not equivalent to a page that says "We use cookies to improve your experience." But without scoring, most generators treat them identically.</p>
+
+          <h2 id="javascript-gap">The JavaScript Rendering Gap</h2>
+
+          <p>Between 60% and 80% of modern websites are built with JavaScript frameworks &mdash; React, Vue, Angular, Next.js, and others. These frameworks render content dynamically in the browser. When you visit one of these sites, your browser executes JavaScript to build the page you see.</p>
+
+          <p>Most llms.txt generators don't execute JavaScript. They fetch the raw HTML &mdash; the initial shell &mdash; and that's all they see. For a React or Vue application, the raw HTML is often nearly empty: a <code>&lt;div id="root"&gt;&lt;/div&gt;</code> and a script tag. No content. No headings. No text.</p>
+
+          <p>A generator that can't render JavaScript literally cannot see the content on a majority of modern websites. It's generating an llms.txt file based on an empty page. The resulting file will either be empty, incomplete, or filled with navigation elements and boilerplate that happened to exist in the initial HTML.</p>
+
+          <p>Full JavaScript rendering requires a headless browser &mdash; Puppeteer, Playwright, or equivalent. This is significantly more complex and expensive to operate than a simple HTTP fetch. It's also non-negotiable if the generator claims to work with modern websites.</p>
+
+          <h2 id="quality-scoring">Why Quality Scoring Matters</h2>
+
+          <p>The llms.txt specification supports a hierarchical structure: pages can be marked as primary, secondary, or optional. This hierarchy should reflect the actual value of each page to AI systems.</p>
+
+          <p>Quality scoring evaluates each page against criteria that predict AI citation value:</p>
+
+          <ul>
+            <li><strong>Content depth and uniqueness</strong> &mdash; Does the page contain substantial, original information?</li>
+            <li><strong>Technical relevance</strong> &mdash; Is the content topically focused and well-structured?</li>
+            <li><strong>Information architecture</strong> &mdash; Are headings, sections, and metadata well-organised?</li>
+            <li><strong>AI citation potential</strong> &mdash; How likely is an AI system to reference this page when answering a relevant question?</li>
+          </ul>
+
+          <p>On a 1&ndash;10 scale, a deep technical guide with structured data, clear headings, and expert authorship might score an 8 or 9. A cookie policy scores a 3. Your homepage &mdash; important for navigation but rarely cited by AI &mdash; might score a 5.</p>
+
+          <p>Without this scoring, every page looks the same to the generator. And the llms.txt file it produces tells AI systems that every page is equally important &mdash; which is the same as telling them nothing at all.</p>
+
+          <h2 id="landscape">The Generator Landscape in 2025</h2>
+
+          <p>The market for llms.txt generators currently splits into three tiers:</p>
+
+          <h3>Free Tools</h3>
+
+          <p>Tools like Keploy work for basic page discovery. They'll crawl your site and produce a list of URLs. If your site is simple, static, and small, these tools may be adequate. But they lack quality scoring, JavaScript rendering, framework detection, and ongoing updates. You get a URL list, not a curated AI guide.</p>
+
+          <h3>Enterprise Platforms</h3>
+
+          <p>At the other end, enterprise solutions priced at $879 per year and above offer comprehensive features but are cost-prohibitive for solo founders, small businesses, and indie SaaS builders. These tools were built for organisations with dedicated SEO teams and substantial budgets.</p>
+
+          <h3>The Middle Ground</h3>
+
+          <p>Between free and enterprise sits a gap that most of the market hasn't addressed. Small businesses and solopreneurs need quality scoring, framework detection, and JavaScript rendering &mdash; but at a price point that doesn't require a procurement process.</p>
+
+          <p>This is the gap that <a href="https://llmtxtmastery.com" target="_blank" rel="noopener noreferrer">LLM.txt Mastery<span class="visually-hidden"> (opens in new tab)</span></a> was built to fill: a dedicated llms.txt platform with quality scoring, detection for 17+ deployment platforms, and JavaScript rendering &mdash; starting with a free tier and scaling to $20 per month.</p>
+
+          <h2 id="what-to-look-for">What to Look for in a Generator</h2>
+
+          <p>If you're evaluating llms.txt generators, here's what separates a useful tool from a URL dumper:</p>
+
+          <ol>
+            <li><strong>Page discovery completeness</strong> &mdash; Can it find all your pages, not just the ones linked from your homepage? Test it against your sitemap count.</li>
+            <li><strong>Quality scoring</strong> &mdash; Does it differentiate between high-value content and boilerplate? Or does every page get the same treatment?</li>
+            <li><strong>JavaScript rendering</strong> &mdash; If your site uses React, Vue, Angular, or any SPA framework, the generator must execute JavaScript to see your content.</li>
+            <li><strong>robots.txt awareness</strong> &mdash; Does the generator respect your existing crawl rules? A generator that ignores robots.txt may include pages you've deliberately excluded from crawlers.</li>
+            <li><strong>Platform detection</strong> &mdash; Different deployment platforms (Netlify, Vercel, WordPress, Shopify) serve llms.txt differently. Your generator should know how to deploy on your stack.</li>
+            <li><strong>Ongoing updates</strong> &mdash; Your site changes. Your llms.txt file should change with it. A one-time generation is a snapshot; you need a tool that regenerates as your content evolves.</li>
+          </ol>
+
+          <p>The llms.txt standard is one of the most practical things you can do for AI visibility right now. But a bad llms.txt file &mdash; one that lists every page indiscriminately or misses most of your content entirely &mdash; is worse than having no file at all. It actively misleads the AI systems you're trying to reach.</p>
+
+          <p>Choose your generator carefully. The file it produces is your introduction to every AI system that visits your site.</p>
+
+          <!-- End-of-Article CTA: LLM.txt Mastery -->
+          <div class="earn-the-ask earn-the-ask--compact mt-8">
+            <div class="earn-the-ask__inner">
+              <div class="earn-the-ask__slot earn-the-ask__problem">
+                <p class="earn-the-ask__text"><strong>Most generators produce junk llms.txt files</strong></p>
+              </div>
+              <div class="earn-the-ask__slot earn-the-ask__fix">
+                <p class="earn-the-ask__text">LLM.txt Mastery scores every page for AI citation value &mdash; free to start.</p>
+              </div>
+              <div class="earn-the-ask__slot earn-the-ask__action">
+                <a href="https://llmtxtmastery.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer"
+                   data-track-cta data-product="llmtxtmastery" data-location="article_end">
+                  Try Free Validator
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ========== INLINE NEWSLETTER (F-020) ========== -->
+    <section class="container">
+      <div class="newsletter newsletter--inline">
+        <div class="newsletter__copy">
+          <h2 class="newsletter__heading">Stay ahead of AI search</h2>
+          <p class="newsletter__desc">Get weekly insights on AI search visibility delivered to your inbox.</p>
+        </div>
+        <div class="newsletter__form-wrap">
+          <form class="newsletter__form" data-location="article_inline">
+            <div class="newsletter__fields">
+              <label for="newsletter-email-inline" class="visually-hidden">Email address</label>
+              <input type="email" id="newsletter-email-inline" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="hp-company-inline">Company</label>
+                <input type="text" id="hp-company-inline" name="hp_company" tabindex="-1" autocomplete="off">
+              </div>
+              <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
+            </div>
+            <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
+          </form>
+          <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER (F-002) ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="newsletter container">
+      <div class="newsletter__copy">
+        <h2 class="newsletter__heading">AI Search Arena</h2>
+        <p class="newsletter__desc">Weekly insights on AI search visibility, direct from the research.</p>
+      </div>
+      <div class="newsletter__form-wrap">
+        <form class="newsletter__form" data-location="footer">
+          <div class="newsletter__fields">
+            <label for="newsletter-email-footer" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email-footer" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="hp-company-footer">Company</label>
+              <input type="text" id="hp-company-footer" name="hp_company" tabindex="-1" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
+          </div>
+          <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
+        </form>
+        <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
+      </div>
+    </div>
+
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <h3 class="footer__heading">Navigate</h3>
+        <nav aria-label="Footer navigation">
+          <ul class="footer__list">
+            <li><a href="/framework" class="footer__link">Framework</a></li>
+            <li><a href="/about" class="footer__link">About</a></li>
+            <li><a href="/products" class="footer__link">Products</a></li>
+            <li><a href="/blog" class="footer__link">Blog</a></li>
+            <li><a href="/contact" class="footer__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Products</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="https://aimpactscanner.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              AImpactScanner<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://llmtxtmastery.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              LLM.txt Mastery<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://llmtxtmastery.com/validator" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              Free Validator<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="/products#aimpactmonitor" class="footer__link">
+              AImpactMonitor <span class="text-secondary">(Coming Soon)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://aisearcharena.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              AI Search Arena<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Connect</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="https://x.com/Jamie_within" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Follow on X / Twitter (opens in new tab)">
+              X / Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/jamie-watters-solo" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Connect on LinkedIn (opens in new tab)">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://jamiewatters.work" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Build in Public journal (opens in new tab)">
+              Build in Public
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Legal</h3>
+        <ul class="footer__list">
+          <li><a href="/privacy" class="footer__link">Privacy Policy</a></li>
+          <li><a href="/terms" class="footer__link">Terms</a></li>
+          <li><a href="/sitemap.xml" class="footer__link">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copyright">&copy; 2026 AI Search Mastery. All rights reserved.</p>
+        <p class="footer__contact">
+          <a href="mailto:info@aisearchmastery.com" class="footer__link">info@aisearchmastery.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

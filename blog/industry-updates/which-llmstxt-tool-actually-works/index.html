@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Which llms.txt Tool Actually Works? We Benchmarked 14 | AI Search Mastery</title>
+  <meta name="description" content="We tested 14 AI visibility tools against a 4-step evaluation framework. Most do one thing. Almost none complete the full loop. Here's the data.">
+  <link rel="canonical" href="https://aisearchmastery.com/blog/industry-updates/which-llmstxt-tool-actually-works/">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Which llms.txt Tool Actually Works? We Benchmarked 14 | AI Search Mastery">
+  <meta property="og:description" content="We tested 14 AI visibility tools against a 4-step framework. Most do one thing. Almost none complete the full loop.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aisearchmastery.com/blog/industry-updates/which-llmstxt-tool-actually-works/">
+  <meta property="og:site_name" content="AI Search Mastery">
+  <meta property="article:published_time" content="2026-02-28T00:00:00+00:00">
+  <meta property="article:modified_time" content="2026-02-28T00:00:00+00:00">
+  <meta property="article:author" content="Jamie Watters">
+  <meta property="article:section" content="Industry Updates">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Which llms.txt Tool Actually Works? We Benchmarked 14 | AI Search Mastery">
+  <meta name="twitter:description" content="We tested 14 AI visibility tools against a 4-step framework. Most do one thing. Almost none complete the full loop.">
+
+  <!-- Google Fonts (deferred — system font shows instantly, Inter swaps in) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- Critical CSS (above-fold, render-blocking) -->
+  <link rel="stylesheet" href="/css/critical.css">
+
+  <!-- Full stylesheet (deferred, loads async) -->
+  <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+
+  <!-- Plausible Analytics (cookieless, GDPR-compliant) -->
+  <script async src="https://plausible.io/js/pa-uuYxfgVfBXI1g3QRbub90.js"></script>
+  <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aisearchmastery.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aisearchmastery.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Industry Updates", "item": "https://aisearchmastery.com/blog?category=industry-updates" },
+      { "@type": "ListItem", "position": 4, "name": "Which llms.txt Tool Actually Works?" }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Which llms.txt Tool Actually Works? We Benchmarked 14",
+    "author": {
+      "@type": "Person",
+      "name": "Jamie Watters",
+      "url": "https://aisearchmastery.com/about"
+    },
+    "datePublished": "2026-02-28",
+    "dateModified": "2026-02-28",
+    "description": "We tested 14 AI visibility tools against a 4-step evaluation framework. Most do one thing. Almost none complete the full loop. Here's the data.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Search Mastery",
+      "url": "https://aisearchmastery.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip Navigation -->
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <!-- ========== HEADER (F-001) ========== -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AI Search Mastery — Home">
+        <span class="header__logo-full">AI Search Mastery</span>
+        <span class="header__logo-compact">ASM</span>
+      </a>
+
+      <nav class="header__nav" id="primary-nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/framework" class="nav__link">Framework</a></li>
+          <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="/products" class="nav__link">Products</a></li>
+          <li class="nav__item"><a href="/blog" class="nav__link nav__link--active" aria-current="page">Blog</a></li>
+          <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://aimpactscanner.com" class="btn btn--primary header__cta" target="_blank" rel="noopener noreferrer"
+         aria-label="Free Site Scan (opens in new tab)" data-track-cta data-product="aimpactscanner" data-location="nav">
+        Free Site Scan
+      </a>
+
+      <button class="header__menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <span class="header__menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ========== ARTICLE HEADER ========== -->
+    <section class="article-header">
+      <div class="container">
+        <a href="/blog?category=industry-updates" class="article-header__category">Industry Updates</a>
+        <h1 class="article-header__title">Which llms.txt Tool Actually Works? We Benchmarked 14</h1>
+        <div class="article-header__meta">
+          <a href="/about" class="article-header__author">Jamie Watters</a>
+          <span class="article-header__separator" aria-hidden="true">&middot;</span>
+          <time datetime="2026-02-28">28 February 2026</time>
+          <span class="article-header__separator" aria-hidden="true">&middot;</span>
+          <span class="article-header__read-time">9 min read</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ARTICLE BODY ========== -->
+    <article class="article">
+      <div class="container">
+        <div class="article__body">
+
+          <!-- Table of Contents -->
+          <details class="article__toc" open>
+            <summary class="article__toc-heading">Table of Contents</summary>
+            <nav aria-label="Table of contents">
+              <ol class="article__toc-list">
+                <li><a href="#the-problem">The One-Thing Problem</a></li>
+                <li><a href="#full-loop">The Full-Loop Framework</a></li>
+                <li><a href="#results">Benchmark Results</a></li>
+                <li><a href="#what-separates">What Separates the Top Tools</a></li>
+                <li><a href="#free-generators">The Free Generator Trap</a></li>
+                <li><a href="#choosing">How to Choose the Right Tool</a></li>
+              </ol>
+            </nav>
+          </details>
+
+          <p class="article__intro">The llms.txt market has exploded. In the past year, more than a dozen tools have launched claiming to improve your AI search visibility &mdash; from free generators to enterprise platforms costing $489 per month. We tested 14 of them against a structured evaluation framework. The results reveal a market where most tools do one thing, a few do two things, and almost none complete the full loop that actually moves the needle.</p>
+
+          <h2 id="the-problem">The One-Thing Problem</h2>
+
+          <p>Most AI visibility tools do a single thing: generate an llms.txt file. You enter your URL, the tool crawls your site, and it produces a file. For many businesses, this feels like a solved problem. You have a file. You deploy it. Done.</p>
+
+          <p>Except that file generation is step one of a four-step process. A generated file tells you nothing about whether it's any good, whether it actually improved your AI visibility, or what to do next. It's like getting a medical scan without a diagnosis &mdash; you have data, but no actionable information.</p>
+
+          <p>The tools that stop at generation leave you guessing. Did the file work? Is AI citing you more now? Are there underlying site issues that undermine the file entirely? Without answers to these questions, a generated llms.txt file is a hope, not a strategy.</p>
+
+          <h2 id="full-loop">The Full-Loop Framework</h2>
+
+          <p>We evaluated all 14 tools against a four-step framework that represents the complete AI visibility workflow:</p>
+
+          <ol>
+            <li><strong>Diagnose</strong> &mdash; Can the tool identify specific problems with your AI visibility? Not just "generate a file" but "tell you what's wrong and why."</li>
+            <li><strong>Optimise</strong> &mdash; Can the tool implement fixes or provide actionable, specific recommendations? Generic advice like "improve your content" doesn't count.</li>
+            <li><strong>Test</strong> &mdash; Can the tool verify that the changes actually worked? Can you re-scan and see measurable improvement?</li>
+            <li><strong>Repeat</strong> &mdash; Can the tool track progress over time? Does it show you a trajectory, not just a snapshot?</li>
+          </ol>
+
+          <p>Most tools cover step one, partially. Some address step two. Almost none complete steps three and four. And without those final steps, you're flying blind.</p>
+
+          <h2 id="results">Benchmark Results</h2>
+
+          <p>We scored each tool across six dimensions: generation quality, validation capability, AI readability scoring, re-testing capability, JavaScript rendering, and improvement tracking. Maximum score: 30 points.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Score (/30)</th>
+                <th>Full Loop?</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LLM.txt Mastery</td>
+                <td>18</td>
+                <td>Yes</td>
+                <td>$4.95/mo</td>
+              </tr>
+              <tr>
+                <td>LLMrefs</td>
+                <td>15</td>
+                <td>Partial</td>
+                <td>$29/mo</td>
+              </tr>
+              <tr>
+                <td>Otterly AI</td>
+                <td>14</td>
+                <td>Partial</td>
+                <td>$49/mo</td>
+              </tr>
+              <tr>
+                <td>Peec AI</td>
+                <td>12</td>
+                <td>Partial</td>
+                <td>$39/mo</td>
+              </tr>
+              <tr>
+                <td>Cairrot</td>
+                <td>11</td>
+                <td>Partial</td>
+                <td>$29/mo</td>
+              </tr>
+              <tr>
+                <td>AIOSEO</td>
+                <td>4</td>
+                <td>No</td>
+                <td>$49/mo</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><em>Table shows 6 of 14 tools tested. Remaining 8 scored between 3 and 10, with none completing the full loop.</em></p>
+
+          <p>The standout finding: the highest-scoring tool costs $4.95 per month. Several lower-scoring tools cost 5&ndash;10x more. Price does not correlate with capability in this market &mdash; a reflection of how new the category is and how differently vendors interpret the problem.</p>
+
+          <h2 id="what-separates">What Separates the Top Tools</h2>
+
+          <h3>JavaScript Rendering</h3>
+
+          <p>Between 60% and 80% of modern websites use JavaScript frameworks. A tool that can't render JavaScript literally cannot see the content on most websites. It's generating an llms.txt file based on an empty page.</p>
+
+          <p>Of the 14 tools tested, only 3 offered full JavaScript rendering. The rest fetched raw HTML, missing all dynamically rendered content. For any site built with React, Vue, Angular, or a similar framework, this is a disqualifying limitation.</p>
+
+          <h3>Readability Scoring Specificity</h3>
+
+          <p>Several tools offer an "AI friendliness" score &mdash; a single number that claims to represent how well your site works for AI. These scores are largely meaningless without specific, factor-level breakdowns. A score of 72 out of 100 tells you nothing about what to fix.</p>
+
+          <p>The more useful tools evaluate specific factors &mdash; structured data presence, content depth, authorship signals, entity recognition, freshness indicators &mdash; and tell you exactly which ones are weak. The MASTERY-AI Framework evaluates 27 specific factors across 8 pillars, each with actionable recommendations.</p>
+
+          <h3>Re-Testing Capability</h3>
+
+          <p>You make changes. You implement the recommendations. Now what? Without re-testing, you have no way to know whether your changes worked. You can't see the delta between your previous score and your current one.</p>
+
+          <p>Only 4 of the 14 tools offered any form of before-and-after comparison. The rest treated each scan as an isolated event with no connection to previous results.</p>
+
+          <h2 id="free-generators">The Free Generator Trap</h2>
+
+          <p>Free llms.txt generators are everywhere. They're the entry point for most businesses exploring AI visibility. And they come with predictable limitations:</p>
+
+          <ul>
+            <li><strong>No JavaScript rendering</strong> &mdash; Free tools don't run headless browsers. If your site uses a JavaScript framework, the generated file will be incomplete or empty.</li>
+            <li><strong>No quality scoring</strong> &mdash; Every page gets listed equally. Your flagship product page carries the same weight as your cookie policy.</li>
+            <li><strong>Bloated output</strong> &mdash; Without filtering, free generators produce files that list every URL they find, creating noise that can degrade AI parsing performance.</li>
+            <li><strong>Lead magnets</strong> &mdash; Many free generators exist primarily to capture email addresses. The tool is the marketing, not the product.</li>
+          </ul>
+
+          <p>A free generator can tell you whether you have an llms.txt file. It can't tell you whether the file is any good, whether your site is actually ready for AI, or what to do next. For businesses that are serious about AI visibility, free generation is the starting point &mdash; not the solution.</p>
+
+          <h2 id="choosing">How to Choose the Right Tool</h2>
+
+          <p>Based on our benchmark data, here's what to evaluate when selecting an AI visibility tool:</p>
+
+          <ol>
+            <li><strong>Does it diagnose?</strong> &mdash; Can the tool tell you specifically what's wrong with your AI visibility, not just generate a file?</li>
+            <li><strong>Does it render JavaScript?</strong> &mdash; If your site uses any modern framework, this is non-negotiable.</li>
+            <li><strong>Does it score specifically?</strong> &mdash; Generic "AI friendliness" scores are unhelpful. Look for factor-level breakdowns with actionable recommendations.</li>
+            <li><strong>Can you re-test?</strong> &mdash; After implementing changes, can you re-scan and measure improvement?</li>
+            <li><strong>Does it track progress?</strong> &mdash; Can you see your trajectory over time, not just isolated snapshots?</li>
+            <li><strong>Is the price sustainable?</strong> &mdash; Enterprise pricing ($49&ndash;$489/month) may be justified for large teams. For solopreneurs and small businesses, the cost needs to reflect the value delivered.</li>
+          </ol>
+
+          <p>The AI visibility tool market is still maturing. Prices will stabilise, features will consolidate, and the tools that deliver the full loop &mdash; diagnose, optimise, test, repeat &mdash; will separate from the ones that just generate files. Choose accordingly.</p>
+
+          <!-- End-of-Article CTA: AImpactScanner -->
+          <div class="earn-the-ask earn-the-ask--compact mt-8">
+            <div class="earn-the-ask__inner">
+              <div class="earn-the-ask__slot earn-the-ask__problem">
+                <p class="earn-the-ask__text"><strong>Most tools stop at file generation. That's step one of four.</strong></p>
+              </div>
+              <div class="earn-the-ask__slot earn-the-ask__fix">
+                <p class="earn-the-ask__text">AImpactScanner diagnoses, scores, and tracks your AI visibility across 27 factors.</p>
+              </div>
+              <div class="earn-the-ask__slot earn-the-ask__action">
+                <a href="https://aimpactscanner.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer"
+                   data-track-cta data-product="aimpactscanner" data-location="article_end">
+                  Free Site Scan
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ========== INLINE NEWSLETTER (F-020) ========== -->
+    <section class="container">
+      <div class="newsletter newsletter--inline">
+        <div class="newsletter__copy">
+          <h2 class="newsletter__heading">Stay ahead of AI search</h2>
+          <p class="newsletter__desc">Get weekly insights on AI search visibility delivered to your inbox.</p>
+        </div>
+        <div class="newsletter__form-wrap">
+          <form class="newsletter__form" data-location="article_inline">
+            <div class="newsletter__fields">
+              <label for="newsletter-email-inline" class="visually-hidden">Email address</label>
+              <input type="email" id="newsletter-email-inline" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="hp-company-inline">Company</label>
+                <input type="text" id="hp-company-inline" name="hp_company" tabindex="-1" autocomplete="off">
+              </div>
+              <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
+            </div>
+            <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
+          </form>
+          <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER (F-002) ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="newsletter container">
+      <div class="newsletter__copy">
+        <h2 class="newsletter__heading">AI Search Arena</h2>
+        <p class="newsletter__desc">Weekly insights on AI search visibility, direct from the research.</p>
+      </div>
+      <div class="newsletter__form-wrap">
+        <form class="newsletter__form" data-location="footer">
+          <div class="newsletter__fields">
+            <label for="newsletter-email-footer" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email-footer" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="hp-company-footer">Company</label>
+              <input type="text" id="hp-company-footer" name="hp_company" tabindex="-1" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
+          </div>
+          <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
+        </form>
+        <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
+      </div>
+    </div>
+
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <h3 class="footer__heading">Navigate</h3>
+        <nav aria-label="Footer navigation">
+          <ul class="footer__list">
+            <li><a href="/framework" class="footer__link">Framework</a></li>
+            <li><a href="/about" class="footer__link">About</a></li>
+            <li><a href="/products" class="footer__link">Products</a></li>
+            <li><a href="/blog" class="footer__link">Blog</a></li>
+            <li><a href="/contact" class="footer__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Products</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="https://aimpactscanner.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              AImpactScanner<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://llmtxtmastery.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              LLM.txt Mastery<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://llmtxtmastery.com/validator" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              Free Validator<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="/products#aimpactmonitor" class="footer__link">
+              AImpactMonitor <span class="text-secondary">(Coming Soon)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://aisearcharena.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              AI Search Arena<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Connect</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="https://x.com/Jamie_within" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Follow on X / Twitter (opens in new tab)">
+              X / Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/jamie-watters-solo" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Connect on LinkedIn (opens in new tab)">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://jamiewatters.work" class="footer__link footer__link--social external-link" target="_blank" rel="noopener noreferrer"
+               aria-label="Build in Public journal (opens in new tab)">
+              Build in Public
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Legal</h3>
+        <ul class="footer__list">
+          <li><a href="/privacy" class="footer__link">Privacy Policy</a></li>
+          <li><a href="/terms" class="footer__link">Terms</a></li>
+          <li><a href="/sitemap.xml" class="footer__link">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copyright">&copy; 2026 AI Search Mastery. All rights reserved.</p>
+        <p class="footer__contact">
+          <a href="mailto:info@aisearchmastery.com" class="footer__link">info@aisearchmastery.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
