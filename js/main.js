@@ -8,6 +8,8 @@
    4. Accordion (FAQ)
    5. Analytics event helpers (Plausible)
    6. Contact form handling
+   8. Blog category filter
+   9. Newsletter signup (F-020)
    ============================================================ */
 
 (function () {
@@ -224,7 +226,7 @@
   }
 
   // ──────────────────────────────────────────────
-  // 8. Blog Category Filter
+  // 8. Blog Category Filter (F-018)
   // ──────────────────────────────────────────────
 
   var blogFilter = document.querySelector('.blog-filter');
@@ -266,5 +268,65 @@
       if (matchingPill) matchingPill.click();
     }
   }
+
+  // ──────────────────────────────────────────────
+  // 9. Newsletter Signup (F-020)
+  // ──────────────────────────────────────────────
+
+  document.querySelectorAll('.newsletter__form').forEach(function (form) {
+    var loadTime = Date.now();
+
+    form.addEventListener('submit', function handleSubmit(e) {
+      e.preventDefault();
+
+      // 5-second time gate — reject instant bot submissions
+      if (Date.now() - loadTime < 5000) return;
+
+      // Honeypot check
+      var honeypot = form.querySelector('[name="hp_company"]');
+      if (honeypot && honeypot.value) return;
+
+      var emailInput = form.querySelector('[name="email"]');
+      var email = emailInput ? emailInput.value.trim() : '';
+      if (!email) return;
+
+      var btn = form.querySelector('[type="submit"]');
+      var successEl = form.closest('.newsletter').querySelector('.newsletter__success');
+      var location = form.getAttribute('data-location') || 'footer';
+
+      // Disable button during submission
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Subscribing\u2026';
+      }
+
+      fetch('https://buttondown.com/api/emails/embed-subscribe/watters', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'email=' + encodeURIComponent(email)
+      })
+      .then(function (response) {
+        if (response.ok || response.status === 201) {
+          form.hidden = true;
+          if (successEl) successEl.hidden = false;
+          trackEvent('newsletter_signup', { location: location });
+        } else {
+          throw new Error('Subscription failed');
+        }
+      })
+      .catch(function () {
+        // CORS fallback: submit natively to Buttondown (redirects to confirmation page)
+        form.removeEventListener('submit', handleSubmit);
+        form.setAttribute('action', 'https://buttondown.com/api/emails/embed-subscribe/watters');
+        form.setAttribute('method', 'POST');
+        form.setAttribute('target', '_blank');
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = 'Subscribe';
+        }
+        form.submit();
+      });
+    });
+  });
 
 })();

@@ -345,8 +345,26 @@
 
   <!-- ========== FOOTER (F-002) ========== -->
   <footer class="footer" role="contentinfo">
-    <div class="footer__newsletter container">
-      <!-- Reserved for F-020 Newsletter signup -->
+    <div class="newsletter container">
+      <div class="newsletter__copy">
+        <h2 class="newsletter__heading">AI Search Arena</h2>
+        <p class="newsletter__desc">Weekly insights on AI search visibility, direct from the research.</p>
+      </div>
+      <div class="newsletter__form-wrap">
+        <form class="newsletter__form" data-location="footer">
+          <div class="newsletter__fields">
+            <label for="newsletter-email-footer" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email-footer" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="hp-company-footer">Company</label>
+              <input type="text" id="hp-company-footer" name="hp_company" tabindex="-1" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
+          </div>
+          <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
+        </form>
+        <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
+      </div>
     </div>
 
     <div class="container footer__grid">
