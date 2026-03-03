@@ -561,6 +561,11 @@ p + p {
   color: var(--color-white);
 }
 
+.badge--amber {
+  background-color: var(--color-action-amber);
+  color: var(--color-white);
+}
+
 .badge--outline {
   background-color: transparent;
   border: 1px solid var(--color-mist);

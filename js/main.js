@@ -309,7 +309,8 @@
         if (response.ok || response.status === 201) {
           form.hidden = true;
           if (successEl) successEl.hidden = false;
-          trackEvent('newsletter_signup', { location: location });
+          var eventName = location === 'aimpactmonitor' ? 'early_access_signup' : 'newsletter_signup';
+          trackEvent(eventName, { location: location });
         } else {
           throw new Error('Subscription failed');
         }
