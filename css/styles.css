@@ -1576,16 +1576,29 @@ article .earn-the-ask--compact {
 /* ---- Product Preview (Products page) ---- */
 
 .product-preview {
-  padding: var(--space-6);
+  margin-inline: auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.product-preview picture {
+  display: block;
   border: 1px solid var(--color-mist);
   border-radius: var(--radius-lg);
+  overflow: hidden;
   background: var(--color-white);
 }
 
 .product-preview img {
+  display: block;
   max-width: 100%;
   height: auto;
-  border-radius: var(--radius-md);
+}
+
+.product-preview figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-slate);
 }
 
 /* ---- Search Form (404 page) ---- */
