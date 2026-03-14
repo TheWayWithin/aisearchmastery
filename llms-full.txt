@@ -14,14 +14,14 @@ Generated on 2026-03-08. This is the llms-full.txt version containing complete p
 - **Contact**: info@aisearchmastery.com
 - **Social**: [X/Twitter](https://x.com/Jamie_within), [LinkedIn](https://linkedin.com/in/jamie-watters-solo), [Build in Public](https://jamiewatters.work)
 
-### Product Suite
+### Product Ecosystem — Diagnose → Optimise → Monitor
 
-| Product | URL | Description | Pricing |
-|---------|-----|-------------|---------|
-| AImpactScanner | https://aimpactscanner.com | AI visibility scanner — 27 factors across 8 pillars | Free first scan, Growth $19.95/mo |
-| LLM.txt Mastery | https://llmtxtmastery.com | llms.txt generator and validator — discovers JavaScript-rendered pages other tools miss, quality-scores content, validates format and robots.txt conflicts, guides deployment | Free validator, paid features included with AImpactScanner Growth |
-| AImpactMonitor | Coming soon | Track AI citations across ChatGPT, Perplexity, Claude | From $9.95/mo at launch |
-| AI Search Arena | https://aisearcharena.com | Independent benchmark comparing AI search optimisation tools | Free |
+| Step | Product | URL | Description | Pricing |
+|------|---------|-----|-------------|---------|
+| 1. Diagnose | AImpactScanner | https://aimpactscanner.com | AI visibility scanner — 27 factors across 8 pillars | Free first scan, Growth $19.95/mo |
+| 2. Optimise | LLM.txt Mastery | https://llmtxtmastery.com | llms.txt generator and validator — discovers JavaScript-rendered pages other tools miss, quality-scores content, validates format and robots.txt conflicts, guides deployment | Free validator, paid features included with AImpactScanner Growth |
+| 3. Monitor | AImpactMonitor | Coming soon | Track AI citations across ChatGPT, Perplexity, Claude | From $9.95/mo at launch |
+| — | AI Search Arena | https://aisearcharena.com | Independent benchmark comparing AI search optimisation tools | Free |
 
 ---
 
@@ -30,7 +30,7 @@ Generated on 2026-03-08. This is the llms-full.txt version containing complete p
 **URL**: https://aisearchmastery.com/
 **Title**: See How AI Sees You
 
-AI Search Mastery provides two tools that diagnose your AI search visibility and make your website readable by ChatGPT, Perplexity, and Claude.
+AI Search Mastery provides three tools that work together as the Diagnose → Optimise → Monitor ecosystem, improving how AI search engines understand and recommend your content.
 
 ### The Three-Layer AI Visibility Gap
 
@@ -97,14 +97,14 @@ We show you exactly what we measure and why. No black boxes, no proprietary secr
 
 ---
 
-## Products
+## Products — The AI Search Mastery Ecosystem
 
 **URL**: https://aisearchmastery.com/products
-**Title**: Diagnose and Fix Your AI Visibility
+**Title**: The AI Search Mastery Ecosystem
 
-AI search is replacing traditional search for millions of people. If AI can't read your website, it can't recommend your business. One subscription gives you a complete diagnosis and the tools to fix it.
+Three tools that work together: Diagnose → Optimise → Monitor. Each tool addresses a step in the loop that turns guesswork into measurable AI visibility progress.
 
-### AImpactScanner
+### Step 1: Diagnose — AImpactScanner
 
 One scan. Two critical audits. 18 AI readiness factors for ChatGPT, Claude & Perplexity — plus 9 SEO foundation factors for Google & traditional search.
 
@@ -116,9 +116,9 @@ One scan. Two critical audits. 18 AI readiness factors for ChatGPT, Claude & Per
 
 ### One subscription. Everything included.
 
-AImpactScanner Growth ($19.95/mo) includes full LLM.txt Mastery Growth features — the complete Diagnose-Optimize-Test-Repeat loop in one subscription.
+AImpactScanner Growth ($19.95/mo) includes full LLM.txt Mastery Growth features — diagnosis and optimisation in one subscription. Full ecosystem pricing coming with AImpactMonitor launch.
 
-### LLM.txt Mastery
+### Step 2: Optimise — LLM.txt Mastery
 
 LLM.txt Mastery is an llms.txt generator and validator for solopreneurs, agencies, and developers. It discovers JavaScript-rendered pages that crawl-only tools miss, quality-scores content to prioritize what matters, validates file format and robots.txt conflicts, and guides deployment across all four standard file locations. Full features included with AImpactScanner Growth, or try the free validator.
 
@@ -128,9 +128,9 @@ LLM.txt Mastery is an llms.txt generator and validator for solopreneurs, agencie
 - **Key differentiators**: JavaScript rendering, quality scoring, format validation, deployment guidance
 - **URL**: https://llmtxtmastery.com
 
-### AImpactMonitor (Coming Soon)
+### Step 3: Monitor — AImpactMonitor (Coming Soon)
 
-Track how AI cites your brand across ChatGPT, Perplexity, and more.
+Track how AI cites your brand across ChatGPT, Perplexity, and more. Completes the Diagnose → Optimise → Monitor ecosystem.
 
 - AI-driven traffic converts 4.4x higher than traditional search
 - Tracks citations across platforms

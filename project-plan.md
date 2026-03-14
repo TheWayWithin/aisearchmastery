@@ -204,7 +204,7 @@
 | Migration: zero 404s from 26 URLs | 0 broken | _redirects deployed, manual crawl pending |
 | Lighthouse Accessibility | 96+ | ✅ 96 (desktop + mobile) |
 
-*Last Updated: 2026-03-08 (Phase 11 added)*
+*Last Updated: 2026-03-14 (Phase 11 complete, Sprint 1 complete)*
 
 ---
 
@@ -235,3 +235,41 @@
 ### 11E: Framework Page Enhancements
 - [x] Add HowTo JSON-LD schema blocks for framework pillars — ✅ 2026-03-14 (done in 11C)
 - [x] Add "Check your score" CTAs linking to aimpactscanner.com per pillar — 7 CTAs added (A,S,T,E,R,Y,AI; M has LLM.txt CTA) — ✅ 2026-03-14
+
+**Phase 11 Complete** — deployed `e86f678` on 2026-03-14
+
+---
+
+## Sprint 1: Entity Alignment
+**Date:** 2026-03-14
+**Source:** `/Ideation/agent-11-aisearchmastery-brief.md`
+**Goal:** Align LLM.txt Mastery descriptions to canonical version across aisearchmastery.com
+
+- [x] Update LLM.txt Mastery description to canonical (JS rendering, quality scoring, validation) — 7 locations across 4 files — ✅ 2026-03-14
+- [x] Update CTA text to "Generate & Validate Your llms.txt" — 4 CTAs updated — ✅ 2026-03-14
+- [x] Change CTA links from /validator to llmtxtmastery.com homepage — 4 links updated — ✅ 2026-03-14
+- [x] Verify sameAs schema includes all ecosystem properties — already complete — ✅ 2026-03-14
+- [x] Verify AImpactMonitor "Coming Soon" status — still accurate — ✅ 2026-03-14
+- [x] Live validation — WebFetch confirmed all changes on production — ✅ 2026-03-14
+
+**Sprint 1 Complete** — deployed `4f749b2` on 2026-03-14, verified live
+
+---
+
+## Sprint 2: Ecosystem Alignment
+**Date:** 2026-03-14
+**Source:** `/sprints/sprint-2-ecosystem-alignment.md`
+**Goal:** Align site messaging with 3-step ecosystem loop (Diagnose → Optimise → Monitor)
+
+- [x] Standardize loop terminology to "Diagnose → Optimise → Monitor" across all pages — ✅ 2026-03-14
+- [x] Replace homepage 2-column product grid with 3-column ecosystem grid (AImpactScanner, LLM.txt Mastery, AImpactMonitor) — ✅ 2026-03-14
+- [x] Update homepage heading, hero subtitle, meta/OG/Twitter descriptions, JSON-LD — ✅ 2026-03-14
+- [x] Update products page intro to "The AI Search Mastery Ecosystem" — ✅ 2026-03-14
+- [x] Add step labels (Step 1/2/3) to product sections on products page — ✅ 2026-03-14
+- [x] Update Growth callout text with ecosystem reference — ✅ 2026-03-14
+- [x] Update products page meta/OG/Twitter descriptions — ✅ 2026-03-14
+- [x] Update llms-full.txt with ecosystem narrative and step labels — ✅ 2026-03-14
+- [x] Update llms.txt summary with ecosystem framing — ✅ 2026-03-14
+- [x] Verify zero stale loop variants remain — ✅ 2026-03-14
+
+**Sprint 2 Complete** — 2026-03-14

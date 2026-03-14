@@ -424,3 +424,65 @@ Phase 9 completed externally (aimpactscanner.com and llmtxtmastery.com domains).
 
 **Sprint document:** `/sprints/sprint-1-entity-alignment.md`
 **All 4 success criteria from brief met.**
+
+### 2026-03-14 — Deployment & Live Verification
+
+**Two commits deployed to production via Netlify:**
+
+| Commit | Description |
+|--------|-------------|
+| `e86f678` | Phase 11: schema, llms.txt, framework CTAs |
+| `4f749b2` | Sprint 1: entity alignment — canonical LLM.txt Mastery descriptions |
+
+**Live verification (WebFetch):**
+- aisearchmastery.com — canonical description confirmed: "Generate and validate llms.txt files. Renders JavaScript to discover pages other tools miss..."
+- aisearchmastery.com — CTA confirmed: "Generate & Validate Your llms.txt" linking to llmtxtmastery.com homepage
+- aisearchmastery.com/products — canonical description confirmed: "Discovers JavaScript-rendered pages that crawl-only tools miss..."
+- aisearchmastery.com/products — CTA confirmed: "Generate & Validate Your llms.txt" linking to llmtxtmastery.com homepage
+- Organization sameAs confirmed includes llmtxtmastery.com
+
+**Status:** Phase 11 + Sprint 1 fully deployed and verified live.
+
+### 2026-03-14 — Sprint 2: Ecosystem Alignment (Diagnose → Optimise → Monitor)
+
+**Source:** `/sprints/sprint-2-ecosystem-alignment.md`
+
+**Problem:** Site had no unified ecosystem narrative. Loop terminology varied across pages ("Diagnose. Optimise. Repeat.", "Diagnose-Optimize-Test-Repeat", "Diagnose → Optimize → Track → Remediate"). Homepage only showed 2 product cards. No step-to-tool mapping anywhere.
+
+**Changes Made:**
+
+**index.html:**
+- Hero subtitle: "Two tools" → "Three tools that diagnose, optimise, and monitor"
+- Meta/OG/Twitter descriptions: updated to "three tools" + ecosystem framing
+- JSON-LD WebSite description: updated
+- Products section: "Diagnose. Optimise. Repeat." h2 with 2-column grid → "Diagnose → Optimise → Monitor" h2 with 3-column grid + subtitle
+- Added AImpactMonitor card (Step 3: Monitor, badge--amber, Coming Soon CTA)
+- Step labels added to all 3 cards (Step 1: Diagnose, Step 2: Optimise, Step 3: Monitor)
+- Product card descriptions updated to reference ecosystem role
+
+**products.html:**
+- Page heading: "Diagnose and Fix Your AI Visibility" → "The AI Search Mastery Ecosystem"
+- Intro text: updated with ecosystem narrative
+- Meta/OG/Twitter descriptions: updated with ecosystem framing
+- AImpactScanner badge: "Free scan available" → "Step 1: Diagnose"
+- LLM.txt Mastery badge: "Included with Growth" → "Step 2: Optimise"
+- AImpactMonitor badge: "Coming Soon" → "Step 3: Monitor — Coming Soon"
+- Growth callout: removed "Diagnose-Optimize-Test-Repeat", added ecosystem pricing teaser
+- AImpactMonitor tagline: "Diagnose → Optimize → Track → Remediate" → "Diagnose → Optimise → Monitor ecosystem"
+
+**llms-full.txt:**
+- Homepage description: "two tools" → "three tools" with ecosystem framing
+- Products section heading: added "The AI Search Mastery Ecosystem"
+- Product Suite table: added Step column mapping each tool to Diagnose/Optimise/Monitor
+- Section headings: added step labels (Step 1/2/3)
+- Growth callout: updated loop name
+- AImpactMonitor: added ecosystem reference
+
+**llms.txt:**
+- Summary description: "two free tools" → three tools with ecosystem names
+- Homepage entry: updated with ecosystem framing
+
+**Verification:** Grep for stale variants ("Test-Repeat", "Track-Remediate", "Two tools", "Diagnose. Optimise. Repeat.", "Diagnose and Fix") — zero matches in active files.
+
+**Sprint document:** `/sprints/sprint-2-ecosystem-alignment.md`
+**All 6 success criteria met.**
