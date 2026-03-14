@@ -407,3 +407,20 @@ Phase 9 completed externally (aimpactscanner.com and llmtxtmastery.com domains).
 - `/project-plan.md` — all Phase 11 tasks marked [x]
 
 **Phase 11 Status**: All tasks complete. Ready for deployment
+
+### 2026-03-14 — Sprint 1: Entity Alignment (LLM.txt Mastery Canonical Descriptions)
+
+**Source:** `/Ideation/agent-11-aisearchmastery-brief.md` (entity audit from Project Lighthouse Phase 0/1)
+
+**Problem:** aisearchmastery.com described LLM.txt Mastery as "robots.txt for the AI era" — catchy but misses all differentiators (JS rendering, quality scoring, validation, deployment guidance). CTAs said "Check your LLM.txt" (vague). All CTA links went to /validator instead of homepage.
+
+**Changes Made:**
+- Updated LLM.txt Mastery description to canonical version across index.html, products.html, framework.html, llms-full.txt (7 locations)
+- Changed CTA text from "Check your/My LLM.txt" to "Generate & Validate Your llms.txt" (4 CTAs)
+- Changed 4 CTA links from llmtxtmastery.com/validator to llmtxtmastery.com homepage
+- Updated Product JSON-LD description in products.html to include differentiators
+- sameAs schema already included all ecosystem properties (no change needed)
+- AImpactMonitor "Coming Soon" status confirmed accurate (no change needed)
+
+**Sprint document:** `/sprints/sprint-1-entity-alignment.md`
+**All 4 success criteria from brief met.**

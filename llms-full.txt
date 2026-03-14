@@ -19,7 +19,7 @@ Generated on 2026-03-08. This is the llms-full.txt version containing complete p
 | Product | URL | Description | Pricing |
 |---------|-----|-------------|---------|
 | AImpactScanner | https://aimpactscanner.com | AI visibility scanner — 27 factors across 8 pillars | Free first scan, Growth $19.95/mo |
-| LLM.txt Mastery | https://llmtxtmastery.com | llms.txt file validator and generator | Free validator, paid features included with AImpactScanner Growth |
+| LLM.txt Mastery | https://llmtxtmastery.com | llms.txt generator and validator — discovers JavaScript-rendered pages other tools miss, quality-scores content, validates format and robots.txt conflicts, guides deployment | Free validator, paid features included with AImpactScanner Growth |
 | AImpactMonitor | Coming soon | Track AI citations across ChatGPT, Perplexity, Claude | From $9.95/mo at launch |
 | AI Search Arena | https://aisearcharena.com | Independent benchmark comparing AI search optimisation tools | Free |
 
@@ -120,12 +120,12 @@ AImpactScanner Growth ($19.95/mo) includes full LLM.txt Mastery Growth features 
 
 ### LLM.txt Mastery
 
-Make your website readable by ChatGPT, Perplexity, and Claude. Full features included with AImpactScanner Growth, or try the free validator.
+LLM.txt Mastery is an llms.txt generator and validator for solopreneurs, agencies, and developers. It discovers JavaScript-rendered pages that crawl-only tools miss, quality-scores content to prioritize what matters, validates file format and robots.txt conflicts, and guides deployment across all four standard file locations. Full features included with AImpactScanner Growth, or try the free validator.
 
 - **Free validator** at https://llmtxtmastery.com/validator
 - **Standalone**: From $4.95/mo
 - **Included free** with AImpactScanner Growth
-- **What it does**: Validates your existing llm.txt or generates one from scratch
+- **Key differentiators**: JavaScript rendering, quality scoring, format validation, deployment guidance
 - **URL**: https://llmtxtmastery.com
 
 ### AImpactMonitor (Coming Soon)
