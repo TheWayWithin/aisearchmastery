@@ -1,0 +1,297 @@
+# AI Search Mastery — Full Content for LLMs
+
+> AI Search Mastery helps businesses become visible to AI search engines like ChatGPT, Perplexity, and Claude. We provide diagnostic tools, an open measurement framework, and educational content on AI search optimisation. Founded by Jamie Watters, a systems programmer and solo founder.
+
+Generated on 2026-03-08. This is the llms-full.txt version containing complete page content in markdown format, suitable for direct LLM ingestion. For the summary version, see [llms.txt](https://aisearchmastery.com/llms.txt).
+
+---
+
+## Company Overview
+
+- **Name**: AI Search Mastery
+- **Website**: https://aisearchmastery.com
+- **Founded by**: Jamie Watters
+- **Contact**: info@aisearchmastery.com
+- **Social**: [X/Twitter](https://x.com/Jamie_within), [LinkedIn](https://linkedin.com/in/jamie-watters-solo), [Build in Public](https://jamiewatters.work)
+
+### Product Suite
+
+| Product | URL | Description | Pricing |
+|---------|-----|-------------|---------|
+| AImpactScanner | https://aimpactscanner.com | AI visibility scanner — 27 factors across 8 pillars | Free first scan, Growth $19.95/mo |
+| LLM.txt Mastery | https://llmtxtmastery.com | llms.txt file validator and generator | Free validator, paid features included with AImpactScanner Growth |
+| AImpactMonitor | Coming soon | Track AI citations across ChatGPT, Perplexity, Claude | From $9.95/mo at launch |
+| AI Search Arena | https://aisearcharena.com | Independent benchmark comparing AI search optimisation tools | Free |
+
+---
+
+## Homepage
+
+**URL**: https://aisearchmastery.com/
+**Title**: See How AI Sees You
+
+AI Search Mastery provides two tools that diagnose your AI search visibility and make your website readable by ChatGPT, Perplexity, and Claude.
+
+### The Three-Layer AI Visibility Gap
+
+Most businesses are invisible to AI search across three layers:
+
+1. **Not Found** — AI models can't recommend what they can't see. If your content isn't structured for AI crawlers, you're invisible to the fastest-growing search channel.
+
+2. **Not Cited** — Even when AI finds your content, it may not reference you. Without clear authority signals and structured claims, you're data without attribution.
+
+3. **Not Chosen** — Being found and cited isn't enough. AI chooses the clearest, most trustworthy answer. If that's not you, a competitor gets the recommendation.
+
+### The Amplifier Effect
+
+AI lowers the build barrier, meaning more competitors in every market. When anyone can build, discoverability becomes the number-one determinant of who wins.
+
+### The Framework
+
+An open framework for AI search: 8 pillars, 27 factors, openly published. No black boxes, no secret sauce — just a clear methodology you can inspect, question, and build on.
+
+### Built by a Practitioner
+
+Jamie Watters built AI Search Mastery because he needed it himself. As a programmer building AI-powered products, he discovered his own tools were invisible to AI search. The MASTERY-AI framework came from solving that problem — not theory, but practice. A practitioner sharing what works — not a guru selling certainty.
+
+---
+
+## MASTERY-AI Framework
+
+**URL**: https://aisearchmastery.com/framework
+**Title**: The MASTERY-AI Framework
+**Version**: 3.1.1 (Last reviewed: February 2026)
+**Author**: Jamie Watters
+
+An open methodology for AI search visibility. 8 pillars, 27 factors — and you can inspect every one. Most businesses have no idea how AI search evaluates their website. Traditional SEO metrics tell part of the story, but AI models weigh different signals. Without a clear framework, optimisation is guesswork.
+
+### The 8 Pillars
+
+#### M — Machine Readability (4 factors)
+Can AI crawlers access your content? Machine readability is the foundation — if AI systems can't read your site, nothing else matters. This pillar evaluates your robots.txt configuration, llm.txt presence, crawl accessibility, and content structure. Businesses with strong machine readability see higher rates of AI citation because their content is actually available to be referenced.
+
+#### A — Authority Signals (3 factors)
+Does your site demonstrate genuine expertise? AI models evaluate trust signals differently from traditional search engines. This pillar measures your domain authority indicators, expertise demonstration, and trust markers. Establishing clear authority signals helps AI models confidently recommend your business over competitors.
+
+#### S — Structured Data (3 factors)
+Is your information organised for machine understanding? Schema markup, clear data structures, and semantic HTML help AI systems extract and cite your information accurately. This pillar evaluates your schema implementation, data organisation, and semantic clarity. Well-structured data means AI systems can accurately represent your business in their responses.
+
+#### T — Technical Foundation (4 factors)
+Does your site meet the technical requirements AI systems expect? Page speed, mobile responsiveness, security, and site architecture all influence how AI crawlers evaluate your site. This pillar covers performance, security posture, mobile experience, and site architecture. A strong technical foundation ensures AI systems can efficiently process your entire site.
+
+#### E — Entity Recognition (3 factors)
+Can AI systems identify your brand as a distinct entity? In a world of information overload, being recognised as a specific, trustworthy entity is critical. This pillar measures brand consistency, entity disambiguation, and knowledge graph presence. Strong entity recognition means AI models associate your brand with your area of expertise.
+
+#### R — Reputation & Citations (3 factors)
+Is your business referenced across the web? AI models triangulate information from multiple sources. If other credible sites mention and link to your business, AI systems treat you as more authoritative. This pillar evaluates external references, citation quality, and backlink health. Businesses with diverse, quality citations are more likely to be recommended by AI systems.
+
+#### Y — Your Content Quality (4 factors)
+Is your content comprehensive, current, and genuinely valuable? AI models prioritise content that thoroughly addresses user queries. This pillar measures content depth, freshness, originality, and user value alignment. High-quality content that directly answers user questions is the strongest signal for AI recommendation.
+
+#### AI — AI-Specific Optimisation (3 factors)
+Have you optimised specifically for how AI models work? Beyond traditional SEO, AI systems have unique preferences for content format, conversational relevance, and direct answer provision. This pillar evaluates AI-specific formatting, conversational readiness, and answer optimisation. AI-specific optimisation is the newest frontier — and the area where most businesses have done the least work.
+
+### Open Methodology
+
+We show you exactly what we measure and why. No black boxes, no proprietary secrets. The MASTERY-AI Framework is openly published so you can inspect it, question it, and build on it. This isn't about gatekeeping knowledge — it's about giving you the tools to understand AI search yourself.
+
+---
+
+## Products
+
+**URL**: https://aisearchmastery.com/products
+**Title**: Diagnose and Fix Your AI Visibility
+
+AI search is replacing traditional search for millions of people. If AI can't read your website, it can't recommend your business. One subscription gives you a complete diagnosis and the tools to fix it.
+
+### AImpactScanner
+
+One scan. Two critical audits. 18 AI readiness factors for ChatGPT, Claude & Perplexity — plus 9 SEO foundation factors for Google & traditional search.
+
+- **Free first scan** — no signup, no credit card
+- **Growth plan**: $19.95/mo with 30-day money-back guarantee
+- **What you get**: A clear score, specific issues, and a prioritised action plan
+- **Scoring**: Uses the MASTERY-AI Framework (8 pillars, 27 factors)
+- **URL**: https://aimpactscanner.com
+
+### One subscription. Everything included.
+
+AImpactScanner Growth ($19.95/mo) includes full LLM.txt Mastery Growth features — the complete Diagnose-Optimize-Test-Repeat loop in one subscription.
+
+### LLM.txt Mastery
+
+Make your website readable by ChatGPT, Perplexity, and Claude. Full features included with AImpactScanner Growth, or try the free validator.
+
+- **Free validator** at https://llmtxtmastery.com/validator
+- **Standalone**: From $4.95/mo
+- **Included free** with AImpactScanner Growth
+- **What it does**: Validates your existing llm.txt or generates one from scratch
+- **URL**: https://llmtxtmastery.com
+
+### AImpactMonitor (Coming Soon)
+
+Track how AI cites your brand across ChatGPT, Perplexity, and more.
+
+- AI-driven traffic converts 4.4x higher than traditional search
+- Tracks citations across platforms
+- Verifies citation accuracy
+- Provides actionable remediation steps
+- **Pricing**: From $9.95/mo at launch
+
+### Frequently Asked Questions
+
+**What's included in AImpactScanner Growth?**
+One subscription, everything included. AImpactScanner Growth gives you full AI visibility scanning across all 27 factors plus all LLM.txt Mastery paid features — one plan for diagnosing and fixing your AI search presence.
+
+**Is there a free option?**
+Yes. AImpactScanner offers a free first scan — no signup, no credit card. The LLM.txt Validator is also free with usage limits at llmtxtmastery.com/validator.
+
+**Can I cancel anytime?**
+Yes. Both products are month-to-month. Cancel from your dashboard anytime — no contracts, no questions.
+
+**How quickly will I see results?**
+You'll get your LLM.txt file or AI visibility score within minutes. Improvements in AI search visibility typically appear within 2-4 weeks as AI models recrawl your site.
+
+**What if I'm not technical?**
+Both tools are designed for non-technical users. Point at your website, click a button, get results. No code required.
+
+**What is AImpactMonitor?**
+AImpactMonitor tracks how AI platforms like ChatGPT, Perplexity, and Claude cite your brand. It monitors citations, verifies accuracy, and tells you exactly what to fix. Coming soon — sign up for early access on our products page.
+
+---
+
+## About
+
+**URL**: https://aisearchmastery.com/about
+**Title**: Built by a Practitioner, Not a Guru
+**Author**: Jamie Watters, Founder
+
+### The Story
+
+Jamie Watters is a systems programmer building AI-powered products as a solo founder. When he started shipping his own tools, he hit a wall: AI search engines like ChatGPT, Perplexity, and Google's AI Overviews were answering questions directly — and his products were invisible to them. Traditional SEO wasn't enough. He needed to understand how AI decides which businesses to recommend.
+
+So he did what any programmer would do — he researched, tested, and built. He dug into how large language models evaluate and rank businesses. The signals AI looks for are different from traditional search: authority, structured data, sentiment, topical depth — factors that no existing tool was measuring. So he built one.
+
+That research became the MASTERY-AI Framework — 8 pillars, 27 measurable factors that determine whether AI recommends your business or ignores it. He built the tools to solve his own problem first. Then he realised every business building online has the same problem.
+
+### The Journey
+
+1. Hit the AI visibility wall — Started shipping AI-powered products as a solo founder and discovered they were invisible to AI search engines — no matter how good the code was.
+2. Researched how AI models evaluate and recommend businesses — Dug into the signals large language models use to decide which brands to mention: authority, structure, sentiment, and more.
+3. Built the MASTERY-AI Framework — Codified the research into a repeatable, measurable system — 8 pillars, 27 factors any business can use.
+4. Launched AImpactScanner — Built the first tool so businesses can see exactly how AI perceives them — and what to fix.
+5. Launched LLM.txt Mastery — Created a tool that generates the structured files AI models need to understand your business.
+
+### The Mission
+
+Every business with genuine value is discoverable.
+
+AI search is the biggest shift in how customers find businesses since Google launched. The companies that adapt early will thrive. The mission is to make sure that adapting doesn't require a six-figure agency contract or a team of specialists — just the right tools and the right framework.
+
+### Values
+
+- **Radical Transparency** — Show the methodology, the pricing, and the limitations. If it's not transparent, it's not trustworthy.
+- **Practitioner-First** — Build from experience, not theory. Every feature exists because it was needed.
+- **Relentless Simplicity** — If a solopreneur can't use it in 5 minutes, it's too complicated.
+- **Evidence Over Opinion** — Measure, test, iterate. Claims without data are just marketing.
+- **Accessible Excellence** — World-class tools shouldn't require world-class budgets.
+
+---
+
+## Blog Articles
+
+### Is AI Stealing Your Traffic? Understanding AI's Impact on Search
+**URL**: https://aisearchmastery.com/blog/fundamentals/is-ai-stealing-your-traffic/
+**Category**: Fundamentals
+
+Explores the impact of AI on search traffic, detailing how AI-powered search engines provide direct answers to user queries, leading to a decline in organic traffic for websites. Discusses the concept of zero-click searches and offers insights on how businesses can adapt their SEO strategies in response to these changes.
+
+### Your SaaS Is Invisible to ChatGPT — Here's Why
+**URL**: https://aisearchmastery.com/blog/fundamentals/your-saas-is-invisible-to-chatgpt/
+**Category**: Fundamentals
+
+Analyzes why 85% of SaaS products are invisible to AI search engines like ChatGPT, highlighting the importance of structured data and machine-readable signals for discoverability. Provides insights from a scan of 41 products, detailing common pitfalls and offering solutions to improve AI visibility.
+
+### If Google Can't Find You, AI Search Won't Either
+**URL**: https://aisearchmastery.com/blog/fundamentals/if-google-cant-find-you/
+**Category**: Fundamentals
+
+Emphasizes the importance of foundational SEO for enhancing AI search visibility, arguing that without addressing basic SEO issues, businesses will remain invisible to both Google and AI search engines. Provides insights into the MASTERY-AI Framework and highlights the correlation between strong SEO practices and AI readiness scores.
+
+### The Uncomfortable Truth About llms.txt Generators
+**URL**: https://aisearchmastery.com/blog/fundamentals/uncomfortable-truth-llmstxt-generators/
+**Category**: Fundamentals
+
+Discusses the inconsistencies of various llms.txt generators, showcasing a comparative analysis of four tools tested on the same website. Emphasizes the importance of generating a curated llms.txt file that effectively guides AI systems to prioritize valuable content, rather than producing a generic list of URLs.
+
+### You Can Rank #1 and Still Be Invisible to AI
+**URL**: https://aisearchmastery.com/blog/fundamentals/rank-1-still-invisible/
+**Category**: Fundamentals
+
+B2B non-brand awareness traffic has dropped 60% while search rankings stayed flat. Explores why ranking #1 no longer guarantees visibility in the age of AI, detailing how AI systems now answer queries directly, often bypassing traditional search results.
+
+### The $200,000 Problem Nobody's Talking About
+**URL**: https://aisearchmastery.com/blog/fundamentals/the-200000-problem/
+**Category**: Fundamentals
+
+Discusses the challenges small businesses face in achieving visibility within AI platforms like ChatGPT, emphasizing the high costs of advertising ($200,000 minimum with $60 CPM) and the importance of creating authoritative content to be recommended by AI. Provides strategies for businesses to enhance their presence without relying on paid channels.
+
+### 93% of AI Searches Never Reach a Website
+**URL**: https://aisearchmastery.com/blog/fundamentals/93-percent-of-ai-searches-never-reach-your-site/
+**Category**: Fundamentals
+
+Reveals that 93% of queries in Google's AI Mode do not result in clicks to websites. Analyzes the implications for businesses, particularly in B2B sectors, and highlights the shift from traditional SEO metrics to the importance of being included in AI-generated answers.
+
+### Which llms.txt Tool Actually Works? We Benchmarked 14
+**URL**: https://aisearchmastery.com/blog/industry-updates/which-llmstxt-tool-actually-works/
+**Category**: Industry Updates
+
+Benchmarks 14 AI visibility tools against a four-step evaluation framework, highlighting their capabilities in generating llms.txt files and assessing their effectiveness in improving AI search visibility. Users can explore detailed comparisons, scores, and insights into the tools' strengths and weaknesses to make informed decisions.
+
+### AI Search Arena: How Our Open Benchmark Methodology Works
+**URL**: https://aisearchmastery.com/blog/industry-updates/ai-search-benchmark-open-methodology/
+**Category**: Industry Updates
+
+Provides a comprehensive overview of the AI Search Arena's open benchmark methodology, detailing its evaluation framework, scoring dimensions, and the importance of transparency in AI search tool assessments, enabling users to understand and replicate the evaluation process.
+
+### Building AImpactScanner: From Concept to AI Search Readiness Tool
+**URL**: https://aisearchmastery.com/blog/industry-updates/building-aimpactscanner/
+**Category**: Industry Updates
+
+Details the development of AImpactScanner, an AI search readiness tool designed to evaluate how AI systems perceive websites. Explains the integration of llms.txt generation and tiered access for users, providing actionable insights for improving AI visibility and citation potential based on a comprehensive framework.
+
+### Why Independent AI Search Benchmarks Matter
+**URL**: https://aisearchmastery.com/blog/industry-updates/ai-benchmark-platform-why-it-matters/
+**Category**: Industry Updates
+
+Discusses the importance of independent AI search benchmarks, highlighting the challenges businesses face in selecting AI search optimisation tools due to a lack of standardized evaluations. Introduces AI Search Arena as a solution for providing unbiased, monthly assessments of various tools using consistent metrics.
+
+### AImpactScanner Now Analyzes Every Website — React, Vue, SPAs and More
+**URL**: https://aisearchmastery.com/blog/industry-updates/aimpactscanner-analyzes-every-website/
+**Category**: Industry Updates
+
+Discusses the enhancements made to AImpactScanner, detailing its new capability to analyze JavaScript-heavy websites like those built with React and Vue. Explains the improved scanning process that now evaluates 27 AI visibility factors, ensuring accurate assessments for modern web applications.
+
+---
+
+## Contact
+
+**URL**: https://aisearchmastery.com/contact
+**Email**: info@aisearchmastery.com
+**Response time**: Within 48 hours
+
+Topics: Products, Partnerships, General questions
+
+---
+
+## Additional Information
+
+### Related Properties
+- **AI Search Arena**: https://aisearcharena.com — Independent benchmark comparing AI search optimisation tools
+- **llms.txt Specification**: https://llmstxt.org/ — Official llmstxt.org format specification
+
+### Technical Details
+- **Analytics**: Plausible (cookieless, GDPR-compliant)
+- **Hosting**: Netlify
+- **Stack**: Static HTML/CSS/JS (no framework)
+- **Performance**: Lighthouse 100 desktop, 93 mobile

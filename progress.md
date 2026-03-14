@@ -221,3 +221,189 @@
 - Earn the Ask CTA price: $14.95/mo → $9.95/mo
 
 **Verification**: Searched all `-new` files for stale references ($14.95, $59.40, 134×, "Lead product", "Two Tools") — zero matches remaining.
+
+### 2026-02-28 — Phase 6: Post-Launch Verification & Quick Code Fixes
+
+**6A: SEO & URL Verification**:
+- Deployed `_redirects` (copied from `_redirects-new`) — 13 Netlify 301 rules covering 26 URLs
+- Google Search Console: set up URL prefix property for aisearchmastery.com
+- Added `<meta name="google-site-verification" content="fKxwkHHRwo2WtZZXTkeILbcvoT33DUKK6UOaqU545EY" />` to index.html
+- Submitted sitemap.xml — accepted, 9 URLs discovered
+- GSC monitoring ongoing (crawl errors, indexing)
+
+**6B: CSS Quick Fixes**:
+- Added to `:root` in styles.css: `--radius-sm: 4px`, `--radius-md: 8px`, `--radius-lg: 12px`
+- Updated `--card-radius` from `4px` to `var(--radius-md)` (8px per Brand Style Guide)
+
+**6C: Schema Fixes**:
+- Added `sameAs` social URLs to Organization schema on index.html (X, LinkedIn, Build in Public)
+- Rich Results Test: 6 valid Product items, 0 errors on products page
+- Non-critical: missing review/aggregateRating (skip — no real data) and priceValidUntil (skip — prices changing soon)
+
+**Committed & pushed**: All Phase 6 code fixes in single commit
+
+### 2026-02-28 — Phase 7: Mobile Performance
+
+**Problem**: Mobile LCP 4.9s, Performance score 29. Root cause: 48KB styles.css + Google Fonts render-blocking.
+
+**Fix 1 — Critical CSS extraction + deferred loading**:
+- Created `/css/critical.css` with above-fold styles
+- Updated all 11 HTML files: critical.css render-blocking, styles.css deferred (`media="print" onload`), Google Fonts deferred same pattern, noscript fallback
+- **Result**: Mobile LCP 4.9s → 2.6s, Performance 29 → 91, CLS stayed at 0
+
+**Issue — Desktop CLS regression**:
+- Desktop CLS jumped 0.026 → 0.388 after CSS deferral
+- Cause: On fast desktop connections, page renders with only critical.css, then styles.css loads and shifts layout
+
+**Fix 2 — Expand critical.css (attempt 1)**:
+- Added cards, grid breakpoints, homepage hero components, footer base, desktop typography
+- **Result**: Desktop CLS 0.388 → 0.275 (better, still failing)
+
+**Fix 3 — Expand critical.css (attempt 2)**:
+- Added full card sub-components, badges, trust strip/block, earn-the-ask CTA (full + compact), complete footer grid with 4-column layout, consent banner, responsive breakpoints for footer/trust/consent
+- **Result**: Desktop CLS 0.275 → 0.027 (passing), Performance 100
+
+**Final scores**:
+| | Performance | LCP | CLS | Accessibility | Best Practices | SEO |
+|---------|-------------|-----|-----|---------------|----------------|-----|
+| Desktop | 100 | 0.7s | 0.027 | 96 | 100 | 92 |
+| Mobile | 93 | 2.6s | 0.011 | 96 | 100 | 92 |
+
+**Key Learning**: When deferring CSS, all layout-contributing styles (not just above-fold visible content) must be in critical.css. Cards, grid, footer, badges — anything that establishes dimensions — causes CLS if deferred on fast connections.
+
+### Phase 6 & 7 Complete — 2026-02-28 18:30
+**Tasks Completed**: 11 tasks marked [x] across Phases 6-7
+**Remaining Phase 6 manual tasks**: GSC monitoring (ongoing), 26-URL crawl verification, 404 monitoring setup
+**Next**: Phase 8 (V1.1 PRD Features) or Phase 9 (Branded House Alignment)
+
+### 2026-03-02 — Phase 8: F-019 Product Demo/Preview Component
+
+**Screenshots Captured** (saved to `/Ideation/`):
+- AImpactScanner: input page, results overview (score 77/100 + Top 3 Gaps), pillar breakdown (8 cards), factor details
+- LLM.txt Mastery: generator input (email redacted), content review + page selection, generated file preview, full llms.txt output
+
+**Images Selected for Products Page**:
+- `aimpactscanner-preview` — results overview (score circle + Top 3 Gaps to Fix First)
+- `llmtxt-preview` — generated file preview with Quality Assessment badges + Download button
+
+**Files Updated**:
+- `/images/products/aimpactscanner-preview.png` (269KB) — replaced 4.7KB mockup with real screenshot
+- `/images/products/aimpactscanner-preview.webp` (29KB) — new WebP conversion at q80
+- `/images/products/llmtxt-preview.png` (137KB) — replaced 10.6KB mockup with real screenshot
+- `/images/products/llmtxt-preview.webp` (51KB) — new WebP conversion at q80
+- `/products.html` — `<img>` replaced with `<figure>/<picture>` elements, WebP + PNG fallback, updated alt text, added `<figcaption>` captions, corrected dimensions (988x837, 843x764)
+- `/css/styles.css` — `.product-preview` restyled for `<figure>`: centered 600px max-width, `<picture>` with border/radius/overflow, `<figcaption>` styling
+
+**Key Decisions**:
+- Used results screenshots (not input pages) as hero images — shows value, not effort
+- Installed `cwebp` via Homebrew for PNG→WebP conversion
+- WebP at quality 80 gives excellent compression (29KB, 51KB) while staying sharp
+- PNG fallback kept for older browsers (Safari <14, IE) despite larger sizes
+- Max-width 600px on `.product-preview` keeps images focused on desktop, scales naturally to mobile
+
+**Committed & pushed**: `c72acbd` — deployed to Netlify
+
+### 2026-03-02 — Phase 8: F-020 Newsletter Signup Component
+
+**ESP Chosen**: Buttondown (`watters` account) — supports double opt-in, simple embed API, CORS-friendly.
+
+**Files Updated**:
+- All 11 HTML pages + `blog-article-template.html` — added newsletter signup form to footer (full-width row above footer columns)
+- Blog article added inline newsletter CTA below content
+- `/js/main.js` — Section 9: newsletter form handler with Buttondown API, honeypot check, 5s time gate, `newsletter_signup` Plausible event with location parameter, CORS fallback (native form submit to Buttondown)
+
+**Committed & pushed**: `e7c9717` — deployed to Netlify
+
+### 2026-03-02 — Phase 8: AImpactMonitor Coming Soon + AI Search Arena
+
+**Products Page** (`products.html`):
+- Added AImpactMonitor "Coming Soon" section after LLM.txt Mastery with `badge--amber` variant
+- Earn-the-ask CTA block: problem/evidence/fix/price/action pattern
+- Early access email signup form (reuses Buttondown `watters` newsletter + `early_access_signup` Plausible event with `location: aimpactmonitor`)
+- Framework attribution: "Completes the Diagnose → Optimize → Track → Remediate loop"
+- Added AI Search Arena resource callout section after FAQ
+- Changed FAQ from `section--alt` to `section` to maintain alternating background rhythm
+- Added AImpactMonitor FAQ accordion item + JSON-LD FAQ entry
+- Added AImpactMonitor JSON-LD Product schema with `PreOrder` availability
+- Updated meta/OG/Twitter descriptions to mention AImpactMonitor
+
+**CSS** (`css/styles.css`):
+- Added `badge--amber` class using `var(--color-action-amber)`
+
+**JS** (`js/main.js`):
+- Conditional event name: fires `early_access_signup` when form `data-location` is `aimpactmonitor`, otherwise `newsletter_signup`
+
+**Footer** (all 11 HTML pages + template):
+- Added "AImpactMonitor (Coming Soon)" linking to `/products#aimpactmonitor`
+- Added "AI Search Arena" linking to `aisearcharena.com`
+
+**Committed & pushed**: `db128c0` — deployed to Netlify
+
+### 2026-03-02 — Phase 6: Remaining Tasks Complete
+
+**Redirect Verification** (19 redirect URLs crawled against live site):
+- All 19 redirect rules return 301 with correct destinations
+- All destination pages resolve to 200 (including `/blog` paths that chain through Netlify trailing-slash 301)
+- External redirect (`/tools/llms-txt-tool/` → llmtxtmastery.com) confirmed working
+
+**404 Monitoring**:
+- Already implemented: `data-page-type="404"` on 404.html triggers `page_not_found` Plausible event with `attempted_url`
+- Plausible auto-surfaces custom events in Goals — no dashboard config needed
+
+**GSC Monitoring**: Ongoing weekly check, no configuration needed beyond existing setup.
+
+### 2026-03-02 — Phase 9: Branded House Alignment Complete
+
+Phase 9 completed externally (aimpactscanner.com and llmtxtmastery.com domains). All tasks done:
+- Both product domains audited for brand consistency
+- "by AI Search Mastery" footer attribution added
+- Navigation headers aligned with parent brand
+- Consistent `sameAs` social URLs across all three domains
+
+### 2026-03-08 — Phase 11: AI Search Arena Benchmark Quick Wins (In Progress)
+
+**Context**: AI Search Arena benchmark shows AI Search Mastery at Rank #6 (Score 6.8). Gap to Top 3 is 0.5–0.8 points. Executing quick wins on aisearchmastery.com to close ~0.3 of the gap with zero product development.
+
+**Brief created**: `/documents/benchmark-improvement-brief.md` — product-level requirements for AImpactScanner, LLM.txt Mastery, and AImpactMonitor teams.
+
+**11B: llms.txt Discovery & Full Content**:
+- Updated `robots.txt` — added `Llms-Txt: https://aisearchmastery.com/llms.txt` directive
+- Added `<link rel="alternate" type="text/plain" href="/llms.txt">` to all 22 HTML files (verified with grep: 22 matches across 22 files)
+- Created `/llms-full.txt` (297 lines, 19KB) — full markdown content version covering homepage, framework (8 pillars with full descriptions), products (all 3 + FAQ), about (story, journey, mission, values), and all 12 blog articles
+
+**11C: Schema Improvements**:
+- Added product domain URLs to Organization `sameAs` in `index.html`: aimpactscanner.com, llmtxtmastery.com, aisearcharena.com
+- Added `potentialAction` SearchAction to WebSite schema on `index.html`
+
+**Brief updated**: Added LT-2B (Deployment Guidance & Discovery Mechanisms) to benchmark improvement brief — covers post-generation deployment panel, verification checker, platform-specific guides for WordPress/Shopify/Squarespace/Wix/Webflow/Next.js, and deployment scoring
+
+### 2026-03-14 — Phase 11 Complete
+
+**11B: llms.txt Content Quality**:
+- Replaced `/llms.txt` with fresh LLM.txt Mastery generation (2026-03-14, 20 pages, quality 9/10, ~9,448 words)
+- Improved site description, better article descriptions, reordered content by impact
+
+**11C: Schema Markup — Article & BreadcrumbList**:
+- Verified all 12 blog posts already have Article + BreadcrumbList JSON-LD with author, datePublished, dateModified
+- Added missing `image` field to 9 blog article schemas (using `/images/og/blog.jpg`)
+- Verified BreadcrumbList on all 21 pages (all except homepage which correctly has none)
+
+**11C: Schema Markup — HowTo on Framework Page**:
+- Added HowTo JSON-LD schema with 8 steps (one per MASTERY-AI pillar) to `framework.html`
+- Each step has name, description text, and deep link URL to pillar section
+
+**11D: Cross-Property Linking**:
+- Verified all pages have footer links to aimpactscanner.com, llmtxtmastery.com, aisearcharena.com
+
+**11E: Framework Page Enhancements**:
+- Added 7 "Check your score" CTAs linking to aimpactscanner.com (pillars A, S, T, E, R, Y, AI)
+- Pillar M retains existing LLM.txt Mastery CTA
+- All CTAs use `btn--outline` style with analytics tracking (`data-track-cta`, per-pillar `data-location`)
+
+**Files Modified**:
+- `/llms.txt` — replaced with 2026-03-14 generation
+- `/framework.html` — HowTo schema + 7 per-pillar CTAs
+- 9 blog article `index.html` files — added `image` field to Article schema
+- `/project-plan.md` — all Phase 11 tasks marked [x]
+
+**Phase 11 Status**: All tasks complete. Ready for deployment

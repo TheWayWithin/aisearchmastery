@@ -17,3 +17,4 @@ Disallow: /test/
 Disallow: /blog/test/
 
 Sitemap: https://aisearchmastery.com/sitemap.xml
+Llms-Txt: https://aisearchmastery.com/llms.txt
