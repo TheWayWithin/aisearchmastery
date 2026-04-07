@@ -25,15 +25,31 @@
 /tools/llms-txt-tool/  https://llmtxtmastery.com  301
 /tools/llms-txt-tool   https://llmtxtmastery.com  301
 
-# Blog category pages → filtered hub views
-/blog/fundamentals/  /blog?category=fundamentals  301
-/blog/how-to-guides/  /blog?category=how-to-guides  301
-/blog/industry-updates/  /blog?category=industry-updates  301
+# Blog categories: /blog/fundamentals/ and /blog/industry-updates/ are
+# real index pages now — no redirect. Empty/retired categories below.
+/blog/how-to-guides/  /blog  301
+/blog/how-to-guides   /blog  301
 
 # Retired categories
 /blog/case-studies/  /blog  301
-/blog/tools-resources/  /products  301
+/blog/case-studies   /blog  301
+/blog/tools-resources/*  /products  301
+/blog/tools-resources   /products  301
 
 # Removed content
 /blog/case-studies/freecalchub-innovation-laboratory/  /blog  301
-/blog/industry-updates/mastery-ai-framework-v2-1-announcement.html  /blog/industry-updates/december-ai-search-changes/  301
+/blog/industry-updates/mastery-ai-framework-v2-1-announcement.html  /blog  301
+
+# Retired standalone pages (404s in GSC 2026-04-06)
+/free-page-assessment/  /products  301
+/free-page-assessment   /products  301
+/archive/  /blog  301
+/archive   /blog  301
+/case-studies/  /blog  301
+/case-studies   /blog  301
+
+# Retired individual blog posts (404s in GSC 2026-04-06)
+/blog/fundamentals/semantic-content-quality/  /blog  301
+/blog/fundamentals/ai-response-optimization-basics/  /blog  301
+/blog/fundamentals/understanding-mastery-ai-framework/  /framework  301
+/blog/fundamentals/dynamic-eeat-introduction/  /blog  301
