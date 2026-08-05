@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>About AI Search Mastery - Pioneering AI Search Optimization</title>
+    <meta name="description" content="AI Search Mastery is the pioneering authority on AI search optimization. Creator of the MASTERY-AI Framework v2.1 with 132 optimization factors.">
+    <meta name="keywords" content="AI Search Mastery, AI search optimization, MASTERY-AI Framework, AI SEO company">
+    <meta name="author" content="Jamie Watters">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aisearchmastery.com/about/">
+    <meta property="og:title" content="About AI Search Mastery - Pioneering AI Search Optimization">
+    <meta property="og:description" content="Creator of the MASTERY-AI Framework v2.1, the industry's most comprehensive AI search optimization methodology.">
+    <meta property="og:image" content="https://aisearchmastery.com/images/og/about-social-share.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aisearchmastery.com/about/">
+    <meta property="twitter:title" content="About AI Search Mastery">
+    <meta property="twitter:description" content="Creator of the MASTERY-AI Framework v2.1, the industry's most comprehensive AI search optimization methodology.">
+    <meta property="twitter:image" content="https://aisearchmastery.com/images/og/about-social-share.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aisearchmastery.com/about/">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PMQG5CBD');</script>
+    <!-- End Google Tag Manager -->
+    
+    <style>
+    /* About Page Specific Styles */
+    .about-hero {
+        background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+        padding: 4rem 0;
+        text-align: center;
+        border-bottom: 1px solid var(--gray-200);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .about-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23e5e7eb" fill-opacity="0.1"><circle cx="30" cy="30" r="1"/></g></svg>') repeat;
+        z-index: 1;
+    }
+    
+    .about-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .about-hero h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+        color: var(--primary-teal);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1.25rem;
+        color: var(--gray-600);
+        line-height: 1.6;
+    }
+    
+    .company-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-number {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        line-height: 1;
+    }
+    
+    .stat-label {
+        display: block;
+        font-size: 0.875rem;
+        color: var(--gray-600);
+        margin-top: 0.25rem;
+    }
+    
+    /* Content Sections */
+    .about-section {
+        padding: 4rem 0;
+    }
+    
+    .about-section:nth-child(even) {
+        background: var(--gray-50);
+    }
+    
+    .section-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .section-content h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .lead-text {
+        font-size: 1.125rem;
+        line-height: 1.7;
+        color: var(--gray-700);
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Framework Section */
+    .framework-highlight {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+        color: var(--white);
+        padding: 3rem;
+        border-radius: var(--radius-lg);
+        margin: 2rem 0;
+        text-align: center;
+    }
+    
+    .framework-highlight h3 {
+        color: var(--white);
+        margin-bottom: 1rem;
+    }
+    
+    .framework-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .framework-stat {
+        text-align: center;
+    }
+    
+    .framework-stat-number {
+        display: block;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+    
+    .framework-stat-label {
+        display: block;
+        font-size: 1rem;
+        opacity: 0.9;
+        margin-top: 0.5rem;
+    }
+    
+    /* Differentiators Grid */
+    .differentiator-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .differentiator-item {
+        text-align: center;
+        padding: 2rem;
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+    }
+    
+    .differentiator-item:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .differentiator-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .differentiator-icon i {
+        font-size: 36px;
+        color: var(--white);
+    }
+    
+    .differentiator-item h3 {
+        color: var(--gray-900);
+        margin-bottom: 1rem;
+    }
+    
+    .differentiator-item p {
+        color: var(--gray-600);
+        line-height: 1.6;
+    }
+    
+    /* Mission Vision Values */
+    .mvv-section {
+        background: var(--gray-50);
+        padding: 4rem 0;
+    }
+    
+    .mvv-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+    
+    .mvv-item {
+        text-align: center;
+    }
+    
+    .mvv-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        background: var(--white);
+        border-radius: 50%;
+        box-shadow: var(--shadow-lg);
+        margin-bottom: 1.5rem;
+    }
+    
+    .mvv-icon i {
+        font-size: 48px;
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .mvv-item h3 {
+        color: var(--gray-900);
+        margin-bottom: 1rem;
+    }
+    
+    .mvv-item p {
+        color: var(--gray-600);
+        line-height: 1.6;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Founder Link */
+    .founder-link {
+        background: var(--white);
+        border: 2px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        margin: 3rem 0;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .founder-link:hover {
+        border-color: var(--primary-blue);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .founder-link h3 {
+        color: var(--gray-900);
+        margin-bottom: 0.5rem;
+    }
+    
+    .founder-link p {
+        color: var(--gray-600);
+        margin-bottom: 1rem;
+    }
+    
+    .founder-link .btn {
+        margin-top: 1rem;
+    }
+    
+    /* CTA Section */
+    .about-cta {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+        padding: 4rem 0;
+        text-align: center;
+        color: var(--white);
+        margin-top: 4rem;
+    }
+    
+    .cta-content h2 {
+        color: var(--white);
+        margin-bottom: 1rem;
+    }
+    
+    .cta-content p {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+    }
+    
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    @media (max-width: 768px) {
+        .company-stats {
+            gap: 2rem;
+        }
+        
+        .framework-highlight {
+            padding: 2rem;
+        }
+        
+        .framework-stats {
+            gap: 1.5rem;
+        }
+        
+        .differentiator-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .mvv-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .cta-buttons .btn {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMQG5CBD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="header-container-full">
+            <!-- Logo - Far Left -->
+            <div class="logo">
+                <a href="/" aria-label="AI Search Mastery - Go to Homepage">
+                    <img src="/images/logos/logo-primary.png" 
+                         alt="AI Search Mastery Logo" 
+                         width="48" 
+                         height="48"
+                         class="logo-image">
+                    <span class="logo-text">AI Search Mastery</span>
+                </a>
+            </div>
+            
+            <!-- Navigation - Centered -->
+            <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li class="nav-dropdown">
+                        <a href="/blog" aria-expanded="false" aria-haspopup="true">
+                            Insights
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/blog" role="menuitem">All Insights</a></li>
+                            <li><a href="/blog/fundamentals" role="menuitem">AI Search Fundamentals</a></li>
+                            <li><a href="/blog/case-studies" role="menuitem">Case Studies</a></li>
+                            <li><a href="/blog/how-to-guides" role="menuitem">How-To Guides</a></li>
+                            <li><a href="/blog/industry-updates" role="menuitem">Industry Updates</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/newsletter">Newsletter</a></li>
+                    <li class="nav-dropdown">
+                        <a href="/free-page-audit" aria-expanded="false" aria-haspopup="true">
+                            Resources
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/free-page-audit" role="menuitem">Free Page Assessment</a></li>
+                            <li><a href="/blog/tools-resources" role="menuitem">Tools & Resources</a></li>
+                            <li><a href="/templates" role="menuitem">Templates</a></li>
+                            <li><a href="/archive" role="menuitem">Archive</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="/about" aria-expanded="false" aria-haspopup="true" aria-current="page">
+                            About
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/about" role="menuitem" aria-current="page">About</a></li>
+                            <li><a href="/contact" role="menuitem">Contact</a></li>
+                            <li><a href="/privacy" role="menuitem">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- CTA Button - Far Right -->
+            <div class="header-cta">
+                <a href="/newsletter" class="btn btn-primary">Join AI Search Weekly</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="about-page" role="main">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h1>About AI Search Mastery</h1>
+                    <p class="hero-subtitle">Pioneering the Future of AI Search Optimization</p>
+                    <p class="hero-description">
+                        We are the creators of the revolutionary MASTERY-AI Framework v2.1, 
+                        helping businesses transform AI search disruption into competitive advantage.
+                    </p>
+                    <div class="company-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">132</span>
+                            <span class="stat-label">Optimization Factors</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Strategic Pillars</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Expert Validators</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2,000+</span>
+                            <span class="stat-label">Newsletter Subscribers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Company Overview -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Who We Are</h2>
+                    <p class="lead-text">
+                        AI Search Mastery is the industry's leading authority on AI search optimization, 
+                        founded to help businesses navigate and thrive in the rapidly evolving landscape 
+                        of AI-powered search.
+                    </p>
+                    <p>
+                        We specialize in developing comprehensive strategies and methodologies that 
+                        position businesses for success across all AI search platforms—from ChatGPT 
+                        and Claude to Perplexity and emerging AI systems.
+                    </p>
+                    <p>
+                        Our flagship creation, the MASTERY-AI Framework v2.1 Enhanced Edition, represents 
+                        the most advanced AI search optimization methodology available today, validated 
+                        by independent experts and proven through real-world implementation.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Framework Highlight -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-content">
+                    <h2>The MASTERY-AI Framework</h2>
+                    <div class="framework-highlight">
+                        <h3>MASTERY-AI Framework v2.1 Enhanced Edition</h3>
+                        <p>The Industry's Most Comprehensive AI Search Optimization Methodology</p>
+                        <div class="framework-stats">
+                            <div class="framework-stat">
+                                <span class="framework-stat-number">132</span>
+                                <span class="framework-stat-label">Atomic Factors</span>
+                            </div>
+                            <div class="framework-stat">
+                                <span class="framework-stat-number">8</span>
+                                <span class="framework-stat-label">Strategic Pillars</span>
+                            </div>
+                            <div class="framework-stat">
+                                <span class="framework-stat-number">100%</span>
+                                <span class="framework-stat-label">AI Platform Coverage</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Our framework goes beyond traditional SEO, addressing the unique requirements 
+                        of AI search systems including dynamic E-E-A-T scoring, RAG optimization, 
+                        multimodal citation readiness, and AI-agent ecosystem preparation.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- What Makes Us Different -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-content">
+                    <h2>What Makes Us Different</h2>
+                    <div class="differentiator-grid">
+                        <div class="differentiator-item">
+                            <div class="differentiator-icon">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <h3>Proprietary Methodology</h3>
+                            <p>
+                                Our MASTERY-AI Framework analyzes 132 atomic factors across 
+                                eight strategic pillars, providing unprecedented optimization precision.
+                            </p>
+                        </div>
+                        <div class="differentiator-item">
+                            <div class="differentiator-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>Proactive Innovation</h3>
+                            <p>
+                                We don't react to AI changes—we anticipate them. Our forward-thinking 
+                                approach keeps you ahead of the curve.
+                            </p>
+                        </div>
+                        <div class="differentiator-item">
+                            <div class="differentiator-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h3>Research-Driven</h3>
+                            <p>
+                                Every strategy is backed by extensive research, real-world testing, 
+                                and continuous refinement based on AI platform evolution.
+                            </p>
+                        </div>
+                        <div class="differentiator-item">
+                            <div class="differentiator-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Proven Results</h3>
+                            <p>
+                                Our methodologies have helped businesses recover from traffic losses 
+                                and achieve sustainable growth in the AI search era.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mission, Vision, Values -->
+        <section class="mvv-section">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Our Mission, Vision & Values</h2>
+                    <div class="mvv-grid">
+                        <div class="mvv-item">
+                            <div class="mvv-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>Mission</h3>
+                            <p>
+                                To empower businesses with the knowledge, tools, and strategies 
+                                needed to thrive in the AI search era through systematic 
+                                optimization and continuous innovation.
+                            </p>
+                        </div>
+                        <div class="mvv-item">
+                            <div class="mvv-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Vision</h3>
+                            <p>
+                                A future where AI search enhances rather than threatens business 
+                                success, with every company equipped to leverage AI platforms 
+                                for sustainable growth.
+                            </p>
+                        </div>
+                        <div class="mvv-item">
+                            <div class="mvv-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Values</h3>
+                            <p>
+                                Innovation, integrity, and impact. We believe in sharing real 
+                                strategies, proven methodologies, and actionable insights that 
+                                deliver measurable results.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Our Story -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Our Story</h2>
+                    <p class="lead-text">
+                        AI Search Mastery was born from a proactive approach to AI innovation. 
+                        In early 2024, we recognized the transformative impact AI search would 
+                        have on digital discovery and business visibility.
+                    </p>
+                    <p>
+                        Rather than waiting for problems to emerge, we created FreecalcHub as 
+                        an AI development laboratory for testing cutting-edge AI tools and 
+                        optimization strategies. This hands-on approach allowed us to develop 
+                        the MASTERY-AI Framework through strategic experimentation and 
+                        forward-thinking research.
+                    </p>
+                    <p>
+                        Today, we're the trusted resource for businesses looking to transform 
+                        AI search challenges into competitive advantages, offering proven 
+                        strategies, comprehensive frameworks, and continuous innovation.
+                    </p>
+                    
+                    <!-- Founder Link -->
+                    <div class="founder-link">
+                        <h3>Meet Our Founder</h3>
+                        <p>
+                            Learn about Jamie Watters, the visionary behind AI Search Mastery 
+                            and creator of the MASTERY-AI Framework.
+                        </p>
+                        <a href="/about/jamie" class="btn btn-primary">
+                            <i class="fas fa-user"></i> About Jamie Watters
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Master AI Search?</h2>
+                    <p>
+                        Join thousands of businesses using our proven methodologies to 
+                        achieve sustainable growth in the AI search era.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="/free-page-audit" class="btn btn-secondary btn-large">
+                            Get Your Free AI Impact Assessment
+                        </a>
+                        <a href="/newsletter" class="btn btn-outline btn-large" style="border-color: white; color: white;">
+                            Join AI Search Weekly
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/logos/logo-primary.png" alt="AI Search Mastery" width="40" height="40">
+                        <span class="footer-logo-text">AI Search Mastery</span>
+                    </div>
+                    <p class="footer-description">
+                        Creator of the MASTERY-AI Framework v2.1. 
+                        Helping businesses thrive in the AI search era.
+                    </p>
+                    <div class="footer-contact">
+                        <a href="mailto:support@aisearchmastery.com">support@aisearchmastery.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Insights</h3>
+                    <ul class="footer-links">
+                        <li><a href="/blog/fundamentals">AI Search Fundamentals</a></li>
+                        <li><a href="/blog/case-studies">Case Studies</a></li>
+                        <li><a href="/blog/how-to-guides">How-To Guides</a></li>
+                        <li><a href="/blog/industry-updates">Industry Updates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="/free-page-audit">Free Page Assessment</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
+                        <li><a href="/templates">Templates</a></li>
+                        <li><a href="/archive">Archive</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/sitemap.html">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 AI Search Mastery. All rights reserved.
+                </p>
+                <div class="footer-legal">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const primaryNav = document.querySelector('.primary-nav');
+        const body = document.body;
+        
+        if (mobileMenuBtn && primaryNav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                const isOpen = primaryNav.classList.contains('mobile-open');
+                primaryNav.classList.toggle('mobile-open');
+                body.classList.toggle('mobile-menu-open');
+                this.setAttribute('aria-expanded', !isOpen);
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header')) {
+                    primaryNav.classList.remove('mobile-open');
+                    body.classList.remove('mobile-menu-open');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

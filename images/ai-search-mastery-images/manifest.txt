@@ -1,0 +1,16 @@
+AI Search Mastery - Image Delivery Manifest
+==================================================
+
+products/aimpactscanner-preview.png  600x400  4725 bytes (4.6 KB)
+products/llmtxt-preview.png  600x400  10621 bytes (10.4 KB)
+jamie-watters.jpg  400x400  5634 bytes (5.5 KB)
+og/homepage.jpg  1200x630  34894 bytes (34.1 KB)
+og/products.jpg  1200x630  26511 bytes (25.9 KB)
+og/framework.jpg  1200x630  25239 bytes (24.6 KB)
+og/about.jpg  1200x630  25979 bytes (25.4 KB)
+og/blog.jpg  1200x630  24343 bytes (23.8 KB)
+og/contact.jpg  1200x630  20671 bytes (20.2 KB)
+blog/ai-traffic-impact-guide.jpg  1200x630  34822 bytes (34.0 KB)
+
+Total: 213439 bytes (208.4 KB)
+Images: 10
