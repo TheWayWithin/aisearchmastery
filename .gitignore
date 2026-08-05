@@ -50,3 +50,12 @@ node_modules/
 *.key
 # Local Netlify folder
 .netlify
+
+# Machine litter, never source: agent-11 install backups, MCP status,
+# Playwright output. Kept out of git so real changes stay visible.
+.claude/backups/
+*.backup-*
+.mcp-status.md
+.playwright-mcp/
+playwright-report/
+test-results/
