@@ -29,8 +29,14 @@ If you run `bash install.sh` without the flag on a v5 install, it detects the v5
 5. **Merges v6 settings** into your existing `.claude/settings.json`:
    - Adds `env.ENABLE_TOOL_SEARCH = "auto"`
    - Adds the `hooks` block (advisory `tsc`/`ruff`/`rubocop` + destructive-command prompt)
-   - **Preserves all your existing keys** — user values win on conflict; the template only fills gaps
+   - **v6.2.0**: adds the **read-only quality gates** `permissions.deny` block (makes `.quality-gates.json` and `gates/` unwritable by agents; the rules use the `Edit(path)` form, which Claude Code applies to every file-editing tool (Edit, Write, MultiEdit, NotebookEdit), whereas `Write()`/`MultiEdit()` rule forms are silently ignored, see A11-ISS-7) and a blocking **PreToolUse "read-only gate guard"** hook (refuses the common Bash write forms against gate paths — redirection, `tee`, `sed -i`, `cp`, `mv`, `rm`, `truncate`, `shred`, `unlink`, `dd of=`, `ln -s`, `perl`/`ruby -i` — but not interpreter-mediated writes or a path held in a variable, so treat it as a speed bump rather than a closed route, see A11-ISS-16; the guard logic lives in `.claude/hooks/gate-guard.sh`, deployed alongside)
+   - **Refreshes AGENT-11-shipped hooks** (A11-ISS-9): a hook entry that is byte-identical to a version AGENT-11 shipped is upgraded to the current version. Hooks you added yourself — or shipped hooks you edited (e.g. promoted from advisory to blocking) — are preserved exactly as you left them, never duplicated or reverted
+   - **Preserves all your existing keys** — user values win on conflict for `env`, `permissions` and everything else; the template only fills gaps
 6. **Re-deploys the v6 library**: 11 specialists, missions, templates, field-manual, MCP setup, skills, schemas, gates
+
+### v6.2.0: changing a quality gate deliberately
+
+After upgrading, agents can no longer edit `.quality-gates.json` or anything under `gates/` — that is the point (an agent must not be able to loosen the criteria that judge its own work). To change a gate **as a deliberate human action**, temporarily remove the relevant `permissions.deny` rules from `.claude/settings.json`, make the edit yourself, then restore the rules. Never let an agent revise a gate mid-mission to make a phase pass.
 
 ## What gets backed up
 
@@ -104,7 +110,19 @@ cp .claude/settings.json.backup-<timestamp> .claude/settings.json
 
 ## Bulk upgrade (multiple repos)
 
-For automation across many repos, use `--non-interactive` (or its alias `--batch-safe`):
+If you run AGENT-11 across more than a handful of repos, use the [bulk-ops toolkit](../project/deployment/bulk/):
+
+```bash
+# Dry-run first to see what would happen across the fleet
+bash project/deployment/bulk/apply-upgrade.sh --dry-run
+
+# Run for real — handles stash/rebase/push for divergent remotes
+bash project/deployment/bulk/apply-upgrade.sh
+```
+
+The toolkit reads a registry file you maintain yourself (template at `project/deployment/bulk/lib/registry-template.yaml`). Tier-aware (`active`, `local-only`, `dormant`, etc.) so dormant or non-agent-11 repos don't get swept up. Includes a smart D-vs-M check on retired v5 marker paths — handles repos that have re-introduced same-named files as project content. See [`project/deployment/bulk/README.md`](../project/deployment/bulk/README.md) for full usage.
+
+For ad-hoc loops without the toolkit, the bare-bones pattern still works:
 
 ```bash
 for repo in repo1 repo2 repo3; do
