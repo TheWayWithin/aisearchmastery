@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Building AImpactScanner: From Concept to AI Search Readiness Tool | AI Search Mastery</title>
-  <meta name="description" content="How AImpactScanner evolved from a simple site scanner to a full AI visibility platform — with llms.txt generation, tiered access, and the technical decisions behind it.">
+  <meta name="description" content="How AImpactScanner evolved from a simple site scanner to a full AI visibility platform, with llms.txt generation and the technical decisions behind it.">
   <link rel="canonical" href="https://aisearchmastery.com/blog/industry-updates/building-aimpactscanner/">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable version">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Building AImpactScanner: From Concept to AI Search Readiness Tool | AI Search Mastery">
@@ -73,7 +73,7 @@
     },
     "datePublished": "2025-11-30",
     "dateModified": "2025-11-30",
-    "description": "How AImpactScanner evolved from a simple site scanner to a full AI visibility platform — with llms.txt generation, tiered access, and the technical decisions behind it.",
+    "description": "How AImpactScanner evolved from a simple site scanner to a full AI visibility platform, with llms.txt generation and the technical decisions behind it.",
     "image": "https://aisearchmastery.com/images/og/blog.jpg",
     "publisher": {
       "@type": "Organization",
@@ -99,15 +99,13 @@
         <ul class="nav__list">
           <li class="nav__item"><a href="/framework" class="nav__link">Framework</a></li>
           <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="/products" class="nav__link">Products</a></li>
+          <li class="nav__item"><a href="/products" class="nav__link">Tools</a></li>
           <li class="nav__item"><a href="/blog" class="nav__link nav__link--active" aria-current="page">Blog</a></li>
           <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
-
-      <a href="https://aimpactscanner.com" class="btn btn--primary header__cta" target="_blank" rel="noopener noreferrer"
-         aria-label="Free Site Scan (opens in new tab)" data-track-cta data-product="aimpactscanner" data-location="nav">
-        Free Site Scan
+      <a href="/framework" class="btn btn--secondary header__cta">
+        Read the framework
       </a>
 
       <button class="header__menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
@@ -145,7 +143,6 @@
               <ol class="article__toc-list">
                 <li><a href="#the-gap">The Gap We Set Out to Fill</a></li>
                 <li><a href="#llmstxt-integration">Connecting Analysis to Action: llms.txt Integration</a></li>
-                <li><a href="#tiered-access">Why Tiered Access Matters</a></li>
                 <li><a href="#technical-decisions">Technical Decisions Along the Way</a></li>
                 <li><a href="#whats-different">What Makes This Different</a></li>
                 <li><a href="#whats-next">What's Next</a></li>
@@ -154,6 +151,10 @@
           </details>
 
           <p class="article__intro">AImpactScanner started with a simple question: what does AI actually see when it looks at your website? Not what Google sees &mdash; that's been well-understood for twenty years. What does ChatGPT see? What does Perplexity see? When an AI system evaluates your site for potential citation, what signals does it find, and which ones are missing?</p>
+
+          <div class="callout mt-8">
+            <p class="callout__text"><strong>Note, September 2026.</strong> This article was written while AImpactScanner was running. The tool was switched off in August 2026. The code is open at <a href="https://github.com/TheWayWithin/aimpactscanner-mvp" target="_blank" rel="noopener noreferrer">github.com/TheWayWithin/aimpactscanner-mvp</a> under the MIT licence. The thinking in the article still stands.</p>
+          </div>
 
           <p>The answer, for most sites, was: not much. And there was no tool that could tell them specifically what to fix. That's the gap AImpactScanner was built to fill.</p>
 
@@ -167,26 +168,13 @@
 
           <h2 id="llmstxt-integration">Connecting Analysis to Action: llms.txt Integration</h2>
 
-          <p>The first major milestone beyond basic scanning was llms.txt integration. After running an analysis, Growth and Scale tier users can now generate optimised llms.txt files directly from their scan results.</p>
+          <p>The first major milestone beyond basic scanning was llms.txt integration. After running an analysis, users could generate optimised llms.txt files directly from their scan results.</p>
 
           <p>This connects two previously separate workflows. Before integration, the process was: scan your site with one tool, identify issues, then use a separate tool to generate your llms.txt file. The problem was that the llms.txt generator didn't know anything about your scan results. It generated files without context about which pages scored well for AI readability and which didn't.</p>
 
-          <p>With integrated generation, the llms.txt file reflects actual content quality. Pages that scored highly for AI citation potential are prioritised. Pages with structural issues are noted. The file becomes a curated guide rather than a URL dump &mdash; because the scanner has already evaluated every page against the full MASTERY-AI Framework.</p>
+          <p>With integrated generation, the llms.txt file reflected actual content quality. Pages that scored highly for AI citation potential were prioritised. Pages with structural issues were noted. The file became a curated guide rather than a URL dump, because the scanner had already evaluated every page against the full MASTERY-AI Framework.</p>
 
-          <p>The integration was built on LLM.txt Mastery's API, with custom Edge Functions handling the analysis, generation, and download workflow. Paid-tier users see a dashboard panel with usage statistics, progress tracking, and direct download &mdash; gated by subscription tier to reflect the infrastructure cost of generation.</p>
-
-          <h2 id="tiered-access">Why Tiered Access Matters</h2>
-
-          <p>The pricing model reflects a deliberate decision: keep the diagnostic accessible while gating the more resource-intensive features.</p>
-
-          <ul>
-            <li><strong>Free tier</strong> &mdash; 3 scans per month. Enough to evaluate your most important pages and understand where you stand. No llms.txt generation, no SPA rendering, no history.</li>
-            <li><strong>Solo ($4.95/mo)</strong> &mdash; 10 scans, 30 days of history. For freelancers and solopreneurs who need regular checks on their own site.</li>
-            <li><strong>Growth ($14.95/mo)</strong> &mdash; 40 scans, 25 llms.txt generations, 90 days of history. For businesses actively optimising their AI visibility and tracking improvement over time.</li>
-            <li><strong>Scale ($29.95/mo)</strong> &mdash; 100 scans, unlimited llms.txt, SPA rendering, unlimited history. For agencies and businesses managing multiple sites or running ongoing optimisation programmes.</li>
-          </ul>
-
-          <p>The free tier is permanent &mdash; not a trial. The goal is that every business can at least diagnose their AI visibility without paying anything. The paid tiers unlock the tools to actually fix what the diagnosis reveals.</p>
+          <p>The integration was built on LLM.txt Mastery's API, with custom Edge Functions handling the analysis, generation, and download workflow. The dashboard panel showed usage statistics, progress tracking, and a direct download.</p>
 
           <h2 id="technical-decisions">Technical Decisions Along the Way</h2>
 
@@ -198,7 +186,7 @@
 
           <h3>Authentication Architecture</h3>
 
-          <p>User tier detection sounds trivial but proved tricky in practice. The initial implementation had a bug where user tiers consistently displayed as "free" &mdash; the dashboard component wasn't receiving the user's subscription data. The root cause was a missing prop in the top-level component, causing tier information to default to the free tier. A small fix with significant UX implications: users on paid plans were seeing free-tier limitations and generating support requests.</p>
+          <p>Detecting which plan an account was on sounds trivial but proved tricky in practice. The initial implementation had a bug where every account displayed as unpaid: the dashboard component wasn't receiving the account's plan data, so the top-level component was missing a prop and the value fell back to the default. A small fix with significant UX implications. Paying users were seeing limits that shouldn't have applied to them, and raising support requests.</p>
 
           <h3>Staging and Production Isolation</h3>
 
@@ -206,9 +194,9 @@
 
           <h2 id="whats-different">What Makes This Different</h2>
 
-          <p>The AI visibility tool market has grown rapidly, and most tools in it focus on a single capability: generating llms.txt files. AImpactScanner takes a different approach by treating llms.txt as one component of a larger diagnostic workflow.</p>
+          <p>The AI visibility tool market has grown rapidly, and most tools in it focus on a single capability: generating llms.txt files. AImpactScanner took a different approach by treating llms.txt as one component of a larger diagnostic workflow.</p>
 
-          <p>The core difference is that AImpactScanner starts with diagnosis, not generation. It evaluates your site against 27 factors first, identifies specific gaps, and then &mdash; for paid users &mdash; generates an llms.txt file informed by that analysis. The file reflects what the scanner found, not just what URLs exist.</p>
+          <p>The core difference was that AImpactScanner started with diagnosis, not generation. It evaluated sites against 27 factors first, identified specific gaps, then generated an llms.txt file informed by that analysis. The file reflected what the scanner found, not just what URLs existed.</p>
 
           <p>This matters because a good llms.txt file can't compensate for a poorly structured site. If your content lacks authorship signals, your schema is incomplete, and your pages aren't structured for AI readability, an llms.txt file won't fix those problems. It'll just direct AI to pages that aren't ready to be cited.</p>
 
@@ -216,83 +204,16 @@
 
           <h2 id="whats-next">What's Next</h2>
 
-          <p>The roadmap includes JavaScript rendering for all tiers (currently Scale-only), expanded factor coverage as AI systems evolve their citation preferences, and integration with monitoring tools for ongoing citation tracking. The goal is a complete AI visibility platform &mdash; not just a scanner, but a continuous feedback loop between your site's AI readiness and its actual citation performance.</p>
-
-          <p>If you're interested in where your site stands right now, the free tier gives you 3 scans per month &mdash; enough to evaluate your most important pages and see exactly what AI systems see when they look at your content.</p>
-
-          <!-- End-of-Article CTA: AImpactScanner -->
-          <div class="earn-the-ask earn-the-ask--compact mt-8">
-            <div class="earn-the-ask__inner">
-              <div class="earn-the-ask__slot earn-the-ask__problem">
-                <p class="earn-the-ask__text"><strong>What does AI actually see on your site?</strong></p>
-              </div>
-              <div class="earn-the-ask__slot earn-the-ask__fix">
-                <p class="earn-the-ask__text">Find out in 60 seconds with a free AI visibility scan across 27 factors.</p>
-              </div>
-              <div class="earn-the-ask__slot earn-the-ask__action">
-                <a href="https://aimpactscanner.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer"
-                   data-track-cta data-product="aimpactscanner" data-location="article_end">
-                  Free Site Scan
-                </a>
-              </div>
-            </div>
-          </div>
+          <p>The roadmap at the time included JavaScript rendering for every account, expanded factor coverage as AI systems evolved their citation preferences, and integration with monitoring tools for ongoing citation tracking. The goal was a complete AI visibility platform: not just a scanner, but a continuous feedback loop between a site's AI readiness and its actual citation performance.</p>
 
         </div>
       </div>
     </article>
 
-    <!-- ========== INLINE NEWSLETTER (F-020) ========== -->
-    <section class="container">
-      <div class="newsletter newsletter--inline">
-        <div class="newsletter__copy">
-          <h2 class="newsletter__heading">Stay ahead of AI search</h2>
-          <p class="newsletter__desc">Get weekly insights on AI search visibility delivered to your inbox.</p>
-        </div>
-        <div class="newsletter__form-wrap">
-          <form class="newsletter__form" data-location="article_inline">
-            <div class="newsletter__fields">
-              <label for="newsletter-email-inline" class="visually-hidden">Email address</label>
-              <input type="email" id="newsletter-email-inline" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
-              <div class="form-honeypot" aria-hidden="true">
-                <label for="hp-company-inline">Company</label>
-                <input type="text" id="hp-company-inline" name="hp_company" tabindex="-1" autocomplete="off">
-              </div>
-              <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
-            </div>
-            <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
-          </form>
-          <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ========== FOOTER (F-002) ========== -->
   <footer class="footer" role="contentinfo">
-    <div class="newsletter container">
-      <div class="newsletter__copy">
-        <h2 class="newsletter__heading">AI Search Arena</h2>
-        <p class="newsletter__desc">Weekly insights on AI search visibility, direct from the research.</p>
-      </div>
-      <div class="newsletter__form-wrap">
-        <form class="newsletter__form" data-location="footer">
-          <div class="newsletter__fields">
-            <label for="newsletter-email-footer" class="visually-hidden">Email address</label>
-            <input type="email" id="newsletter-email-footer" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
-            <div class="form-honeypot" aria-hidden="true">
-              <label for="hp-company-footer">Company</label>
-              <input type="text" id="hp-company-footer" name="hp_company" tabindex="-1" autocomplete="off">
-            </div>
-            <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
-          </div>
-          <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
-        </form>
-        <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
-      </div>
-    </div>
-
     <div class="container footer__grid">
       <div class="footer__col">
         <h3 class="footer__heading">Navigate</h3>
@@ -300,39 +221,28 @@
           <ul class="footer__list">
             <li><a href="/framework" class="footer__link">Framework</a></li>
             <li><a href="/about" class="footer__link">About</a></li>
-            <li><a href="/products" class="footer__link">Products</a></li>
+            <li><a href="/products" class="footer__link">Tools</a></li>
             <li><a href="/blog" class="footer__link">Blog</a></li>
             <li><a href="/contact" class="footer__link">Contact</a></li>
           </ul>
         </nav>
       </div>
-
       <div class="footer__col">
-        <h3 class="footer__heading">Products</h3>
+        <h3 class="footer__heading">Open source</h3>
         <ul class="footer__list">
           <li>
-            <a href="https://aimpactscanner.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/TheWayWithin/mastery-ai-framework" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              MASTERY-AI Framework<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheWayWithin/aimpactscanner-mvp" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
               AImpactScanner<span class="visually-hidden"> (opens in new tab)</span>
             </a>
           </li>
           <li>
-            <a href="https://llmtxtmastery.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/TheWayWithin/llm-txt-mastery" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
               LLM.txt Mastery<span class="visually-hidden"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://llmtxtmastery.com/validator" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
-              Free Validator<span class="visually-hidden"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a href="/products#aimpactmonitor" class="footer__link">
-              AImpactMonitor <span class="text-secondary">(Coming Soon)</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://aisearcharena.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
-              AI Search Arena<span class="visually-hidden"> (opens in new tab)</span>
             </a>
           </li>
         </ul>

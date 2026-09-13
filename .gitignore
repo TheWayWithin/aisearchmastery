@@ -59,3 +59,8 @@ node_modules/
 .playwright-mcp/
 playwright-report/
 test-results/
+
+# Local MCP approval/audit stores, never source
+data/*.db
+data/*.db-wal
+data/*.db-shm

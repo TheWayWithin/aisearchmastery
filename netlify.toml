@@ -114,14 +114,15 @@
   to = "/products"
   status = 301
 
+# Retired tool: was an external product site, now the retired-tools page
 [[redirects]]
   from = "/tools/llms-txt-tool/"
-  to = "https://llmtxtmastery.com"
+  to = "/products"
   status = 301
 
 [[redirects]]
   from = "/tools/llms-txt-tool"
-  to = "https://llmtxtmastery.com"
+  to = "/products"
   status = 301
 
 # NOTE: /blog/fundamentals/ and /blog/industry-updates/ are now real

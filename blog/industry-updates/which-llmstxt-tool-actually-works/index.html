@@ -10,9 +10,9 @@
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable version">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Which llms.txt Tool Actually Works? We Benchmarked 14 | AI Search Mastery">
@@ -99,15 +99,13 @@
         <ul class="nav__list">
           <li class="nav__item"><a href="/framework" class="nav__link">Framework</a></li>
           <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="/products" class="nav__link">Products</a></li>
+          <li class="nav__item"><a href="/products" class="nav__link">Tools</a></li>
           <li class="nav__item"><a href="/blog" class="nav__link nav__link--active" aria-current="page">Blog</a></li>
           <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
-
-      <a href="https://aimpactscanner.com" class="btn btn--primary header__cta" target="_blank" rel="noopener noreferrer"
-         aria-label="Free Site Scan (opens in new tab)" data-track-cta data-product="aimpactscanner" data-location="nav">
-        Free Site Scan
+      <a href="/framework" class="btn btn--secondary header__cta">
+        Read the framework
       </a>
 
       <button class="header__menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
@@ -153,7 +151,11 @@
             </nav>
           </details>
 
-          <p class="article__intro">The llms.txt market has exploded. In the past year, more than a dozen tools have launched claiming to improve your AI search visibility &mdash; from free generators to enterprise platforms costing $489 per month. We tested 14 of them against a structured evaluation framework. The results reveal a market where most tools do one thing, a few do two things, and almost none complete the full loop that actually moves the needle.</p>
+          <p class="article__intro">The llms.txt market has exploded. In the past year, more than a dozen tools have launched claiming to improve your AI search visibility, from free generators to enterprise platforms. We tested 14 of them against a structured evaluation framework. The results reveal a market where most tools do one thing, a few do two things, and almost none complete the full loop that actually moves the needle.</p>
+
+          <div class="callout mt-8">
+            <p class="callout__text"><strong>Note, September 2026.</strong> This article was written while LLM.txt Mastery was running. The tool was switched off in August 2026. The code is open at <a href="https://github.com/TheWayWithin/llm-txt-mastery" target="_blank" rel="noopener noreferrer">github.com/TheWayWithin/llm-txt-mastery</a> under the MIT licence. The thinking in the article still stands.</p>
+          </div>
 
           <h2 id="the-problem">The One-Thing Problem</h2>
 
@@ -186,7 +188,6 @@
                 <th>Tool</th>
                 <th>Score (/30)</th>
                 <th>Full Loop?</th>
-                <th>Price</th>
               </tr>
             </thead>
             <tbody>
@@ -194,44 +195,38 @@
                 <td>LLM.txt Mastery</td>
                 <td>18</td>
                 <td>Yes</td>
-                <td>$4.95/mo</td>
               </tr>
               <tr>
                 <td>LLMrefs</td>
                 <td>15</td>
                 <td>Partial</td>
-                <td>$29/mo</td>
               </tr>
               <tr>
                 <td>Otterly AI</td>
                 <td>14</td>
                 <td>Partial</td>
-                <td>$49/mo</td>
               </tr>
               <tr>
                 <td>Peec AI</td>
                 <td>12</td>
                 <td>Partial</td>
-                <td>$39/mo</td>
               </tr>
               <tr>
                 <td>Cairrot</td>
                 <td>11</td>
                 <td>Partial</td>
-                <td>$29/mo</td>
               </tr>
               <tr>
                 <td>AIOSEO</td>
                 <td>4</td>
                 <td>No</td>
-                <td>$49/mo</td>
               </tr>
             </tbody>
           </table>
 
           <p><em>Table shows 6 of 14 tools tested. Remaining 8 scored between 3 and 10, with none completing the full loop.</em></p>
 
-          <p>The standout finding: the highest-scoring tool costs $4.95 per month. Several lower-scoring tools cost 5&ndash;10x more. Price does not correlate with capability in this market &mdash; a reflection of how new the category is and how differently vendors interpret the problem.</p>
+          <p>The standout finding: price did not correlate with capability. The highest-scoring tool was among the cheapest tested, and several lower-scoring tools cost many times more. That is a reflection of how new the category is and how differently vendors interpret the problem.</p>
 
           <h2 id="what-separates">What Separates the Top Tools</h2>
 
@@ -245,7 +240,7 @@
 
           <p>Several tools offer an "AI friendliness" score &mdash; a single number that claims to represent how well your site works for AI. These scores are largely meaningless without specific, factor-level breakdowns. A score of 72 out of 100 tells you nothing about what to fix.</p>
 
-          <p>The more useful tools evaluate specific factors &mdash; structured data presence, content depth, authorship signals, entity recognition, freshness indicators &mdash; and tell you exactly which ones are weak. The MASTERY-AI Framework evaluates 27 specific factors across 8 pillars, each with actionable recommendations.</p>
+          <p>The more useful tools evaluate specific factors &mdash; structured data presence, content depth, authorship signals, entity recognition, freshness indicators &mdash; and tell you exactly which ones are weak. The MASTERY-AI Framework v3.2.0 evaluates 149 atomic factors across 8 pillars, each with actionable recommendations.</p>
 
           <h3>Re-Testing Capability</h3>
 
@@ -276,84 +271,19 @@
             <li><strong>Does it score specifically?</strong> &mdash; Generic "AI friendliness" scores are unhelpful. Look for factor-level breakdowns with actionable recommendations.</li>
             <li><strong>Can you re-test?</strong> &mdash; After implementing changes, can you re-scan and measure improvement?</li>
             <li><strong>Does it track progress?</strong> &mdash; Can you see your trajectory over time, not just isolated snapshots?</li>
-            <li><strong>Is the price sustainable?</strong> &mdash; Enterprise pricing ($49&ndash;$489/month) may be justified for large teams. For solopreneurs and small businesses, the cost needs to reflect the value delivered.</li>
+            <li><strong>Is the price sustainable?</strong> &mdash; Enterprise pricing may be justified for large teams. For solopreneurs and small businesses, the cost needs to reflect the value delivered.</li>
           </ol>
 
           <p>The AI visibility tool market is still maturing. Prices will stabilise, features will consolidate, and the tools that deliver the full loop &mdash; diagnose, optimise, test, repeat &mdash; will separate from the ones that just generate files. Choose accordingly.</p>
-
-          <!-- End-of-Article CTA: AImpactScanner -->
-          <div class="earn-the-ask earn-the-ask--compact mt-8">
-            <div class="earn-the-ask__inner">
-              <div class="earn-the-ask__slot earn-the-ask__problem">
-                <p class="earn-the-ask__text"><strong>Most tools stop at file generation. That's step one of four.</strong></p>
-              </div>
-              <div class="earn-the-ask__slot earn-the-ask__fix">
-                <p class="earn-the-ask__text">AImpactScanner diagnoses, scores, and tracks your AI visibility across 27 factors.</p>
-              </div>
-              <div class="earn-the-ask__slot earn-the-ask__action">
-                <a href="https://aimpactscanner.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer"
-                   data-track-cta data-product="aimpactscanner" data-location="article_end">
-                  Free Site Scan
-                </a>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>
     </article>
 
-    <!-- ========== INLINE NEWSLETTER (F-020) ========== -->
-    <section class="container">
-      <div class="newsletter newsletter--inline">
-        <div class="newsletter__copy">
-          <h2 class="newsletter__heading">Stay ahead of AI search</h2>
-          <p class="newsletter__desc">Get weekly insights on AI search visibility delivered to your inbox.</p>
-        </div>
-        <div class="newsletter__form-wrap">
-          <form class="newsletter__form" data-location="article_inline">
-            <div class="newsletter__fields">
-              <label for="newsletter-email-inline" class="visually-hidden">Email address</label>
-              <input type="email" id="newsletter-email-inline" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
-              <div class="form-honeypot" aria-hidden="true">
-                <label for="hp-company-inline">Company</label>
-                <input type="text" id="hp-company-inline" name="hp_company" tabindex="-1" autocomplete="off">
-              </div>
-              <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
-            </div>
-            <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
-          </form>
-          <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ========== FOOTER (F-002) ========== -->
   <footer class="footer" role="contentinfo">
-    <div class="newsletter container">
-      <div class="newsletter__copy">
-        <h2 class="newsletter__heading">AI Search Arena</h2>
-        <p class="newsletter__desc">Weekly insights on AI search visibility, direct from the research.</p>
-      </div>
-      <div class="newsletter__form-wrap">
-        <form class="newsletter__form" data-location="footer">
-          <div class="newsletter__fields">
-            <label for="newsletter-email-footer" class="visually-hidden">Email address</label>
-            <input type="email" id="newsletter-email-footer" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
-            <div class="form-honeypot" aria-hidden="true">
-              <label for="hp-company-footer">Company</label>
-              <input type="text" id="hp-company-footer" name="hp_company" tabindex="-1" autocomplete="off">
-            </div>
-            <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
-          </div>
-          <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
-        </form>
-        <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
-      </div>
-    </div>
-
     <div class="container footer__grid">
       <div class="footer__col">
         <h3 class="footer__heading">Navigate</h3>
@@ -361,39 +291,28 @@
           <ul class="footer__list">
             <li><a href="/framework" class="footer__link">Framework</a></li>
             <li><a href="/about" class="footer__link">About</a></li>
-            <li><a href="/products" class="footer__link">Products</a></li>
+            <li><a href="/products" class="footer__link">Tools</a></li>
             <li><a href="/blog" class="footer__link">Blog</a></li>
             <li><a href="/contact" class="footer__link">Contact</a></li>
           </ul>
         </nav>
       </div>
-
       <div class="footer__col">
-        <h3 class="footer__heading">Products</h3>
+        <h3 class="footer__heading">Open source</h3>
         <ul class="footer__list">
           <li>
-            <a href="https://aimpactscanner.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/TheWayWithin/mastery-ai-framework" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              MASTERY-AI Framework<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheWayWithin/aimpactscanner-mvp" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
               AImpactScanner<span class="visually-hidden"> (opens in new tab)</span>
             </a>
           </li>
           <li>
-            <a href="https://llmtxtmastery.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/TheWayWithin/llm-txt-mastery" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
               LLM.txt Mastery<span class="visually-hidden"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://llmtxtmastery.com/validator" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
-              Free Validator<span class="visually-hidden"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a href="/products#aimpactmonitor" class="footer__link">
-              AImpactMonitor <span class="text-secondary">(Coming Soon)</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://aisearcharena.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
-              AI Search Arena<span class="visually-hidden"> (opens in new tab)</span>
             </a>
           </li>
         </ul>

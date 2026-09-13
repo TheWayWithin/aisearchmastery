@@ -10,9 +10,9 @@
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable version">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
 
   <!-- Open Graph -->
   <meta property="og:title" content="AImpactScanner Now Analyzes Every Website — React, Vue, SPAs and More | AI Search Mastery">
@@ -99,15 +99,13 @@
         <ul class="nav__list">
           <li class="nav__item"><a href="/framework" class="nav__link">Framework</a></li>
           <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="/products" class="nav__link">Products</a></li>
+          <li class="nav__item"><a href="/products" class="nav__link">Tools</a></li>
           <li class="nav__item"><a href="/blog" class="nav__link nav__link--active" aria-current="page">Blog</a></li>
           <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
-
-      <a href="https://aimpactscanner.com" class="btn btn--primary header__cta" target="_blank" rel="noopener noreferrer"
-         aria-label="Free Site Scan (opens in new tab)" data-track-cta data-product="aimpactscanner" data-location="nav">
-        Free Site Scan
+      <a href="/framework" class="btn btn--secondary header__cta">
+        Read the framework
       </a>
 
       <button class="header__menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
@@ -148,7 +146,6 @@
                 <li><a href="#factor-expansion">From 19 Factors to 27</a></li>
                 <li><a href="#new-seo-factors">The 8 New SEO Factors</a></li>
                 <li><a href="#llmstxt-generation">Built-In llms.txt Generation</a></li>
-                <li><a href="#pricing">Updated Pricing Tiers</a></li>
                 <li><a href="#whats-next">What This Means for Your Site</a></li>
               </ol>
             </nav>
@@ -156,9 +153,13 @@
 
           <p class="article__intro">AImpactScanner launched with a straightforward goal: scan any website and evaluate its AI search visibility across the MASTERY-AI Framework. It worked well &mdash; for sites built with traditional server-rendered HTML. But a growing percentage of scans were returning artificially low scores, and the reason was clear: JavaScript.</p>
 
+          <div class="callout mt-8">
+            <p class="callout__text"><strong>Note, September 2026.</strong> This article was written while AImpactScanner was running. The tool was switched off in August 2026. The code is open at <a href="https://github.com/TheWayWithin/aimpactscanner-mvp" target="_blank" rel="noopener noreferrer">github.com/TheWayWithin/aimpactscanner-mvp</a> under the MIT licence. The thinking in the article still stands.</p>
+          </div>
+
           <p>Sites built with React, Vue, Angular, and other single-page application (SPA) frameworks render their content in the browser, not on the server. When AImpactScanner fetched these pages, it saw the initial HTML shell &mdash; an empty <code>&lt;div&gt;</code> and a script tag &mdash; not the actual content. The scores reflected a blank page, not the site users actually see.</p>
 
-          <p>That's now fixed. AImpactScanner has rebuilt its entire backend with full JavaScript rendering and expanded its evaluation from 19 factors to 27.</p>
+          <p>That was fixed. AImpactScanner rebuilt its entire backend with full JavaScript rendering and expanded its evaluation from 19 factors to 27.</p>
 
           <h2 id="the-problem">The Problem with JavaScript-Heavy Sites</h2>
 
@@ -185,7 +186,7 @@
             <li><strong>Analysis</strong> &mdash; The 27-factor evaluation runs against the rendered page, not the raw HTML shell</li>
           </ol>
 
-          <p>This means a React marketing site, a Vue e-commerce store, or an Angular SaaS dashboard now receives the same thorough analysis as a static HTML site. The score reflects actual content and structure, not a blank shell.</p>
+          <p>This meant a React marketing site, a Vue e-commerce store, or an Angular SaaS dashboard received the same thorough analysis as a static HTML site. The score reflected actual content and structure, not a blank shell.</p>
 
           <h2 id="factor-expansion">From 19 Factors to 27</h2>
 
@@ -193,7 +194,7 @@
 
           <p>AI SEO is fundamentally limited by basic SEO. If search engines can't index your site, AI systems can't cite it. If your pages load slowly, AI crawlers may time out. If you have broken links, AI can't follow your content architecture.</p>
 
-          <p>The expanded evaluation now covers 27 factors across 9 pillars, adding 8 traditional SEO checks that directly impact AI discoverability.</p>
+          <p>The expanded evaluation covered 27 factors, grouped by the scanner into the framework's 8 pillars plus a ninth group of its own for the 8 traditional SEO checks it had added. That ninth group was the scanner's grouping, not part of the MASTERY-AI framework.</p>
 
           <h2 id="new-seo-factors">The 8 New SEO Factors</h2>
 
@@ -214,146 +215,28 @@
 
           <h2 id="llmstxt-generation">Built-In llms.txt Generation</h2>
 
-          <p>Growth and Scale tier users can now generate llms.txt files directly from their scan results. After AImpactScanner analyses your site, it uses the same data to identify which pages have the highest AI citation potential and generates a prioritised llms.txt file.</p>
+          <p>Users could generate llms.txt files directly from their scan results. After AImpactScanner analysed a site, it used the same data to identify which pages had the highest AI citation potential and generated a prioritised llms.txt file.</p>
 
-          <p>This connects two previously separate workflows: diagnosing AI visibility issues and optimising your site's AI discoverability through llms.txt. The generated file reflects actual content quality, not just a URL dump &mdash; because the scanner has already evaluated every page against the full MASTERY-AI Framework.</p>
-
-          <h2 id="pricing">Updated Pricing Tiers</h2>
-
-          <p>The expanded capabilities come with updated pricing that reflects the infrastructure cost of JavaScript rendering:</p>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Tier</th>
-                <th>Price</th>
-                <th>Monthly Scans</th>
-                <th>llms.txt</th>
-                <th>SPA Rendering</th>
-                <th>History</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Free</td>
-                <td>$0</td>
-                <td>3</td>
-                <td>&mdash;</td>
-                <td>&mdash;</td>
-                <td>&mdash;</td>
-              </tr>
-              <tr>
-                <td>Solo</td>
-                <td>$4.95/mo</td>
-                <td>10</td>
-                <td>&mdash;</td>
-                <td>&mdash;</td>
-                <td>30 days</td>
-              </tr>
-              <tr>
-                <td>Growth</td>
-                <td>$14.95/mo</td>
-                <td>40</td>
-                <td>25/mo</td>
-                <td>&mdash;</td>
-                <td>90 days</td>
-              </tr>
-              <tr>
-                <td>Scale</td>
-                <td>$29.95/mo</td>
-                <td>100</td>
-                <td>Unlimited</td>
-                <td>100/mo</td>
-                <td>Unlimited</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p>The free tier still provides 3 scans per month &mdash; enough to evaluate your most important pages and understand where you stand. SPA rendering is available on the Scale tier, where the infrastructure cost of headless browser sessions is offset by the subscription.</p>
+          <p>This connected two previously separate workflows: diagnosing AI visibility issues and optimising a site's AI discoverability through llms.txt. The generated file reflected actual content quality, not just a URL dump, because the scanner had already evaluated every page against the full MASTERY-AI Framework.</p>
 
           <h2 id="whats-next">What This Means for Your Site</h2>
 
-          <p>If you've scanned your site before and received a score that felt lower than expected, it's worth scanning again. JavaScript rendering means the scanner now sees what your users see, and the 8 new SEO factors provide a more complete picture of your AI readiness.</p>
+          <p>Any score from before the rebuild was liable to read lower than it should have. JavaScript rendering meant the scanner saw what users see, and the 8 new SEO factors gave a more complete picture of AI readiness.</p>
 
-          <p>If your site is built with React, Vue, Angular, or any SPA framework, this update is directly relevant. Previous scans would have evaluated an empty page. The new scan evaluates your actual content.</p>
+          <p>For sites built with React, Vue, Angular, or any SPA framework, the update mattered most. Earlier scans had evaluated an empty page. The rebuilt scan evaluated the actual content.</p>
 
-          <p>The expanded factor set also means your score may shift &mdash; in either direction. Sites with strong traditional SEO foundations may see their scores increase as those signals are now counted. Sites with underlying SEO issues (broken links, missing sitemaps, duplicate versions) may see areas for improvement that weren't previously flagged.</p>
+          <p>The expanded factor set also meant a score could shift in either direction. Sites with strong traditional SEO foundations could see their scores rise, because those signals were now counted. Sites with underlying SEO issues (broken links, missing sitemaps, duplicate versions) saw areas for improvement that weren't previously flagged.</p>
 
-          <p>Either way, you now have a more accurate picture of how AI systems perceive your site. And that's the starting point for everything else.</p>
-
-          <!-- End-of-Article CTA: AImpactScanner -->
-          <div class="earn-the-ask earn-the-ask--compact mt-8">
-            <div class="earn-the-ask__inner">
-              <div class="earn-the-ask__slot earn-the-ask__problem">
-                <p class="earn-the-ask__text"><strong>Your last scan might have missed the full picture</strong></p>
-              </div>
-              <div class="earn-the-ask__slot earn-the-ask__fix">
-                <p class="earn-the-ask__text">Re-scan with full JavaScript rendering and 27-factor analysis &mdash; free.</p>
-              </div>
-              <div class="earn-the-ask__slot earn-the-ask__action">
-                <a href="https://aimpactscanner.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer"
-                   data-track-cta data-product="aimpactscanner" data-location="article_end">
-                  Free Site Scan
-                </a>
-              </div>
-            </div>
-          </div>
+          <p>Either way, the result was a more accurate picture of how AI systems perceive a site. And that's the starting point for everything else.</p>
 
         </div>
       </div>
     </article>
 
-    <!-- ========== INLINE NEWSLETTER (F-020) ========== -->
-    <section class="container">
-      <div class="newsletter newsletter--inline">
-        <div class="newsletter__copy">
-          <h2 class="newsletter__heading">Stay ahead of AI search</h2>
-          <p class="newsletter__desc">Get weekly insights on AI search visibility delivered to your inbox.</p>
-        </div>
-        <div class="newsletter__form-wrap">
-          <form class="newsletter__form" data-location="article_inline">
-            <div class="newsletter__fields">
-              <label for="newsletter-email-inline" class="visually-hidden">Email address</label>
-              <input type="email" id="newsletter-email-inline" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
-              <div class="form-honeypot" aria-hidden="true">
-                <label for="hp-company-inline">Company</label>
-                <input type="text" id="hp-company-inline" name="hp_company" tabindex="-1" autocomplete="off">
-              </div>
-              <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
-            </div>
-            <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
-          </form>
-          <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ========== FOOTER (F-002) ========== -->
   <footer class="footer" role="contentinfo">
-    <div class="newsletter container">
-      <div class="newsletter__copy">
-        <h2 class="newsletter__heading">AI Search Arena</h2>
-        <p class="newsletter__desc">Weekly insights on AI search visibility, direct from the research.</p>
-      </div>
-      <div class="newsletter__form-wrap">
-        <form class="newsletter__form" data-location="footer">
-          <div class="newsletter__fields">
-            <label for="newsletter-email-footer" class="visually-hidden">Email address</label>
-            <input type="email" id="newsletter-email-footer" name="email" class="newsletter__input" placeholder="you@example.com" required autocomplete="email">
-            <div class="form-honeypot" aria-hidden="true">
-              <label for="hp-company-footer">Company</label>
-              <input type="text" id="hp-company-footer" name="hp_company" tabindex="-1" autocomplete="off">
-            </div>
-            <button type="submit" class="btn btn--primary newsletter__btn">Subscribe</button>
-          </div>
-          <p class="newsletter__consent">Unsubscribe anytime. No spam.</p>
-        </form>
-        <p class="newsletter__success" hidden>You're in. Check your inbox to confirm.</p>
-      </div>
-    </div>
-
     <div class="container footer__grid">
       <div class="footer__col">
         <h3 class="footer__heading">Navigate</h3>
@@ -361,39 +244,28 @@
           <ul class="footer__list">
             <li><a href="/framework" class="footer__link">Framework</a></li>
             <li><a href="/about" class="footer__link">About</a></li>
-            <li><a href="/products" class="footer__link">Products</a></li>
+            <li><a href="/products" class="footer__link">Tools</a></li>
             <li><a href="/blog" class="footer__link">Blog</a></li>
             <li><a href="/contact" class="footer__link">Contact</a></li>
           </ul>
         </nav>
       </div>
-
       <div class="footer__col">
-        <h3 class="footer__heading">Products</h3>
+        <h3 class="footer__heading">Open source</h3>
         <ul class="footer__list">
           <li>
-            <a href="https://aimpactscanner.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/TheWayWithin/mastery-ai-framework" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+              MASTERY-AI Framework<span class="visually-hidden"> (opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheWayWithin/aimpactscanner-mvp" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
               AImpactScanner<span class="visually-hidden"> (opens in new tab)</span>
             </a>
           </li>
           <li>
-            <a href="https://llmtxtmastery.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/TheWayWithin/llm-txt-mastery" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
               LLM.txt Mastery<span class="visually-hidden"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://llmtxtmastery.com/validator" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
-              Free Validator<span class="visually-hidden"> (opens in new tab)</span>
-            </a>
-          </li>
-          <li>
-            <a href="/products#aimpactmonitor" class="footer__link">
-              AImpactMonitor <span class="text-secondary">(Coming Soon)</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://aisearcharena.com" class="footer__link external-link" target="_blank" rel="noopener noreferrer">
-              AI Search Arena<span class="visually-hidden"> (opens in new tab)</span>
             </a>
           </li>
         </ul>
