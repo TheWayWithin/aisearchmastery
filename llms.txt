@@ -14,10 +14,10 @@ Last updated 2026-09-13.
 - [The Uncomfortable Truth About llms.txt Generators](https://aisearchmastery.com/blog/fundamentals/uncomfortable-truth-llmstxt-generators/): Four llms.txt generators run against the same site, and why their outputs disagree so much.
 - [The $200,000 Problem Nobody's Talking About](https://aisearchmastery.com/blog/fundamentals/the-200000-problem/): The cost of advertising on AI platforms, and why earning a recommendation is the realistic route for a small business.
 - [Which llms.txt Tool Actually Works? We Benchmarked 14](https://aisearchmastery.com/blog/industry-updates/which-llmstxt-tool-actually-works/): A four-step evaluation of 14 tools, with scores and what each one does and does not do.
-- [AI Search Arena: How Our Open Benchmark Methodology Works](https://aisearchmastery.com/blog/industry-updates/ai-search-benchmark-open-methodology/): The evaluation framework and scoring dimensions behind the AI Search Arena benchmark.
-- [Why Independent AI Search Benchmarks Matter](https://aisearchmastery.com/blog/industry-updates/ai-benchmark-platform-why-it-matters/): Why self-reported tool results are hard to compare, and what an independent benchmark needs to measure.
+- [AI Search Arena: How Our Open Benchmark Methodology Works](https://aisearchmastery.com/blog/industry-updates/ai-search-benchmark-open-methodology/): The evaluation framework and scoring dimensions designed for the AI Search Arena benchmark, which never ran a cycle.
+- [Why Independent AI Search Benchmarks Matter](https://aisearchmastery.com/blog/industry-updates/ai-benchmark-platform-why-it-matters/): Why self-reported tool results are hard to compare, and what an independent benchmark needs to measure. The benchmark it announces never ran.
 - [Building AImpactScanner: From Concept to AI Search Readiness Tool](https://aisearchmastery.com/blog/industry-updates/building-aimpactscanner/): A build log of the AImpactScanner tool, which has since been retired.
-- [AImpactScanner Now Analyzes Every Website: React, Vue, SPAs and More](https://aisearchmastery.com/blog/industry-updates/aimpactscanner-analyzes-every-website/): How full JavaScript rendering was added to the AImpactScanner tool, which has since been retired.
+- [AImpactScanner Analysed Every Website: React, Vue, SPAs and More](https://aisearchmastery.com/blog/industry-updates/aimpactscanner-analyzes-every-website/): How full JavaScript rendering was added to the AImpactScanner tool, which has since been retired.
 
 ## Additional Resources
 

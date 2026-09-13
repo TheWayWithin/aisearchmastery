@@ -32,7 +32,7 @@ A static site. It publishes the MASTERY-AI Framework, a set of guides and articl
 | AImpactScanner | Switched off in August 2026 | https://github.com/TheWayWithin/aimpactscanner-mvp (MIT licence) |
 | LLM.txt Mastery | Switched off in August 2026 | https://github.com/TheWayWithin/llm-txt-mastery (MIT licence) |
 
-AImpactMonitor was discussed on this site as a planned third tool. It was never opened to anyone and does not exist as a product.
+AImpactMonitor was built in March 2026 and never opened to anyone. It does not exist as a product and there is no source code to link. The AI Search Arena benchmark was announced here and never ran a cycle; aisearcharena.com is not serving.
 
 ---
 
@@ -80,29 +80,31 @@ An open methodology for AI search visibility: 8 pillars and 149 atomic factors, 
 
 ### The 8 Pillars
 
-#### M: Machine Readability
-Can AI crawlers access your content? Machine readability is the foundation. If AI systems cannot read your site, nothing else matters. This pillar covers robots.txt configuration, llms.txt presence, crawl accessibility, and content structure.
+Names, weights and factor counts below are the ones published in the framework repository at v3.2.0. They sum to 149 factors and 100 percent.
 
-#### A: Authority Signals
-Does your site demonstrate genuine expertise? AI models evaluate trust signals differently from traditional search engines. This pillar covers domain authority indicators, expertise demonstration, and trust markers.
+#### M: Machine Readability & Technical Infrastructure (22 factors, 15.0%)
+Can AI systems reach and parse your content? Covers robots.txt configuration, llms.txt presence, crawl accessibility and content structure. v3.2.0 added AI bot access configuration here: whether robots.txt allows the crawlers that feed AI answers, such as OAI-SearchBot and GPTBot.
 
-#### S: Structured Data
-Is your information organised for machine understanding? Schema markup, clear data structures, and semantic HTML help AI systems extract and cite your information accurately. This pillar covers schema implementation, data organisation, and semantic clarity.
+#### A: Authority & Trust Signals (15 factors, 17.8%)
+The credibility and trust indicators an AI system can verify. Weighted differently from traditional search signals, which is why a site can rank well and still go uncited.
 
-#### T: Technical Foundation
-Does your site meet the technical requirements AI systems expect? Page speed, mobile responsiveness, security, and site architecture all influence how AI crawlers evaluate a site.
+#### S: Semantic Content Quality (22 factors, 13.8%)
+Content depth and semantic richness: whether a page makes claims specific enough for an AI system to lift and attribute.
 
-#### E: Entity Recognition
-Can AI systems identify your brand as a distinct entity? This pillar covers brand consistency, entity disambiguation, and knowledge graph presence.
+#### T: Topical Expertise & Experience (14 factors, 8.9%)
+Whether the site demonstrates real expertise in its subject rather than asserting it: depth across a topic, and first-hand knowledge.
 
-#### R: Reputation and Citations
-Is your business referenced across the web? AI models triangulate information from multiple sources. This pillar covers external references, citation quality, and backlink health.
+#### E: Engagement & User Experience (19 factors, 10.9%)
+The ordinary web quality signals. They rarely win a citation on their own and regularly lose one.
 
-#### Y: Your Content Quality
-Is your content comprehensive, current, and genuinely valuable? This pillar covers content depth, freshness, originality, and user value alignment.
+#### R: Reference Networks & Citations (19 factors, 5.9%)
+External validation. AI systems triangulate, so who else refers to you, and how credibly, matters.
 
-#### AI: AI-Specific Optimisation
-Have you optimised for how AI models actually work? Beyond traditional SEO, AI systems have their own preferences for content format, conversational relevance, and direct answer provision.
+#### Y: Yield Optimization & Freshness (15 factors, 4.0%)
+Whether the site is maintained: freshness and continuous optimisation over time.
+
+#### AI: AI Response Optimization & Citation (23 factors, 23.7%)
+The heaviest pillar. Optimisation aimed at how AI systems assemble an answer: content format, conversational relevance, direct answer provision and Model Context Protocol integration.
 
 ### Open Methodology
 
@@ -126,7 +128,7 @@ An llms.txt generator and validator. It discovered JavaScript-rendered pages tha
 
 ### AImpactMonitor
 
-A planned third tool for tracking AI citations. It was never opened to anyone. There is no product and no source code to link.
+A third tool for tracking AI citations. It was built in March 2026 and never opened to anyone. There is no product and no source code to link.
 
 ---
 
@@ -237,7 +239,7 @@ A build log of AImpactScanner, the AI search readiness tool, covering llms.txt g
 
 Discusses why self-reported tool results are hard to compare, and what an independent benchmark of AI search optimisation tools needs to measure.
 
-### AImpactScanner Now Analyzes Every Website: React, Vue, SPAs and More
+### AImpactScanner Analysed Every Website: React, Vue, SPAs and More
 **URL**: https://aisearchmastery.com/blog/industry-updates/aimpactscanner-analyzes-every-website/
 **Category**: Industry Updates
 
