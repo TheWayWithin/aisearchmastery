@@ -64,3 +64,6 @@ test-results/
 data/*.db
 data/*.db-wal
 data/*.db-shm
+
+# Built deploy directory, assembled by scripts/build-site.sh
+_site/

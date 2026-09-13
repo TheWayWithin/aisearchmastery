@@ -1,5 +1,10 @@
 [build]
-  publish = "."
+  # Do not publish the repository root. Doing so made every file in the repo a
+  # public URL, including the old Kit email sequences with their upgrade links,
+  # the 2026 PRD with the original price list, progress.md and .env.example.
+  # build-site.sh copies the site and nothing else.
+  command = "bash scripts/check-copy.sh && bash scripts/check-links.sh && bash scripts/build-site.sh"
+  publish = "_site"
 
 # Pretty URLs: /about serves about.html
 [[redirects]]

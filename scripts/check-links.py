@@ -2,9 +2,9 @@
 """
 check-links.py — every internal link, asset and redirect on aisearchmastery.com resolves.
 
-The site is static and Netlify publishes the repository root, so "resolves" means:
-a tracked file exists at that path, or a redirect rule in netlify.toml sends it
-somewhere that does. Fragment links (#anchor) must point at an id that exists on
+The site is static. Netlify publishes what scripts/build-site.sh assembles, so
+"resolves" means: a published file exists at that path, or a redirect rule in
+netlify.toml sends it somewhere that does. Fragment links (#anchor) must point at an id that exists on
 the target page.
 
 Exit 0: every link resolves. Exit 1: at least one does not.
@@ -18,7 +18,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def tracked():
-    out = subprocess.run(['git', 'ls-files'], cwd=ROOT, capture_output=True, text=True, check=True)
+    """The files this site actually publishes, per scripts/published-files.sh."""
+    out = subprocess.run(['bash', os.path.join(ROOT, 'scripts', 'published-files.sh')],
+                         cwd=ROOT, capture_output=True, text=True, check=True)
     return set(out.stdout.split('\n')) - {''}
 
 
