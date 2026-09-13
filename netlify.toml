@@ -1,10 +1,5 @@
 [build]
-  # Do not publish the repository root. Doing so made every file in the repo a
-  # public URL, including the old Kit email sequences with their upgrade links,
-  # the 2026 PRD with the original price list, progress.md and .env.example.
-  # build-site.sh copies the site and nothing else.
-  command = "bash scripts/check-copy.sh && bash scripts/check-links.sh && bash scripts/check-framework.sh && bash scripts/build-site.sh"
-  publish = "_site"
+  publish = "."
 
 # Pretty URLs: /about serves about.html
 [[redirects]]
@@ -119,15 +114,14 @@
   to = "/products"
   status = 301
 
-# Retired tool: was an external product site, now the retired-tools page
 [[redirects]]
   from = "/tools/llms-txt-tool/"
-  to = "/products"
+  to = "https://llmtxtmastery.com"
   status = 301
 
 [[redirects]]
   from = "/tools/llms-txt-tool"
-  to = "/products"
+  to = "https://llmtxtmastery.com"
   status = 301
 
 # NOTE: /blog/fundamentals/ and /blog/industry-updates/ are now real

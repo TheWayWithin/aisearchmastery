@@ -1,12 +1,4 @@
-# aisearchmastery.com
-# Crawling is welcome, including by the crawlers that feed AI answers.
-# /llms.txt and /llms-full.txt exist so machines can read the site without
-# crawling it at all.
-
 User-agent: *
-Allow: /
-
-User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: GPTBot
@@ -20,6 +12,9 @@ Allow: /
 
 User-agent: Google-Extended
 Allow: /
+
+Disallow: /test/
+Disallow: /blog/test/
 
 Sitemap: https://aisearchmastery.com/sitemap.xml
 Llms-Txt: https://aisearchmastery.com/llms.txt
