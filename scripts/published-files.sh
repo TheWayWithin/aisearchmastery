@@ -31,7 +31,12 @@ ROOT_FILES=(
   _redirects
 )
 
-DIRS=(blog css js)
+DIRS=(blog js)
+
+# css/ is not published wholesale either. main.css and blog.css are referenced
+# by no page and still carry the retired newsletter's styling, including a nav
+# selector for a /newsletter link that no longer exists.
+CSS_FILES=(css/critical.css css/styles.css)
 
 # images/ is NOT published wholesale. The repo holds source assets that no page
 # references, and two of them are screenshots of the retired scanner showing it
@@ -58,6 +63,10 @@ for d in "${DIRS[@]}" "${IMAGE_DIRS[@]}"; do
       ! -name '*.md' ! -name '*.py' ! -name '*.txt' ! -name '.env*' ! -name '*.zip' \
       ! -name '*.log' ! -name '.DS_Store' ! -name '.gitkeep'
   fi
+done
+
+for f in "${CSS_FILES[@]}"; do
+  if [ -f "$f" ]; then echo "$f"; fi
 done
 
 for f in "${IMAGE_FILES[@]}"; do
