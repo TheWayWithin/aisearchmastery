@@ -21,9 +21,9 @@
 /tools-resources/  /products  301
 /tools-resources   /products  301
 
-# External product redirect
-/tools/llms-txt-tool/  https://llmtxtmastery.com  301
-/tools/llms-txt-tool   https://llmtxtmastery.com  301
+# Retired tool: was an external product site, now the retired-tools page
+/tools/llms-txt-tool/  /products  301
+/tools/llms-txt-tool   /products  301
 
 # Blog categories: /blog/fundamentals/ and /blog/industry-updates/ are
 # real index pages now — no redirect. Empty/retired categories below.
