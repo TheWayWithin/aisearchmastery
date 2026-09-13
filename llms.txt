@@ -21,7 +21,7 @@ Last updated 2026-09-13.
 
 ## Additional Resources
 
-- [See How AI Sees You](https://aisearchmastery.com/): Home page. What the site is and where the framework, the articles and the retired tools now sit.
+- [How AI Search Decides What to Recommend](https://aisearchmastery.com/): Home page. What the site is and where the framework, the articles and the retired tools now sit.
 - [MASTERY-AI Framework](https://aisearchmastery.com/framework): The open methodology: 8 pillars and 149 atomic factors, published so anyone can inspect, question and build on it.
 - [Retired tools](https://aisearchmastery.com/products): A record of AImpactScanner and LLM.txt Mastery, switched off in August 2026, with links to their public source code.
 - [AI Search Insights, the blog](https://aisearchmastery.com/blog): Guides and industry updates on AI search visibility.
