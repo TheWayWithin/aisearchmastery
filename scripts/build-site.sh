@@ -58,5 +58,18 @@ find "$OUT" -type f \
   \( -name '*.md' -o -name '*.py' -o -name '.env*' -o -name '*.zip' \
      -o -name '*.log' -o -name '.DS_Store' -o -name '.gitkeep' \) -print -delete
 
+# Drop anything left over from an earlier local build. Netlify always starts
+# from a clean checkout, but a stale file here would make a local run of the
+# gates check a page that no longer exists, or miss one that does.
+WANTED=$(mktemp)
+HAVE=$(mktemp)
+bash scripts/published-files.sh | sort > "$WANTED"
+find "$OUT" -type f | sed "s|^$OUT/||" | sort > "$HAVE"
+comm -13 "$WANTED" "$HAVE" | while IFS= read -r stale; do
+  echo "build-site: dropping stale $stale"
+  find "$OUT/$stale" -maxdepth 0 -type f -delete
+done
+find "$OUT" -type d -empty -delete
+
 echo "build-site: $(find "$OUT" -type f | wc -l | tr -d ' ') files published to $OUT/"
 echo "build-site: $(find "$OUT" -name '*.html' | wc -l | tr -d ' ') HTML pages"
