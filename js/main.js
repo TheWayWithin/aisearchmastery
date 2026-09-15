@@ -110,20 +110,11 @@
     });
   });
 
-  // Scroll depth tracking
-  var scrollThresholds = [25, 50, 75, 100];
-  var scrollFired = {};
-  window.addEventListener('scroll', function () {
-    var scrollPercent = Math.round(
-      (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-    );
-    scrollThresholds.forEach(function (threshold) {
-      if (scrollPercent >= threshold && !scrollFired[threshold]) {
-        scrollFired[threshold] = true;
-        trackEvent('scroll_depth', { depth: threshold + '%', page: window.location.pathname });
-      }
-    });
-  }, { passive: true });
+  // Scroll depth was tracked here at 25/50/75/100 percent. Removed: four
+  // events per visitor, and no threshold among them was ever going to change
+  // a decision. Plausible records a pageview and an engagement time already.
+  // If reading depth matters later, one event at the end of the article is
+  // the version worth having.
 
   // 404 tracking
   if (document.querySelector('[data-page-type="404"]')) {
